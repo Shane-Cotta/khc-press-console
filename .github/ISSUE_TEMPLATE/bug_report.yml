@@ -1,0 +1,106 @@
+name: Bug report
+description: Something in M7 Console does not work as described.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. **Make the press safe before you fill this in**: stop it, and switch off the
+        press console's power if needed.
+
+        - **If the press did not stop when it should have** (STOP, the Remote Stop, the Machine Guard or Safety
+          Shield, a sensor), say so in the first line of "What happened", and stop using M7 Console until the issue
+          is understood.
+        - M7 Console is not made or supported by Mark 7 Reloading: please do not contact Mark 7 about it.
+        - What to include: [Troubleshooting, Reporting a problem](https://github.com/Shane-Cotta/M7-Console/blob/main/docs/user-guide/troubleshooting.md#reporting-a-problem).
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety
+      options:
+        - label: The press is stopped and safe, and nobody was put at risk while I collected this information.
+          required: true
+  - type: input
+    id: version
+    attributes:
+      label: M7 Console version
+      description: Bottom right of every screen, or the ABOUT screen (for example "0.1.0 BETA"). If ABOUT shows an SD card image version too, give both.
+      placeholder: e.g. 0.1.0 (card 0.1.0)
+    validations:
+      required: true
+  - type: dropdown
+    id: pi
+    attributes:
+      label: Raspberry Pi
+      options:
+        - Raspberry Pi 4
+        - Raspberry Pi 5
+        - Other / not sure
+    validations:
+      required: true
+  - type: input
+    id: hardware
+    attributes:
+      label: Pi memory, screen and power supplies
+      description: The Pi's memory size, the touch screen's make and model, and the power supplies of the Pi and of the screen.
+      placeholder: e.g. Pi 5 4 GB, 10.1" 1920x1200 HDMI screen (make/model), official 27 W supply, screen on its own 5 V supply
+  - type: dropdown
+    id: press
+    attributes:
+      label: Press model
+      options:
+        - Apex 10 Evolution
+        - Revolution
+        - 650 PRO / 650 X / 750 AutoDrive
+        - 1050 PRO AutoDrive
+        - 1050 X AutoDrive
+        - 1050 LTE
+        - Other (say which below)
+        - No press connected
+    validations:
+      required: true
+  - type: input
+    id: firmware
+    attributes:
+      label: Press firmware and motor, as the console shows them
+      description: The status bar at the bottom of the press screen. Write "not identified" if the console never got that far.
+      placeholder: e.g. Firmware Evolution 19 · Motor 3441 (4)
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: What you did
+      description: The steps that led to the problem, one per line.
+      placeholder: |
+        1. Tapped PRESS, then ACCEPT
+        2. Tapped CALIBRATE with an empty shell plate
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened
+      description: What the press did, and the exact text of every alert or message on the screen. A photo of the screen helps a lot.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+  - type: dropdown
+    id: repeat
+    attributes:
+      label: Does it happen again?
+      options:
+        - Every time
+        - Sometimes
+        - Only once so far
+        - Not tried again
+  - type: textarea
+    id: files
+    attributes:
+      label: Photos, screenshots or log files
+      description: Drag files here. Photos of the screen and of the wiring are the most useful. The console's own log files can only be copied off by a technician for now; if one was collected, attach it here.

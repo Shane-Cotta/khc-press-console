@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Safety information
+    url: https://github.com/Shane-Cotta/M7-Console/blob/main/SAFETY.md
+    about: Read this before using M7 Console on a press. If the press did not stop when it should have, report it as a bug.

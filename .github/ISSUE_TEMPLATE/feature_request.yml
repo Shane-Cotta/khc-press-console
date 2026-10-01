@@ -1,0 +1,43 @@
+name: Feature request
+description: Suggest something M7 Console should do, or do differently.
+title: "[Idea] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion. M7 Console drives real machinery, so ideas that would weaken STOP, the interlocks,
+        the calibration requirement or the CRITICAL alerts will not be taken; ideas that make the press safer or
+        easier to use are very welcome.
+
+        To report something that does not work, use the bug report instead.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What you are trying to do
+      description: The task or problem, in your own words. What happens today?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What you would like
+      description: How you would like it to work on the console.
+    validations:
+      required: true
+  - type: dropdown
+    id: press
+    attributes:
+      label: Press model it is for
+      options:
+        - All presses
+        - Apex 10 Evolution
+        - Revolution
+        - 650 PRO / 650 X / 750 AutoDrive
+        - 1050 PRO / 1050 X / 1050 LTE AutoDrive
+        - Other (say which above)
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
+      description: Photos, sketches, how Mark 7's own app does it, or a page of a press manual.
