@@ -33,11 +33,12 @@ press (for example station 5 on an Apex 10 Evolution). Do it before you continue
 
 A CRITICAL alert means the console cannot be sure the press is under control. Every CRITICAL alert ends with
 **"Switch off the console power now."** **Do it**, then tap **CONSOLE IS OFF** to close the alert. STOP stays
-tappable on it.
+tappable on it. Once it is closed, the console offers to **SAVE LOGS** for a bug report
+([Reporting a problem](troubleshooting.md#reporting-a-problem)).
 
 | Alert | What happened |
 |---|---|
-| **STOP NOT CONFIRMED** | The press did not confirm a STOP within about a second. The console reset the press controller through the USB cable. |
+| **STOP NOT CONFIRMED** | The press did not confirm a STOP within about a second, or the STOP could not reach the press at all. The console reset the press controller through the USB cable; the alert says whether that reset went out. |
 | **PRESS NOT ANSWERING** | The press did not answer RUN, SINGLE CYCLE or END CYCLE within about a second. With its motor fault line held, the press can step the motor without answering anything, not even STOP or the Remote Stop. The console reset the press controller. |
 | **PRESS KEPT MOVING** | The press moved after it reported a stop. The console sent STOP, and resets the controller if that STOP is not confirmed. |
 | **TOUCHSCREEN NOT WORKING** | The touch screen stopped responding: STOP on the screen cannot work. Use the remote stop, or switch off the console power if the press is moving. This alert closes with OK, and by itself when the touch screen is back. |

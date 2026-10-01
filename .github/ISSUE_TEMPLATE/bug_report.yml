@@ -99,8 +99,14 @@ body:
         - Sometimes
         - Only once so far
         - Not tried again
+  - type: input
+    id: logs
+    attributes:
+      label: Saved logs file
+      description: Tap CONSOLE SETTINGS, then SAVE LOGS (or SAVE LOGS on the message after a CRITICAL alert), and copy the file name the console shows. The file stays on the console; we will say if it is needed and how to get it. It holds no Wi-Fi password.
+      placeholder: the file name the console showed, or "not saved"
   - type: textarea
     id: files
     attributes:
       label: Photos, screenshots or log files
-      description: Drag files here. Photos of the screen and of the wiring are the most useful. The console's own log files can only be copied off by a technician for now; if one was collected, attach it here.
+      description: Drag files here. Photos of the screen and of the wiring are the most useful. If you already copied the saved logs file off the console, attach it here.

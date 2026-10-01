@@ -1,9 +1,9 @@
 # Console settings
 
-**CONSOLE SETTINGS** on the home screen holds the settings of the console itself (not of the press), and links to
-**FOOT PEDAL**, **SETTINGS FILE** and **CONSOLE PORTS**.
+**CONSOLE SETTINGS** on the home screen holds the settings of the console itself (not of the press), links to
+**FOOT PEDAL**, **SETTINGS FILE**, **CONSOLE PORTS** and **WI-FI**, and has **SAVE LOGS**.
 
-![Console settings: touch screen, screen rotation, sound, and the FOOT PEDAL, SETTINGS FILE and CONSOLE PORTS buttons](../images/screen-settings.png)
+![Console settings: touch screen, screen rotation, sound, and the FOOT PEDAL, SETTINGS FILE, CONSOLE PORTS, WI-FI and SAVE LOGS buttons](../images/screen-settings.png)
 
 ## Touch screen
 
@@ -57,6 +57,11 @@ a stick in). Tap a file to see **what it would change** first; then **IMPORT** o
 - It is refused while the press runs or calibrates, or a firmware update runs.
 - An import **never bypasses a sensor**, never clears DO NOT OPERATE, and never arms the foot pedal. Remote Stop,
   Machine Guard and TorqueSense are switched ACTIVE at the next connection anyway.
+
+## Save logs
+
+**SAVE LOGS** saves the console's logs in one file for a bug report: see
+[Troubleshooting: Reporting a problem](troubleshooting.md#reporting-a-problem).
 
 ## Foot pedal and console ports
 

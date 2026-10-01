@@ -96,11 +96,30 @@ Open an [issue](https://github.com/Shane-Cotta/M7-Console/issues/new/choose) wit
 - the press model and firmware as the console shows them (the status bar on the press screen);
 - what you did, what happened, and **the exact text of any alert** (a photo of the screen is best);
 - whether the press stopped when it should have. **If it did not, say so in the first line**, and do not use M7
-  Console again until the problem is understood.
+  Console again until the problem is understood;
+- the name of the logs file, if you saved one (below).
+
+### Save logs
 
 The console keeps a detailed log of every session on the card, including a record of the last moments before each
-CRITICAL alert. There is no button to copy it to a USB stick yet (sticks are read-only on the console); if a log is
-needed, the issue will say how to get it, usually with a technician's help.
+CRITICAL alert. **SAVE LOGS** puts it, with the console's version, the press model and firmware and the recent
+alerts, into one file:
+
+- **CONSOLE SETTINGS → SAVE LOGS**, at any time; or
+- **SAVE LOGS** on the "Save the logs?" message the console shows after you close a CRITICAL alert with CONSOLE IS
+  OFF.
+
+It takes a few seconds; the console and STOP keep working meanwhile. It is not possible while a firmware update runs.
+When it is done, the console shows the file's name and where it was saved.
+
+![Logs saved: the file's name and where it was saved](../images/screen-alert-logs-saved.png)
+
+- The file is **kept on the console**. USB sticks are mounted read-only on the console, so it cannot be written to a
+  stick (the message says so). The console keeps the five newest.
+- Give the file's name in your bug report. If the file is needed, the issue will say how to get it off the console's
+  SD card (it needs a computer that can read the card's Linux partition, so usually a technician's help).
+- The file holds **no Wi-Fi password** and no other secret: the console leaves out its Wi-Fi settings and blanks
+  anything in the logs that looks like a password.
 
 ## For technicians
 
