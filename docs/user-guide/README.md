@@ -13,10 +13,11 @@ M7 Console is BETA software for real machinery. Read [Safety](../../SAFETY.md) f
 | 7 | [Alerts](alerts.md) | Information, stop and CRITICAL alerts, and what each asks of you |
 | 8 | [Firmware](firmware.md) | Which image for which press, the custom builds, flashing, recovery, DO NOT OPERATE |
 | 9 | [Software updates and Wi-Fi](software-updates.md) | Setting up Wi-Fi, checking for updates, installing, going back, USB sticks, the trial |
-| 10 | [Console settings](console-settings.md) | Touch calibration, rotation, sounds, settings export and import |
-| 11 | [Foot pedal](foot-pedal.md) | Setting up and arming a USB foot pedal for SINGLE CYCLE |
-| 12 | [Console ports](console-ports.md) | Which sensor plugs into which port of the press console |
-| 13 | [Troubleshooting](troubleshooting.md) | Common problems and what to do; a note for technicians |
-| 14 | [FAQ](faq.md) | Common questions |
+| 10 | [The trial and your license](license.md) | The 10-day trial, activating a license, seats, moving a seat to another Pi |
+| 11 | [Console settings](console-settings.md) | Touch calibration, rotation, sounds, settings export and import |
+| 12 | [Foot pedal](foot-pedal.md) | Setting up and arming a USB foot pedal for SINGLE CYCLE |
+| 13 | [Console ports](console-ports.md) | Which sensor plugs into which port of the press console |
+| 14 | [Troubleshooting](troubleshooting.md) | Common problems and what to do; a note for technicians |
+| 15 | [FAQ](faq.md) | Common questions |
 
 The words on the buttons are written in capitals here, as on the screen: **RUN**, **CALIBRATE**, **ACCEPT**.

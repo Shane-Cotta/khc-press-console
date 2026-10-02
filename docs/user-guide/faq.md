@@ -71,15 +71,21 @@ Yes, a software update keeps them. Writing a new SD card does not.
 Not easily in this BETA: the settings file is saved on the console's card, because the console never writes to USB
 sticks. A settings file on a USB stick can be imported.
 
-### A number pad titled "Debug mode (read-only)" appeared.
+### A number pad titled "Technician: debug and demo mode" appeared.
 
-That is the way into a read-only diagnostic view for technicians. Tap **CANCEL**, or wait a minute and it closes by
-itself. It changes nothing on the press, and STOP keeps working.
+That is the way into the technicians' menu (a read-only diagnostic view, and a demo mode that simulates a press). Tap
+**CANCEL**, or wait a minute and it closes by itself. It changes nothing on the press, and STOP keeps working.
+
+### A banner says "DEMO — NO PRESS CONNECTED".
+
+A technician turned on demo mode: the console is simulating a press, and nothing it shows comes from your press.
+Restarting the console turns it off (it is always off at start), or ask the technician to turn it off.
 
 ### Can I use Raspberry Pi Imager's settings (user, Wi-Fi, SSH)?
 
 No: answer **No** to OS customisation. Set up Wi-Fi on the console's own Wi-Fi screen instead
-([Installing](install.md#os-customisation-answer-no)).
+([Installing](install.md#os-customisation-answer-no)). The card has no user account and no SSH server: there is
+nothing to log in to.
 
 ### Is the source code available?
 

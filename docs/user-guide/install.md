@@ -84,7 +84,7 @@ card in your computer's card reader.
 
 M7 Console's card configures itself: its name on the network, its firewall, the kiosk that runs the console, and
 Wi-Fi (which you set up later on the console's own screen, if you want online updates). It needs no user account,
-no SSH and no Wi-Fi settings from Imager, and Imager's customisation is **not supported** for it:
+no SSH (the card has no SSH server) and no Wi-Fi settings from Imager, and Imager's customisation is **not supported** for it:
 
 - **Current Imager versions (2.x)** do not know how a custom image wants to be customised, so they skip the
   customisation step for it. Nothing to do.

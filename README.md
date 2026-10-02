@@ -121,6 +121,8 @@ Be very sure of the device name: `dd` overwrites whatever you point it at.
 3. Switch on the screen, then plug in the Pi's power.
 4. You see Mark 7's boot animation, then the M7 Console home screen. **The first start takes about a minute longer**
    than later ones: the card grows to fill the whole microSD card and finishes its setup.
+   On the first start the console asks for Wi-Fi (or **SKIP**) and then for a **license number** or the **10-day
+   trial**: [The trial and your license](docs/user-guide/license.md).
 5. Tap **PRESS**, read the safety text and tap **ACCEPT**, then **CALIBRATE** with an empty shell plate. RUN unlocks
    after a successful calibration.
 
@@ -141,6 +143,7 @@ The full walk-through: [Getting started](docs/user-guide/getting-started.md).
 | [Alerts](docs/user-guide/alerts.md) | Normal alerts, stop alerts and CRITICAL alerts, and what to do |
 | [Firmware](docs/user-guide/firmware.md) | Which image for which press, the custom builds, flashing, DO NOT OPERATE |
 | [Software updates and Wi-Fi](docs/user-guide/software-updates.md) | Wi-Fi setup, checking, installing, going back, USB updates, the trial |
+| [The trial and your license](docs/user-guide/license.md) | The 10-day trial, activating a license, seats, moving a seat to another Pi |
 | [Console settings](docs/user-guide/console-settings.md) | Touch calibration, rotation, sounds, settings export and import |
 | [Foot pedal](docs/user-guide/foot-pedal.md) | A USB foot pedal for SINGLE CYCLE |
 | [Console ports](docs/user-guide/console-ports.md) | Which sensor plugs into which port, per press family |

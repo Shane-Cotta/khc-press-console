@@ -60,9 +60,10 @@ you prepared yourself from it.
 
 ## 9. Source code
 
-The M7 Console app is distributed as readable Python inside the SD card image and the update packages, but its
-source code is not published in this repository and it remains the authors' copyright. Apart from using it as
-described in section 1, these terms give you no license to copy, modify or redistribute the M7 Console app's code.
+The M7 Console app is distributed in compiled form (native machine code) inside the SD card image and the update
+packages. Its source code is not published and it remains the authors' copyright. Apart from using it as described
+in section 1, these terms give you no license to copy, modify, redistribute, decompile or reverse engineer the M7
+Console app, except where the law allows it regardless of these terms.
 
 ## 10. Third-party components
 

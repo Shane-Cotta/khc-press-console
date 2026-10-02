@@ -134,5 +134,8 @@ These need a computer and some Linux experience; operators never need them.
   laptop's browser, with a one-time code shown on the console. It never sends anything to the press, it is opened by a
   technician (operators do not need it), and it switches itself off after 30 minutes without use. Nothing listens on
   the network while it is off.
-- If a number pad titled **Debug mode (read-only)** appears by accident, tap **CANCEL** (or wait a minute: it closes
-  by itself). STOP keeps working while it is open.
+- The console also has a **demo mode for technicians**, opened the same way: the console simulates a press by
+  itself, so the screens and the touchscreen can be tried, or the console shown, with no press connected. It is off at every start,
+  a large **DEMO — NO PRESS CONNECTED** banner shows on every screen while it is on, and nothing is sent to a press.
+- If a number pad titled **Technician: debug and demo mode** appears by accident, tap **CANCEL** (or wait a minute: it
+  closes by itself). STOP keeps working while it is open.
