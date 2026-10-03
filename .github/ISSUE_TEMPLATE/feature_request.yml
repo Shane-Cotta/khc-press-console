@@ -31,10 +31,10 @@ body:
       label: Press model it is for
       options:
         - All presses
-        - Apex 10 Evolution
-        - Revolution
-        - 650 PRO / 650 X / 750 AutoDrive
-        - 1050 PRO / 1050 X / 1050 LTE AutoDrive
+        - Apex / Evo
+        - Revo
+        - 650/750 (PRO or X)
+        - 1050/1100 (PRO, X or LTE)
         - Other (say which above)
   - type: textarea
     id: extra

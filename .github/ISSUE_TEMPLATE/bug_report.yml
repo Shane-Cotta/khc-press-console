@@ -50,12 +50,12 @@ body:
     attributes:
       label: Press model
       options:
-        - Apex 10 Evolution
-        - Revolution
-        - 650 PRO / 650 X / 750 AutoDrive
-        - 1050 PRO AutoDrive
-        - 1050 X AutoDrive
-        - 1050 LTE
+        - Apex / Evo
+        - Revo
+        - 650/750 (PRO or X)
+        - 1050/1100 PRO
+        - 1050/1100 X
+        - 1050/1100 LTE
         - Other (say which below)
         - No press connected
     validations:
@@ -65,7 +65,7 @@ body:
     attributes:
       label: Press firmware and motor, as the console shows them
       description: The status bar at the bottom of the press screen. Write "not identified" if the console never got that far.
-      placeholder: e.g. Firmware Evolution 19 · Motor 3441 (4)
+      placeholder: e.g. Firmware: Evo FW 19 · Motor: 3441 (4)
     validations:
       required: true
   - type: textarea

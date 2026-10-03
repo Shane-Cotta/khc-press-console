@@ -3,7 +3,9 @@
 Copy the block below into the GitHub release's description. Replace every `X.Y.Z` and fill in or delete each
 bracketed part. Keep it for operators: what changed for them, what to watch for, how to update. The console's
 SOFTWARE UPDATE screen shows a plain-text version of the notes (at most 4000 characters), with its first line in the
-version list: start with one short, plain sentence.
+version list: start with one short, plain sentence. The index takes a plain-text copy (`stage_release.sh
+--notes-file`: no `#`, `**`, `>`, links or tables, one line per paragraph or bullet); the GitHub description keeps
+the Markdown.
 
 ---
 

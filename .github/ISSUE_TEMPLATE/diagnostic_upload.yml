@@ -53,12 +53,12 @@ body:
     attributes:
       label: Press model
       options:
-        - Apex 10 Evolution
-        - Revolution
-        - 650 PRO / 650 X / 750 AutoDrive
-        - 1050 PRO AutoDrive
-        - 1050 X AutoDrive
-        - 1050 LTE
+        - Apex / Evo
+        - Revo
+        - 650/750 (PRO or X)
+        - 1050/1100 PRO
+        - 1050/1100 X
+        - 1050/1100 LTE
         - Other (say which in the description)
         - No press connected
   - type: textarea
