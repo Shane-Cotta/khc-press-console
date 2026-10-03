@@ -1,5 +1,5 @@
 name: Bug report
-description: Something in M7 Console does not work as described.
+description: Something in KHC Press Console does not work as described.
 title: "[Bug] "
 labels: ["bug"]
 body:
@@ -10,10 +10,10 @@ body:
         press console's power if needed.
 
         - **If the press did not stop when it should have** (STOP, the Remote Stop, the Machine Guard or Safety
-          Shield, a sensor), say so in the first line of "What happened", and stop using M7 Console until the issue
+          Shield, a sensor), say so in the first line of "What happened", and stop using KHC Press Console until the issue
           is understood.
-        - M7 Console is not made or supported by Mark 7 Reloading: please do not contact Mark 7 about it.
-        - What to include: [Troubleshooting, Reporting a problem](https://github.com/Shane-Cotta/M7-Console/blob/main/docs/user-guide/troubleshooting.md#reporting-a-problem).
+        - KHC Press Console is not made or supported by Mark 7 Reloading: please do not contact Mark 7 about it.
+        - What to include: [Troubleshooting, Reporting a problem](https://github.com/Shane-Cotta/khc-press-console/blob/main/docs/user-guide/troubleshooting.md#reporting-a-problem).
   - type: checkboxes
     id: safety
     attributes:
@@ -24,7 +24,7 @@ body:
   - type: input
     id: version
     attributes:
-      label: M7 Console version
+      label: KHC Press Console version
       description: Bottom right of every screen, or the ABOUT screen (for example "0.1.0 BETA"). If ABOUT shows an SD card image version too, give both.
       placeholder: e.g. 0.1.0 (card 0.1.0)
     validations:

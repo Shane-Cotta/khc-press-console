@@ -8,11 +8,11 @@ version list: start with one short, plain sentence.
 ---
 
 ```markdown
-## M7 Console X.Y.Z (BETA)
+## KHC Press Console X.Y.Z (BETA)
 
 [One or two sentences: what this release is about.]
 
-> M7 Console is unofficial BETA software for real machinery, not made or supported by Mark 7 Reloading.
+> KHC Press Console is unofficial BETA software for real machinery, not made or supported by Mark 7 Reloading.
 > Keep the press console's power switch within reach. Read SAFETY.md before use.
 
 ### Safety
@@ -32,8 +32,9 @@ version list: start with one short, plain sentence.
 
 ### Press firmware
 
-- [No change to the firmware images. | New or changed image: name, which press, what it changes, whether it has run
-  on a press.]
+- [No change to the firmware builds. | New or changed KHC build: its name ("KHC primer-learn patch for Evo (from Mark 7 FW 19)"), which press,
+  what it changes, whether it has run on a press. For the Primer Orientation fix: calibrate after every connect with
+  an empty shell plate; the sensor goes in console port 2, never on a 1050/1100; re-test a sensor on a Revo.]
 
 ### Tested
 
@@ -48,8 +49,8 @@ version list: start with one short, plain sentence.
 ### How to update
 
 - **Consoles with online updates:** SOFTWARE UPDATE → CHECK FOR UPDATES → X.Y.Z → INSTALL.
-- **Without a network:** copy `m7console-X.Y.Z.bundle.tar.xz` to a USB stick, then SOFTWARE UPDATE → USB STICK.
-- **New console, or a first-BETA console:** write `m7console-X.Y.Z-rpi.img.xz` to the SD card with Raspberry Pi
+- **Without a network:** copy `khc-press-console-X.Y.Z.bundle.tar.xz` to a USB stick, then SOFTWARE UPDATE → USB STICK.
+- **New console, or a first-BETA console:** write `khc-press-console-X.Y.Z-rpi.img.xz` to the SD card with Raspberry Pi
   Imager (answer **No** to OS customisation). This erases the card's settings.
 
 Check downloads against `SHA256SUMS.txt`.
@@ -58,10 +59,10 @@ Check downloads against `SHA256SUMS.txt`.
 
 | File | For |
 |---|---|
-| `m7console-X.Y.Z-rpi.img.xz` | the SD card image (Raspberry Pi 4 and 5) |
-| `m7console-X.Y.Z-rpi.img.xz.sha256`, `SHA256SUMS.txt` | checksums |
-| `m7console-X.Y.Z-rpi.packages.txt` | every software package on the card |
-| `m7console-X.Y.Z.bundle.tar.xz` | the app update package (USB updates) |
-| `m7fw-*.hex`, `firmware-catalog.json` | the press firmware images |
-| `m7console-index.json` | the update list the consoles read |
+| `khc-press-console-X.Y.Z-rpi.img.xz` | the SD card image (Raspberry Pi 4 and 5) |
+| `khc-press-console-X.Y.Z-rpi.img.xz.sha256`, `SHA256SUMS.txt` | checksums |
+| `khc-press-console-X.Y.Z-rpi.packages.txt` | every software package on the card |
+| `khc-press-console-X.Y.Z.bundle.tar.xz` | the app update package (USB updates) |
+| `khc-*.json` | the KHC firmware patch definitions (no firmware image is released) |
+| `khc-press-console-index.json` | the update list the consoles read |
 ```

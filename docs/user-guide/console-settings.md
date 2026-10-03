@@ -56,7 +56,7 @@ a stick in). Tap a file to see **what it would change** first; then **IMPORT** o
 - Importing **disconnects the press first** (its controller restarts): connect again with PRESS afterwards.
 - It is refused while the press runs or calibrates, or a firmware update runs.
 - An import **never bypasses a sensor**, never clears DO NOT OPERATE, and never arms the foot pedal. Remote Stop,
-  Machine Guard and TorqueSense are switched ACTIVE at the next connection anyway.
+  Machine Guard and Index torque (TorqueSense™) are switched ACTIVE at the next connection anyway.
 
 ## Save logs
 

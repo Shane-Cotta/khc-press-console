@@ -7,8 +7,8 @@ Every tab of the press screen has the same column on the right:
 | Button | What it does |
 |---|---|
 | **RUN** | Runs the press continuously. **Locked until the press has calibrated** in this connection. |
-| **END CYCLE** | Stops at the end of the current cycle, with the press at home. (On the 1050 LTE it is called **HOME**.) |
-| **SINGLE** | Runs one cycle. Locked until calibrated, like RUN. (The 1050 LTE has no SINGLE.) |
+| **END CYCLE** | Stops at the end of the current cycle, with the press at home. (On the 1050/1100 LTE it is called **HOME**.) |
+| **SINGLE** | Runs one cycle. Locked until calibrated, like RUN. (The 1050/1100 LTE has no SINGLE.) |
 | **STOP** | Stops the press now. On every screen of the console, not only here. |
 
 Disabled buttons are drawn dimmed and do nothing. If the press refuses a command (for example because the guard is
@@ -36,9 +36,9 @@ calibration is gone. Calibrate after every connection, **with an empty shell pla
 If the press refuses or aborts the calibration (guard open, busy, or blocked), the **Calibration failed** alert says
 so and RUN stays locked. CALIBRATE is available only while the press is idle, and not during die setup.
 
-**Primer Orientation** (Evolution and Revolution): the press also learns this sensor during calibration. With Mark 7's
-firmware, it is learned only when the calibration sees the sensor change state; the custom "pocketlearn" firmware
-learns it at every calibration ([Firmware](firmware.md#the-custom-pocketlearn-builds)).
+**Primer Orientation** (Evo and Revo): the press also learns this sensor during calibration. With Mark 7's
+firmware, it is learned only when the calibration sees the sensor change state; the KHC firmware learns it at every
+calibration ([Firmware](firmware.md#the-khc-primer-learn-patch-the-primer-orientation-fix)).
 
 ## RUN, END CYCLE and SINGLE
 
@@ -63,18 +63,18 @@ Calibration needs an empty shell plate, so clear the plate first.
 **JOG UP** and **JOG DOWN** (on the Control tab of the models that have them) move the press a short step. They are
 available only while the press is idle. **JOG moves the press even with the guard open.**
 
-On a 1050, **remove the Dillon ratchet before you jog** (the 1050 manual): with it fitted, jogging from mid-stroke
+On a 1050/1100, **remove the Dillon ratchet before you jog** (the 1050 manual): with it fitted, jogging from mid-stroke
 jams the press.
 
-## CLEAR SHELL PLATE (1050 models)
+## CLEAR SHELL PLATE (1050/1100 models)
 
-**CLEAR SHELL PLATE** on the Control tab of a 1050 runs the press's shell-plate clearing move. It also moves with the
+**CLEAR SHELL PLATE** on the Control tab of a 1050/1100 runs the press's shell-plate clearing move. It also moves with the
 guard open.
 
 ## Die setup
 
 On the **Setup** tab (models with die setup): **START DIE SETUP**, then **MOVE TO TOP** / **MOVE TO BOTTOM** (on the
-650 the order is reversed, because the platform moves) and **FINISH DIE SETUP**. The sensors and the powder measure are
+650/750 the order is reversed, because the platform moves) and **FINISH DIE SETUP**. The sensors and the powder measure are
 disabled during die setup, and these moves run with the guard open. RUN, END CYCLE and CALIBRATE are not available
 until you finish die setup.
 

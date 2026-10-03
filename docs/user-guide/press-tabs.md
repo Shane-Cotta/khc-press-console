@@ -1,32 +1,34 @@
 # The press tabs
 
-The press screen shows the tabs of your press model along the top, as Mark 7's app does:
+The press screen shows the tabs of your press model along the top:
 
 | Press | Tabs |
 |---|---|
-| Apex 10 Evolution, Revolution, 650 X / 650 PRO, 1050 X / 1050 PRO, and the Evolution PRO, Duals and GAP PRO | **CONTROL**, **MONITORS**, **SENSORS**, **SETUP**, **SETTINGS** |
-| 1050 LTE | **CONTROL**, **SENSORS**, **SETTINGS** |
+| Evo, Revo, 650/750 X and PRO, 1050/1100 X and PRO, and the Evo PRO, Duals and GAP PRO | **CONTROL**, **MONITORS**, **SENSORS**, **SETUP**, **SETTINGS** |
+| 1050/1100 LTE | **CONTROL**, **SENSORS**, **SETTINGS** |
 | A press the console does not recognise | **SETTINGS** only (STOP-only mode) |
 
 Before the press is identified (connecting, identifying, restoring its settings) or after a fault, the tabs say why
 they are not ready; the Settings tab stays usable.
 
-The status bar at the bottom shows the console version, the press firmware and motor, the port, and on the right the
-state: **CONNECTED**, **NOT CALIBRATED** / **CALIBRATING** / **CALIBRATED** / **RUNNING**, the rounds per hour while
+The status bar at the bottom shows the console version, the press firmware and motor (the port is on the Settings
+tab), and on the right the state: **CONNECTED**, **NOT CALIBRATED** / **CALIBRATING** / **CALIBRATED** / **RUNNING**, the rounds per hour while
 running, and the round count.
 
 ## Control
 
-![The Evolution's Control tab](../images/screen-press-evolution-control.png)
+![The Evo's Control tab](../images/screen-press-evolution-control.png)
 
 - **ROUNDS PER HOUR:** the speeds of your press model.
-- **DIGITAL CLUTCH:** the torque limit for the stroke (on the 1050 LTE: LOW, MED, HIGH, MAX). A jam above it stops the
+- **DIGITAL CLUTCH:** the torque limit for the stroke (on the 1050/1100 LTE: LOW, MED, HIGH, MAX). A jam above it stops the
   press with the **Jam: Digital Clutch** alert.
-- **TorqueSense:** ACTIVE or BYPASSED. It is switched **ACTIVE every time the console connects**.
-- **TorqueSense level** (650 instead of the TorqueSense switch): the torque while the shell plate indexes, below the
-  clutch; lower is more sensitive (the 650 manual).
-- **Index Slowdown** (1050 LTE).
-- **JOG UP / JOG DOWN** (models with jog), **CALIBRATE**, and **CLEAR SHELL PLATE** (1050 models). See
+- **Index torque** (Mark 7's TorqueSense™, named on the button's second line): ACTIVE or BYPASSED. It stops the
+  press when the shell plate meets resistance while it indexes, and it is switched **ACTIVE every time the console
+  connects**.
+- **INDEX TORQUE LEVEL** (650/750, instead of the Index torque switch): the torque while the shell plate indexes,
+  below the clutch; lower is more sensitive (the 650 manual).
+- **Index Slowdown** (1050/1100 LTE).
+- **JOG UP / JOG DOWN** (models with jog), **CALIBRATE**, and **CLEAR SHELL PLATE** (1050/1100 models). See
   [Calibrating and running](calibrate-and-run.md).
 - With a foot pedal set up: **ARM PEDAL** / **DISARM PEDAL** ([Foot pedal](foot-pedal.md)).
 
@@ -34,8 +36,8 @@ Each model's Control tab looks a little different:
 
 | | |
 |---|---|
-| ![Revolution](../images/screen-press-revolution-control.png) | ![650 PRO](../images/screen-press-650pro-control.png) |
-| ![1050 PRO](../images/screen-press-1050pro-control.png) | ![1050 X](../images/screen-press-1050x-control.png) |
+| ![Revo](../images/screen-press-revolution-control.png) | ![650/750 PRO](../images/screen-press-650pro-control.png) |
+| ![1050/1100 PRO](../images/screen-press-1050pro-control.png) | ![1050/1100 X](../images/screen-press-1050x-control.png) |
 
 ## Monitors
 
@@ -46,25 +48,34 @@ Each model's Control tab looks a little different:
   made takes one of each. When a supply reaches its stop level, the run ends at the end of that cycle.
 - RUN is refused while a supply is already at its stop level: refill and correct the count, or switch that stop off.
 
+Under the buttons, one short line says what matters most ("Calibrate after every connect, with an empty shell
+plate."). The **?** button next to it opens the details; **CLOSE** (or STOP) closes them. Throughout the console a
+**?** opens the longer explanation behind a short line, over the left part of the screen: RUN, END CYCLE, SINGLE and
+STOP stay where they are and keep working.
+
 Numbers are typed on an on-screen number pad.
 
 ## Sensors
 
-![The Sensors tab: Remote Stop and Machine Guard ACTIVE, the other sensors BYPASSED, and notes on the right](../images/screen-press-evolution-sensors.png)
+![The Sensors tab: each sensor with its console port, Remote Stop and Machine Guard ACTIVE, the other sensors BYPASSED](../images/screen-press-evolution-sensors.png)
 
-Every sensor your press model has, in Mark 7's order, each **ACTIVE** (green: its checks are on) or **BYPASSED**
-(black: the press ignores it). Tap a sensor to switch it. The notes on the right explain the sensors of your model.
-See [Sensors and interlocks](sensors-and-interlocks.md).
+Every sensor your press model has, each **ACTIVE** (green: its checks are on) or **BYPASSED** (black: the press
+ignores it). Tap a sensor to switch it. Each button shows the **console port** the sensor plugs into, from your press
+model's manual (**PORT 3**; the same as the [Console ports](console-ports.md) page), and the buttons are **in port
+order**, lowest first: sensors that share a port sit side by side and both show it, and a sensor the manual gives no
+numbered port (the Machine Guard on most models) shows none and comes last. A sensor is named plainly (**Bullet
+sensor**), with Mark 7's name on its second line (**BulletSense™ · ACTIVE**). Short notes sit under the buttons; the **?** at the top opens the full notes for your model. See
+[Sensors and interlocks](sensors-and-interlocks.md).
 
 ## Setup
 
 ![The Setup tab: dwell and index, slowdown, die setup](../images/screen-press-evolution-setup.png)
 
-- **DWELL AND INDEX:** **TOP DWELL** (with ±10 buttons), **INDEX SPEED**, **BOTTOM DWELL**. On a 650 the bottom
+- **DWELL AND INDEX:** **TOP DWELL** (with ±10 buttons), **INDEX SPEED**, **BOTTOM DWELL**. On a 650/750 the bottom
   setting is **Primer depth (0 = deepest)**: it sets how deep primers are seated; change it one step at a time, not
   while cycling, and check the seated primers with SINGLE before you RUN.
-- **SLOWDOWN:** **BOTTOM SLOWDOWN** (for big brass; Evolution, Revolution and 1050 models), or **Top Slowdown** on
-  the 650.
+- **SLOWDOWN:** **BOTTOM SLOWDOWN** (for big brass; Evo, Revo and 1050/1100 models), or **Top Slowdown** on
+  the 650/750.
 - **DIE SETUP:** **START DIE SETUP**, the moves, **FINISH DIE SETUP**
   ([Calibrating and running](calibrate-and-run.md#die-setup)).
 
@@ -80,4 +91,4 @@ See [Sensors and interlocks](sensors-and-interlocks.md).
 
 If the press reports a firmware type the console does not know, you get only the Settings tab: RUN, END CYCLE and
 SINGLE are disabled, and **STOP works**. Use Mark 7's own console for such a press, or report its firmware version as
-an [issue](https://github.com/Shane-Cotta/M7-Console/issues/new/choose).
+an [issue](https://github.com/Shane-Cotta/khc-press-console/issues/new/choose).

@@ -1,6 +1,6 @@
 # Software updates and Wi-Fi
 
-M7 Console updates itself from the [M7 Console releases](https://github.com/Shane-Cotta/M7-Console/releases), over
+KHC Press Console updates itself from the [KHC Press Console releases](https://github.com/Shane-Cotta/khc-press-console/releases), over
 Wi-Fi or Ethernet, or from a USB stick. You can install a newer version (an upgrade) or go back to an older one (a
 downgrade). Updates bring the press firmware images with them.
 
@@ -19,7 +19,7 @@ downgrade). Updates bring the press firmware images with them.
   and installs. **STOP still works** the whole time. Then the console software restarts into the new version. Tap
   PRESS, ACCEPT and CALIBRATE again afterwards.
 - **Updates are checked, not yet signed.** Every package is checked against the SHA-256 checksums published with its
-  release, and is downloaded only over HTTPS from the M7 Console releases. They are not yet digitally signed: install
+  release, and is downloaded only over HTTPS from the KHC Press Console releases. They are not yet digitally signed: install
   only from the official releases, or from a USB stick you prepared yourself from them.
 - The press never needs Wi-Fi. Wi-Fi is only for updates; the console app itself has no network access.
 
@@ -81,7 +81,7 @@ A newly installed version is **on trial** ("Trying X.Y.Z. It is kept once the co
 kept once it has run for 15 seconds with its screen working. If it does not start, freezes for 3 minutes, or the
 console restarts twice before the version was confirmed, the console **goes back to the previous version by itself**
 and says so on the SOFTWARE UPDATE screen. If that happens, please
-[report it](https://github.com/Shane-Cotta/M7-Console/issues/new/choose).
+[report it](https://github.com/Shane-Cotta/khc-press-console/issues/new/choose).
 
 ## The safety minimum
 
@@ -92,9 +92,9 @@ install it soon.
 
 ## From a USB stick (no network)
 
-1. On a computer, download `m7console-X.Y.Z.bundle.tar.xz` from the release you want (and check it against that
+1. On a computer, download `khc-press-console-X.Y.Z.bundle.tar.xz` from the release you want (and check it against that
    release's `SHA256SUMS.txt`, as in [Installing](install.md#check-the-download)).
-2. Copy it, unchanged, to the **top folder** of a FAT or exFAT USB stick, or into a folder named `m7console` on it.
+2. Copy it, unchanged, to the **top folder** of a FAT or exFAT USB stick, or into a folder named `khc-press-console` on it.
 3. Plug the stick into the Pi, open **SOFTWARE UPDATE** and tap **USB STICK**. The stick's packages appear with their
    version.
 4. Tap one, and confirm as for an online install.
@@ -112,5 +112,5 @@ The console mounts USB sticks **read-only**: it never writes to your stick.
 ## Firmware images kept
 
 Each version brings the press firmware images of its release. The console keeps **every firmware image it has ever
-had**, so going back to an older M7 Console version never takes a newer firmware image away. Updating the console does
+had**, so going back to an older KHC Press Console version never takes a newer firmware image away. Updating the console does
 not change your press's firmware: that only happens when you flash it on the [FIRMWARE](firmware.md) screen.

@@ -1,10 +1,10 @@
 # FAQ
 
-### Is M7 Console made by Mark 7?
+### Is KHC Press Console made by Mark 7?
 
-No. It is an independent project, offered to Mark 7, but **not made, endorsed or supported by Mark 7 Reloading**.
-Ask questions here, not Mark 7. It uses Mark 7's look and logo so the screens feel familiar; see the
-[trademark note](../../README.md#trademarks).
+No. It is made by KHC Precision, an independent maker, and is **not made, endorsed or supported by Mark 7
+Reloading**. Ask questions here, not Mark 7. Its controls use the same press functions, so an experienced
+operator will find them straightforward; see the [trademark note](../../README.md#trademarks).
 
 ### Is it safe to use?
 
@@ -15,14 +15,14 @@ read [Safety](../../SAFETY.md).
 
 ### Do I have to change my press firmware?
 
-No. M7 Console works with the firmware your press shipped with. The custom builds are optional
+No. KHC Press Console works with the firmware your press shipped with. The KHC primer-learn patch is optional
 ([Firmware](firmware.md)).
 
 ### Can I go back to Mark 7's tablet?
 
-Yes. M7 Console changes nothing on the press except when you flash firmware yourself. Unplug the Pi and plug Mark 7's
-tablet back into the press console's micro-USB port. (If you flashed a custom firmware, Mark 7's app shows its version,
-for example Evolution 20; flash Mark 7's original back first if you prefer.)
+Yes. KHC Press Console changes nothing on the press except when you flash firmware yourself. Unplug the Pi and plug Mark 7's
+tablet back into the press console's micro-USB port. (If you flashed the KHC patch, Mark 7's app shows its version, one
+higher than Mark 7's; flash Mark 7's original back first if you prefer.)
 
 ### Does it work on Mark 7's own tablet, or on a Raspberry Pi 3?
 
@@ -33,10 +33,11 @@ Not in this BETA. It runs on a Raspberry Pi 4 or 5 with a 10.1-inch 1920x1200 HD
 No. The press never needs a network. Wi-Fi or Ethernet is used only to check for and download updates, and the
 console app itself has no network access. Without a network, update from a USB stick.
 
-### Why do I have to tap ACCEPT every time?
+### Why do I have to tap ACCEPT (or CONNECT) every time?
 
 So that nothing reaches the press until a person has decided to connect, and to remind everyone that connecting
-restarts the press controller. Mark 7's app works the same way.
+restarts the press controller. Mark 7's app works the same way. When you plug the press in, the **Press detected**
+question is that step: tap CONNECT.
 
 ### Why must I calibrate after every connection?
 
@@ -45,7 +46,7 @@ it has calibrated again. Use an empty shell plate.
 
 ### Why did my Remote Stop / guard bypass come back on?
 
-On purpose: Remote Stop, the Machine Guard and TorqueSense are switched ACTIVE at every connection, so a bypass never
+On purpose: Remote Stop, the Machine Guard and Index torque (TorqueSense™) are switched ACTIVE at every connection, so a bypass never
 carries over by mistake ([Sensors and interlocks](sensors-and-interlocks.md)).
 
 ### The screen told me to switch off the console power. Was that necessary?

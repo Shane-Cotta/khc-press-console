@@ -34,8 +34,8 @@ Plug and unplug **sensors** at the press console only with the console switched 
 
 ## Power-on order
 
-1. The press console switched **off**, or on with the press at rest. (M7 Console never moves the press by itself:
-   nothing is sent until you tap ACCEPT.)
+1. The press console switched **off**, or on with the press at rest. (KHC Press Console never moves the press by itself:
+   nothing is sent until you tap ACCEPT or CONNECT.)
 2. Switch on the screen.
 3. Plug in the Pi's power. The boot animation plays, then the home screen appears (the very first start takes about
    a minute longer).
@@ -46,18 +46,23 @@ Plug and unplug **sensors** at the press console only with the console switched 
 Use an **empty shell plate** for your first sessions, keep your hand near the console's power switch, and go one step
 at a time.
 
-1. **Home screen.** The status line says **Press not connected**. Tap **PRESS**.
+1. **Plug in the press, tap CONNECT.** When the console sees the press console's USB cable (plugged in, or already
+   plugged in when the console starts), it asks: **Press detected**, with the USB adapter, the press it last saw on
+   that cable, and **"Connecting restarts the press controller. Keep hands clear."** Tap **CONNECT** to connect, or
+   **NOT NOW** (it asks again the next time you plug the cable in).
 
-   ![The home screen](../images/screen-home.png)
+   ![Press detected: the adapter, the last press seen on it, CONNECT and NOT NOW](../images/screen-press-detected.png)
 
-2. **Accept.** Read the safety text and tap **ACCEPT** (or **DENY** to go back). The console connects and restarts
-   the press controller. This screen comes **before every connection**: see
-   [The home screen](home-screen.md#accept-before-every-connection).
+   Or, from the home screen (the status line says **Press not connected**), tap **PRESS**, read the safety text and
+   tap **ACCEPT** (or **DENY** to go back).
 
    ![The accept screen: "Reloading is dangerous.", ACCEPT and DENY](../images/screen-accept.png)
 
+2. **Either way, the console connects and restarts the press controller.** You accept **before every connection**:
+   see [The home screen](home-screen.md#accept-before-every-connection).
+
 3. **Wait for the press to be identified.** The status bar at the bottom shows the firmware (for example
-   "Firmware: Evolution 19") and the motor, then **CONNECTED** and **NOT CALIBRATED**. The tabs for your press model
+   "Firmware: Evo FW 19") and the motor, then **CONNECTED** and **NOT CALIBRATED**. The tabs for your press model
    appear.
 4. **Check the interlocks.** On the **Sensors** tab, **Remote Stop** and **Machine Guard** are **ACTIVE** (green).
    Turn on the other sensors that are fitted to your press. Close the guard.
@@ -68,7 +73,7 @@ at a time.
 7. **Run.** Choose a speed and tap **RUN**. **END CYCLE** stops at the end of the current cycle; **STOP** stops now.
    See [Calibrating and running](calibrate-and-run.md).
 
-![The Control tab of an Apex 10 Evolution: speeds, digital clutch, TorqueSense, JOG, CALIBRATE, and RUN / END CYCLE / SINGLE / STOP on the right](../images/screen-press-evolution-control.png)
+![The Control tab of an Evo: speeds, digital clutch, Index torque, JOG, CALIBRATE, and RUN / END CYCLE / SINGLE / STOP on the right](../images/screen-press-evolution-control.png)
 
 When you are done, tap **MENU** to go back home, and **TURN OFF** before you unplug the Pi
 ([Turning off](home-screen.md#turning-off)).
@@ -77,7 +82,7 @@ When you are done, tap **MENU** to go back home, and **TURN OFF** before you unp
 
 - Your **press settings** (sensors, clutch, dwell, index and the monitors), per press model. They are sent to the
   press every time it connects, because the press itself forgets them at every restart. The **speed** always starts
-  at the slowest, and **Remote Stop, Machine Guard and TorqueSense** always start **ACTIVE**.
+  at the slowest, and **Remote Stop, Machine Guard and Index torque (TorqueSense™)** always start **ACTIVE**.
 - The **console settings**: touch calibration, screen rotation, sounds, the foot pedal.
 - The last press model it saw (used for firmware recovery).
 

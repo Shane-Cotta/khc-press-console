@@ -43,7 +43,7 @@ settings import.
 | ![The confirmation before arming](../images/screen-press-evolution-pedal-confirm.png) | ![PEDAL ARMED in the status bar, and DISARM PEDAL on the Control tab](../images/screen-press-evolution-pedal-armed.png) |
 
 **Arming is refused** (with the reason) before a calibration, while the Remote Stop or the Machine Guard is bypassed,
-while a CRITICAL alert is open, away from the press screen, and on a press without SINGLE (the 1050 LTE).
+while a CRITICAL alert is open, away from the press screen, and on a press without SINGLE (the 1050/1100 LTE).
 
 ## When it disarms itself
 

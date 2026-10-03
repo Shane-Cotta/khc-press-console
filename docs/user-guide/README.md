@@ -1,6 +1,6 @@
-# M7 Console user guide
+# KHC Press Console user guide
 
-M7 Console is BETA software for real machinery. Read [Safety](../../SAFETY.md) first.
+KHC Press Console is BETA software for real machinery. Read [Safety](../../SAFETY.md) first.
 
 | # | Page | What it covers |
 |---|---|---|

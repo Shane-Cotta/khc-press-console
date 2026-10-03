@@ -1,6 +1,6 @@
 # The trial and your license
 
-M7 Console is an evaluation release. A new card runs as a **10-day trial**. A **license number** activates the
+KHC Press Console is an evaluation release. A new card runs as a **10-day trial**. A **license number** activates the
 Raspberry Pi for good, and from then on it works without Wi-Fi.
 
 **STOP always works,** whatever the license says. Without a valid trial or license the console only refuses to

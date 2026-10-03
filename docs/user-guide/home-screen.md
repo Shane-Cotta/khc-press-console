@@ -1,6 +1,6 @@
 # The home screen
 
-![The home screen: the Mark 7 logo, the status line, six buttons, and STOP on the right](../images/screen-home.png)
+![The home screen: the KHC Precision logo, the status line, six buttons, and STOP on the right](../images/screen-home.png)
 
 The home screen is where the console starts. **STOP** is on the right, as on every screen.
 
@@ -20,12 +20,20 @@ fault the press reported. The bar at the very bottom shows the press port, the c
 
 ## Accept before every connection
 
-Before **every** connection to the press, the console shows a safety screen: **"Reloading is dangerous."**, with
-**ACCEPT** and **DENY**. Mark 7's own app works the same way.
+Before **every** connection to the press, the console asks first. From **PRESS** it shows a safety screen:
+**"Reloading is dangerous."**, with **ACCEPT** and **DENY**. Mark 7's own app works the same way.
 
-- **Nothing is sent to the press before you tap ACCEPT.** After a restart of the console, the press is left alone
-  until someone accepts.
-- **ACCEPT connects**, and connecting **restarts the press controller**: the press forgets its calibration (and, with
+When you **plug in the press console's USB cable** (or start the console with it plugged in), the console asks
+instead with **Press detected**: the USB adapter, the press it last saw on that cable, **"Connecting restarts the
+press controller. Keep hands clear."**, and **CONNECT** / **NOT NOW**. NOT NOW (or STOP) closes it; it asks again
+the next time the cable is plugged in. If the cable was pulled out while connected, the button says **RECONNECT**.
+It does not ask while something else is going on (a firmware or software update, an open message, the first-start
+setup, demo mode, ...): it asks once that is over, or use PRESS. If more than one USB serial adapter is plugged in,
+or one that cannot run the press, a yellow note at the bottom says so instead, and nothing connects.
+
+- **Nothing is sent to the press before you tap ACCEPT or CONNECT.** After a restart of the console, the press is
+  left alone until someone accepts.
+- **ACCEPT (or CONNECT) connects**, and connecting **restarts the press controller**: the press forgets its calibration (and, with
   Mark 7's firmware, the learned Primer Orientation sensor). You calibrate again afterwards, with an empty shell
   plate.
 - **DENY** goes back to the home screen without connecting.
@@ -43,8 +51,9 @@ If the connection fails, the press screen says why and offers **CONNECT** (which
 
 ## About
 
-**ABOUT** shows the console app's version, the SD card image it came on (version and build date), a note that Mark 7,
-the Mark 7 logo and the press names belong to Mark 7 Reloading, and the licences of the software on the card. Quote the
+**ABOUT** shows the console app's version, who makes it (KHC Precision), the SD card image it came on (version and
+build date), a note that it is not affiliated with Mark 7 Reloading, Lyman Products or Dillon Precision (their names
+only describe compatibility; its **?** opens the trademark note), and the licences of the software on the card. Quote the
 version from here (or from the bottom bar) in a bug report.
 
 ## Turning off

@@ -13,7 +13,7 @@ until it is closed ([Console settings](console-settings.md#sound)).
 |---|---|---|---|
 | **Information** | a dialog | Run ended, Stopping at end of cycle, Not now (a refused tap, with the reason) | Read it, tap OK |
 | **Warning** | a dialog | Calibration failed, Refused by the press, Primers low, Connection reset, Neutral | Read it, fix the cause, tap OK |
-| **Stop** | a dialog | Stopped, Jam: Digital Clutch, TorqueSense, Machine Guard open, Remote Stop, DecapSense, SwageSense, BulletSense, Primer Orientation, Index, Powder check | The press has stopped. Make it safe, clear the cause, check for a double charge where the alert says so |
+| **Stop** | a dialog | Stopped, Jam: Digital Clutch, Index torque (TorqueSense™), Machine Guard open, Remote Stop, Decap sensor (DecapSense™), Swage sensor (SwageSense™), Bullet sensor (BulletSense™), Primer Orientation, Index, Powder check | The press has stopped. Make it safe, clear the cause, check for a double charge where the alert says so |
 | **CRITICAL** | full screen, red | STOP NOT CONFIRMED, PRESS NOT ANSWERING, PRESS KEPT MOVING, TOUCHSCREEN NOT WORKING | **Switch off the console power now** |
 
 ![A stop alert over the press screen, with NEUTRAL and OK](../images/screen-alert-stop.png)
@@ -21,11 +21,11 @@ until it is closed ([Console settings](console-settings.md#sound)).
 Stop alerts offer:
 
 - **NEUTRAL:** switches the motor off so the press can be moved by hand (RUN then needs a new calibration);
-- **CLEAR CASE** (SwageSense): raises the tool head to release the case. It moves the press, even with the guard open;
+- **CLEAR CASE** (swage sensor): raises the tool head to release the case. It moves the press, even with the guard open;
 - **OK:** closes the alert.
 
-After a **Jam**, **TorqueSense** or **SwageSense** stop, the alert says what to check for a **double charge** on your
-press (for example station 5 on an Apex 10 Evolution). Do it before you continue.
+After a **Jam**, **Index torque** or **Swage sensor** stop, the alert says what to check for a **double charge** on
+your press (for example station 5 on an Evo). Do it before you continue.
 
 ## CRITICAL alerts
 

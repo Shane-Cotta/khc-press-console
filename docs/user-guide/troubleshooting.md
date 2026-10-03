@@ -40,7 +40,7 @@ seconds: tap **KEEP** if it is right; if it is wrong, wait and it goes back by i
 - The card tells the Pi to drive the screen at 1920x1200 even when the screen does not identify itself at start-up.
   Screens of another resolution are not supported in this BETA.
 - If the picture comes only sometimes after a cold start (the screen powered after the Pi), a technician can make the
-  console remember the screen's identification: see `M7CONSOLE.txt` on the card's boot partition ("If the screen or
+  console remember the screen's identification: see `PRESS-CONSOLE.txt` on the card's boot partition ("If the screen or
   sound misbehaves").
 - If the screen stays black and not even the boot animation appears, the card may be badly written: write it again
   and let Imager verify it, or try another card.
@@ -50,7 +50,7 @@ seconds: tap **KEEP** if it is right; if it is wrong, wait and it goes back by i
 The console app failed to start several times in a row and stopped trying. **The press is not controlled from this
 screen: switch the press console off before you touch the press.** Then restart the Pi (unplug and plug in). If it
 happens again, write the card again ([Installing](install.md)) and
-[report it](https://github.com/Shane-Cotta/M7-Console/issues/new/choose) with a photo of the screen.
+[report it](https://github.com/Shane-Cotta/khc-press-console/issues/new/choose) with a photo of the screen.
 
 ## No sound
 
@@ -59,7 +59,7 @@ happens again, write the card again ([Installing](install.md)) and
 - **CONSOLE SETTINGS → Sound** must be **ON**. The panel says which device plays the sounds, or "No sound device
   found: the console is silent".
 - The first fraction of a second of a sound can be lost while the screen's audio wakes up.
-- Sound also needs the screen's identification at start-up; the same `M7CONSOLE.txt` note as for the picture applies.
+- Sound also needs the screen's identification at start-up; the same `PRESS-CONSOLE.txt` note as for the picture applies.
 
 Sounds are an extra: every alert also shows on the screen.
 
@@ -90,13 +90,13 @@ it with the version numbers.
 
 ## Reporting a problem
 
-Open an [issue](https://github.com/Shane-Cotta/M7-Console/issues/new/choose) with the bug report form. Include:
+Open an [issue](https://github.com/Shane-Cotta/khc-press-console/issues/new/choose) with the bug report form. Include:
 
 - the console version (bottom right of every screen, or ABOUT);
 - the press model and firmware as the console shows them (the status bar on the press screen);
 - what you did, what happened, and **the exact text of any alert** (a photo of the screen is best);
-- whether the press stopped when it should have. **If it did not, say so in the first line**, and do not use M7
-  Console again until the problem is understood;
+- whether the press stopped when it should have. **If it did not, say so in the first line**, and do not use KHC
+  Press Console again until the problem is understood;
 - the name of the logs file, if you saved one (below).
 
 ### Save logs
@@ -121,15 +121,31 @@ When it is done, the console shows the file's name and where it was saved.
 - The file holds **no Wi-Fi password** and no other secret: the console leaves out its Wi-Fi settings and blanks
   anything in the logs that looks like a password.
 
+## Send a diagnostic report
+
+A technician can send a report straight from the console, with the logs, when it is connected to the internet
+(Wi-Fi or Ethernet). They open **DIAGNOSTIC UPLOAD**, type a short description of what happened (and, if you like,
+your company and first name), and tap **SEND**. STOP and the RUN column keep working meanwhile.
+
+- **Your description and the diagnostics are posted publicly on GitHub. Your name and company are not.** The console
+  says so on the form before you send.
+- The logs go with it, privately: only KHC reads them. They hold no Wi-Fi password or network name, no license
+  number and no other secret, and errors keep only where they happened, never their messages.
+- When it is done, the console shows the ticket number, for example **Ticket KHC-20261002-7F3K sent: GitHub issue
+  #42.**, or **Received (ticket …). We'll review it.** on a console in its trial: KHC reads it first and then posts it.
+  Give the ticket number if you write to us about it.
+- A console can send a few reports a day. If it says there is no internet, connect it (CONSOLE SETTINGS → Wi-Fi) and
+  try again.
+
 ## For technicians
 
 These need a computer and some Linux experience; operators never need them.
 
-- **`M7CONSOLE.txt`** on the card's boot partition (readable from any computer) describes the card: what runs at
+- **`PRESS-CONSOLE.txt`** on the card's boot partition (readable from any computer) describes the card: what runs at
   start-up, the screen and sound settings, and how to enable an administrator login before the first start, from
   which the console's logs can be read.
 - **The service link:** a laptop connected to the Pi's Ethernet port with a plain cable gets an address from the
-  console (no internet goes through it); the console is then `m7console.local`. The console has a **read-only
+  console (no internet goes through it); the console is then `khc-console.local`. The console has a **read-only
   diagnostic view** for support sessions: it shows the press traffic live on the screen and can stream it to the
   laptop's browser, with a one-time code shown on the console. It never sends anything to the press, it is opened by a
   technician (operators do not need it), and it switches itself off after 30 minutes without use. Nothing listens on

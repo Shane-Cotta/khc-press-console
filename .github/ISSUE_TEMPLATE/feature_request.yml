@@ -1,12 +1,12 @@
 name: Feature request
-description: Suggest something M7 Console should do, or do differently.
+description: Suggest something KHC Press Console should do, or do differently.
 title: "[Idea] "
 labels: ["enhancement"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for the suggestion. M7 Console drives real machinery, so ideas that would weaken STOP, the interlocks,
+        Thanks for the suggestion. KHC Press Console drives real machinery, so ideas that would weaken STOP, the interlocks,
         the calibration requirement or the CRITICAL alerts will not be taken; ideas that make the press safer or
         easier to use are very welcome.
 

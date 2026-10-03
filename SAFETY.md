@@ -1,7 +1,7 @@
 # Safety
 
-M7 Console controls a reloading press: a machine with a servo motor that can exert a lot of force, pinch points
-around the ram, shell plate and dies, and live primers and powder. M7 Console is **BETA software** and **unofficial**:
+KHC Press Console controls a reloading press: a machine with a servo motor that can exert a lot of force, pinch points
+around the ram, shell plate and dies, and live primers and powder. KHC Press Console is **BETA software** and **unofficial**:
 it is not made, endorsed or supported by Mark 7 Reloading. It is provided without any warranty
 ([Terms of use](TERMS.md)). You use it at your own risk.
 
@@ -25,9 +25,9 @@ Pulling the Raspberry Pi's plug does **not** stop the press: the press console's
 
 - Know where the console's power switch is, and keep your hand near it for the first cycles.
 - Keep hands and tools out of the press whenever it is powered and connected.
-- Check that **STOP**, the **Remote Stop** and the **Machine Guard** (the Safety Shield on a 1050) stop the press
+- Check that **STOP**, the **Remote Stop** and the **Machine Guard** (the Safety Shield on a 1050/1100) stop the press
   before you load components.
-- For your first sessions with M7 Console, after every software or firmware update, and after any change of
+- For your first sessions with KHC Press Console, after every software or firmware update, and after any change of
   hardware: use an **empty shell plate**.
 - Follow your press manual for everything the press itself does: dies, shell plate, powder, primers, calibration.
 
@@ -72,24 +72,24 @@ Pulling the Raspberry Pi's plug does **not** stop the press: the press console's
 
 ## Interlocks and bypass
 
-- **Remote Stop, the Machine Guard and TorqueSense are switched ON (ACTIVE) every time the console connects**,
-  whatever they were before. A bypass lasts until the next connection.
+- **Remote Stop, the Machine Guard and Index torque (TorqueSense™) are switched ON (ACTIVE) every time the
+  console connects**, whatever they were before. A bypass lasts until the next connection.
 - **Bypassing the Remote Stop or the Machine Guard asks for confirmation.** The switch then shows **BYPASSED**.
 - **A bypassed sensor or interlock does not stop the press.** With the Remote Stop bypassed, the remote stop button
   does nothing. With the Machine Guard bypassed, the press runs with the guard open. Bypass an interlock only for a
   specific reason, never while anyone can reach into the press, and turn it back on as soon as you can.
-- **An open guard stops only four commands.** With the Machine Guard (or a 1050's Safety Shield) open, the press
+- **An open guard stops only four commands.** With the Machine Guard (or a 1050/1100's Safety Shield) open, the press
   refuses only RUN, SINGLE CYCLE, END CYCLE and CALIBRATE. **Every other move still moves the press with the guard
-  open:** JOG UP / JOG DOWN, CLEAR SHELL PLATE, CLEAR CASE (the SwageSense alert's button) and the die-setup moves.
+  open:** JOG UP / JOG DOWN, CLEAR SHELL PLATE, CLEAR CASE (the swage sensor alert's button) and the die-setup moves.
   Keep your hands out of the press whenever it is powered, guard open or not.
-- Other sensors start **BYPASSED** on a new console (as in Mark 7's app), except PrimerSense on the Revolution. Turn
+- Other sensors start **BYPASSED** on a new console (as in Mark 7's app), except the primer sensor (PrimerSense™) on the Revo. Turn
   on the ones fitted to your press and check that each one stops the press.
 
 Details: [Sensors and interlocks](docs/user-guide/sensors-and-interlocks.md).
 
 ## After a jam: check for a double charge
 
-After a **Jam**, **TorqueSense** or **SwageSense** stop a case can be left half-way through a station, and running on
+After a **Jam**, **Index torque (TorqueSense™)** or **Swage sensor (SwageSense™)** stop a case can be left half-way through a station, and running on
 can give a round **a double charge or no charge**. The alert says what to check on your press. When in doubt, switch
 the press off, clear it by hand, and discard the affected rounds.
 
@@ -101,13 +101,15 @@ disarms itself on any stop. See [Foot pedal](docs/user-guide/foot-pedal.md).
 
 ## Firmware
 
-- You do not need to change your press firmware to use M7 Console.
+- You do not need to change your press firmware to use KHC Press Console.
 - **Each firmware image is for its own press model only.** All Mark 7 presses speak the same language to the
   console, so nothing on the press tells you when it runs another model's firmware: the sensor inputs and the motion
   and torque settings would be wrong. The console refuses another model's firmware, except Mark 7's own original for
   putting back a press that was flashed with the wrong one, and then only after a warning.
-- The **custom "pocketlearn" builds** (Evolution 20, Revolution 31) are unofficial and have not yet run on a real
-  press. The Revolution build must be validated on a Revolution itself.
+- The **KHC primer-learn patch** (for the Evo, from Mark 7 FW 19, and for the Revo, from Mark 7 FW 30) is
+  unofficial and **has not yet run on a real press**. Test it with dummy rounds and pull a primer before loading; the
+  Revo build must be validated on a Revo itself. With a KHC build, calibrate after every connect with an empty shell plate,
+  and keep Primer Orientation bypassed if no sensor is fitted.
 - If a firmware update is interrupted after it started writing, the console shows **DO NOT OPERATE THE PRESS** and
   will not connect until the press is flashed again. Do not run a press in that state.
 
@@ -121,32 +123,32 @@ yet digitally signed**: whoever controls the release account, or a USB stick you
 software that drives your press. Install only from the official releases page or from a stick you prepared yourself.
 See [Software updates](docs/user-guide/software-updates.md).
 
-## 650 / 750 and 1050 presses
+## 650/750 and 1050/1100 presses
 
-M7 Console supports the Mark 7 AutoDrive on the **650 PRO** and **650 X** (and the **750**, which we believe reports
-itself as a 650 model), the **1050 PRO**, **1050 X** and **1050 LTE**. **None of these has been run with M7 Console
+KHC Press Console supports Mark 7's drives for the Dillon 650 and 750 (the **650/750 PRO** and **650/750 X**; we believe a
+750 drive reports itself as a 650 model) and for the Dillon 1050 and 1100 (the **1050/1100 PRO**, **X** and **LTE**). **None of these has been run with KHC Press Console
 yet**; the support comes from Mark 7's manuals and from reading their firmware.
 
-- On a 650, the Setup tab's **Primer depth (0 = deepest)** sets how deep primers are seated. Change it one step at a
+- On a 650/750, the Setup tab's **Primer depth (0 = deepest)** sets how deep primers are seated. Change it one step at a
   time and check seated primers with SINGLE CYCLE before you RUN.
-- On a 1050, **JOG needs the Dillon ratchet removed** (the 1050 manual): with it fitted, jogging from mid-stroke jams
+- On a 1050/1100, **JOG needs the Dillon ratchet removed** (the 1050 manual): with it fitted, jogging from mid-stroke jams
   the press.
-- **Never connect a DIY Primer Orientation sensor to a 1050.** Its console port 2 is SwageSense: the press would read
-  the sensor as a swage switch.
+- **Never connect a DIY Primer Orientation sensor to a 1050/1100.** Its console port 2 is the swage sensor: the press
+  would read the sensor as a swage switch.
 
 ## Not yet verified on real hardware
 
-At the time of this BETA, M7 Console has been developed and tested against press simulators (a model of every press
+At the time of this BETA, KHC Press Console has been developed and tested against press simulators (a model of every press
 build, and Mark 7's real firmware running in a microcontroller simulator), and the SD card has been built and started
 in a container. These have **not yet been verified on real hardware**:
 
-- **Running a real press** with M7 Console, at all, on any model.
+- **Running a real press** with KHC Press Console, at all, on any model.
 - **The Raspberry Pi 4 and 5 themselves:** the screen, the touch panel, sound over HDMI, Wi-Fi and the boot time.
 - **The press console's USB-serial chip** with the Pi, and the controller reset through the cable.
-- **Firmware flashing** on a real press controller, and the custom Evolution 20 and Revolution 31 builds on a press.
+- **Firmware flashing** on a real press controller, and the KHC primer-learn patch for the Evo and the Revo on a press.
 - **Software updates and Wi-Fi** on a real console.
 - **The foot pedal** with a real USB pedal.
 
 Until these are verified, treat every session as a test: the console's power switch within reach, an empty shell
 plate first, and one careful step at a time. Please report what you find as an
-[issue](https://github.com/Shane-Cotta/M7-Console/issues/new/choose).
+[issue](https://github.com/Shane-Cotta/khc-press-console/issues/new/choose).
