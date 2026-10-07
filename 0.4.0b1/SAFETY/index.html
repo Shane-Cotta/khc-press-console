@@ -1417,137 +1417,183 @@
 
 <h1 id="safety">Safety<a class="headerlink" href="#safety" title="Permanent link">¶</a></h1>
 <p>KHC Press Console controls a reloading press: a machine with a servo motor that can exert a lot of force, pinch points
-around the ram, shell plate and dies, and live primers and powder. KHC Press Console is <strong>BETA software</strong> and <strong>unofficial</strong>:
-it is not made, endorsed or supported by Mark 7 Reloading. It is provided without any warranty
-(<a href="../TERMS/">Terms of use</a>). You use it at your own risk.</p>
+around the ram, shell plate and dies, and live primers and powder.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>KHC Press Console is <strong>BETA software</strong> and <strong>unofficial</strong>: it is not made, endorsed or supported by Mark 7
+Reloading. It is provided without any warranty (<a href="../TERMS/">Terms of use</a>). You use it at your own risk.</p>
+</div>
 <h2 id="the-one-rule-the-consoles-power-switch">The one rule: the console's power switch<a class="headerlink" href="#the-one-rule-the-consoles-power-switch" title="Permanent link">¶</a></h2>
+<div class="admonition danger">
+<p class="admonition-title">Caution</p>
 <p><strong>The Mark 7 press console has no separate emergency-stop button. Its power switch is the only hard stop.</strong> Keep it
-within reach whenever the press is powered. The STOP sign on the screen is a message sent over the USB cable. It is
-not a substitute for the power switch.</p>
-<p><strong>Switch off the console power</strong> when:</p>
+within reach whenever the press is powered.</p>
+</div>
+<p>The STOP sign on the screen is a message sent over the USB cable. It is not a substitute for the power switch.</p>
+<p><strong>Switch off the console power at once</strong> when:</p>
 <ul>
 <li>the screen shows a <strong>CRITICAL</strong> alert (full screen, red, ending in "Switch off the console power now");</li>
-<li>the press does not stop at once when you tap STOP, press the remote stop or open the guard;</li>
+<li>the press does not stop at once when you tap STOP, press the Remote Stop or open the guard;</li>
 <li>the screen goes dark, freezes, or shows "the console app has stopped";</li>
 <li>the touch screen stops responding while the press can move;</li>
 <li>anything else is not as you expect while the press can move.</li>
 </ul>
-<p>Pulling the Raspberry Pi's plug does <strong>not</strong> stop the press: the press console's switch does.</p>
+<p>Pulling the Raspberry Pi's plug does <strong>not</strong> stop the press. Only the press console's switch does.</p>
 <h2 id="before-every-session">Before every session<a class="headerlink" href="#before-every-session" title="Permanent link">¶</a></h2>
 <ul>
-<li>Know where the console's power switch is, and keep your hand near it for the first cycles.</li>
+<li>Know where the console's power switch is. Keep your hand near it for the first cycles.</li>
 <li>Keep hands and tools out of the press whenever it is powered and connected.</li>
 <li>Check that <strong>STOP</strong>, the <strong>Remote Stop</strong> and the <strong>Machine Guard</strong> (the Safety Shield on a 1050/1100) stop the press
   before you load components.</li>
-<li>For your first sessions with KHC Press Console, after every software or firmware update, and after any change of
-  hardware: use an <strong>empty shell plate</strong>.</li>
+<li>Use an <strong>empty shell plate</strong> for your first sessions with KHC Press Console, after every software or firmware update,
+  and after any change of hardware.</li>
 <li>Follow your press manual for everything the press itself does: dies, shell plate, powder, primers, calibration.</li>
 </ul>
 <h2 id="stop">STOP<a class="headerlink" href="#stop" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong>STOP is on every screen</strong>, in the same place on the right, and it is checked before anything else you touch.
-  It acts the moment a finger touches it (it does not wait for you to lift the finger), and it goes out ahead of
-  anything else waiting to be sent. It also cancels moves that were waiting to be sent, and closes any open question
-  (a bypass confirmation, a firmware override, a turn-off question).</li>
+<li><strong>STOP is on every screen,</strong> in the same place on the right, and it is checked before anything else you touch. It
+  acts the moment a finger touches it (it does not wait for you to lift the finger), and it goes out ahead of anything
+  else waiting to be sent.</li>
+<li>STOP also cancels moves that were waiting to be sent, and closes any open question (a bypass confirmation, a
+  firmware override, a turn-off question).</li>
 <li><strong>A STOP that is not confirmed is reported.</strong> If the press does not confirm a STOP within about a second, the
   console resets the press controller through the USB cable (which stops the motor) and shows <strong>STOP NOT CONFIRMED</strong>
   with "Switch off the console power now". Do it.</li>
 <li><strong>The press can stop answering while its motor moves.</strong> When the motor reports a fault as RUN, SINGLE CYCLE or END
   CYCLE starts, the press firmware can keep stepping the motor in a loop that answers nothing: not STOP, and not the
-  Remote Stop. If the guard is opened during it, the run can even start with the guard open. The console watches for
-  this: any RUN, SINGLE, END CYCLE or STOP that the press does not answer within about a second gets the controller
-  reset and the CRITICAL alert <strong>PRESS NOT ANSWERING</strong>. If the press moves after it reported a stop, you get <strong>PRESS
-  KEPT MOVING</strong>. Both tell you to switch off the console power.</li>
-<li>These <strong>CRITICAL alerts</strong> stay on the screen until you tap <strong>CONSOLE IS OFF</strong>, and they sound an alarm until then
-  (if sounds are on). STOP stays tappable on them.</li>
-<li><strong>If the touch screen stops working</strong> the console shows <strong>TOUCHSCREEN NOT WORKING</strong>: STOP on the screen cannot work
-  then. Use the remote stop, or the console's power switch.</li>
+  Remote Stop. If the guard is opened during it, the run can even start with the guard open.</li>
+<li>The console watches for this. Any RUN, SINGLE, END CYCLE or STOP that the press does not answer within about a
+  second gets the controller reset and the CRITICAL alert <strong>PRESS NOT ANSWERING</strong>. If the press moves after it
+  reported a stop, you get <strong>PRESS KEPT MOVING</strong>. Both tell you to switch off the console power.</li>
+<li><strong>CRITICAL alerts</strong> stay on the screen until you tap <strong>CONSOLE IS OFF</strong>, and they sound an alarm until then (if
+  sounds are on). STOP stays tappable on them.</li>
+<li><strong>If the touch screen stops working,</strong> the console shows <strong>TOUCHSCREEN NOT WORKING</strong>. STOP on the screen cannot work
+  then. Use the Remote Stop, or the console's power switch.</li>
 </ul>
 <h2 id="if-the-console-software-stops">If the console software stops<a class="headerlink" href="#if-the-console-software-stops" title="Permanent link">¶</a></h2>
 <ul>
 <li>If the console app crashes or hangs, the Raspberry Pi resets the press controller (the motor stops) and starts the
   app again within a few seconds. Nothing moves until you tap ACCEPT and calibrate again.</li>
-<li>If it keeps failing, it stops trying and the screen says <strong>"the console app has stopped"</strong>: the press is then
+<li>If it keeps failing, it stops trying and the screen says <strong>"the console app has stopped"</strong>. The press is then
   <strong>not controlled from the screen</strong>. Switch the press console off before you touch the press.</li>
 <li>If the Raspberry Pi loses power, or the USB cable is pulled, nothing can be sent to the press. A running press may
   keep cycling. <strong>Switch off the console power.</strong></li>
 </ul>
 <h2 id="run-needs-a-calibration">RUN needs a calibration<a class="headerlink" href="#run-needs-a-calibration" title="Permanent link">¶</a></h2>
 <ul>
-<li>RUN and SINGLE unlock only after the press confirms a successful <strong>CALIBRATE</strong> in the current connection. They lock
-  again after every new connection, every restart of the press controller, and NEUTRAL. A refused or failed
-  calibration keeps them locked.</li>
-<li><strong>Every connection restarts the press controller</strong>, and the press forgets its calibration (and, with Mark 7's
+<li>RUN and SINGLE unlock only after the press confirms a successful <strong>CALIBRATE</strong> in the current connection.</li>
+<li>They lock again after every new connection, every restart of the press controller, and NEUTRAL. A refused or
+  failed calibration keeps them locked.</li>
+<li><strong>Every connection restarts the press controller,</strong> and the press forgets its calibration (and, with Mark 7's
   firmware, the learned Primer Orientation sensor). Calibrate after every connection, with an <strong>empty shell plate</strong>.</li>
-<li>After <strong>NEUTRAL</strong> (motor off, the press can be moved by hand) RUN stays locked until you calibrate again, even
-  where your press manual goes straight back to RUN: the press may no longer be where it was calibrated.</li>
+<li>After <strong>NEUTRAL</strong> (motor off, the press can be moved by hand) RUN stays locked until you calibrate again, even where
+  your press manual goes straight back to RUN: the press may no longer be where it was calibrated.</li>
 </ul>
 <h2 id="interlocks-and-bypass">Interlocks and bypass<a class="headerlink" href="#interlocks-and-bypass" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong>Remote Stop, the Machine Guard and Index torque (TorqueSense™) are switched ON (ACTIVE) every time the
-  console connects</strong>, whatever they were before. A bypass lasts until the next connection.</li>
+<li><strong>Remote Stop, the Machine Guard and Index torque (TorqueSense™) are switched ON (ACTIVE) every time the console
+  connects,</strong> whatever they were before. A bypass lasts until the next connection.</li>
 <li><strong>Bypassing the Remote Stop or the Machine Guard asks for confirmation.</strong> The switch then shows <strong>BYPASSED</strong>.</li>
-<li><strong>A bypassed sensor or interlock does not stop the press.</strong> With the Remote Stop bypassed, the remote stop button
-  does nothing. With the Machine Guard bypassed, the press runs with the guard open. Bypass an interlock only for a
-  specific reason, never while anyone can reach into the press, and turn it back on as soon as you can.</li>
-<li><strong>An open guard stops only four commands.</strong> With the Machine Guard (or a 1050/1100's Safety Shield) open, the press
-  refuses only RUN, SINGLE CYCLE, END CYCLE and CALIBRATE. <strong>Every other move still moves the press with the guard
-  open:</strong> JOG UP / JOG DOWN, CLEAR SHELL PLATE, CLEAR CASE (the swage sensor alert's button) and the die-setup moves.
-  Keep your hands out of the press whenever it is powered, guard open or not.</li>
-<li>Other sensors start <strong>BYPASSED</strong> on a new console (as in Mark 7's app), except the primer sensor (PrimerSense™) on the Revo. Turn
-  on the ones fitted to your press and check that each one stops the press.</li>
+<li><strong>A bypassed sensor or interlock does not stop the press.</strong> With the Remote Stop bypassed, the Remote Stop button
+  does nothing. With the Machine Guard bypassed, the press runs with the guard open.</li>
+<li>Bypass an interlock only for a specific reason, never while anyone can reach into the press, and turn it back on as
+  soon as you can.</li>
+<li>Other sensors start <strong>BYPASSED</strong> on a new console (as in Mark 7's app), except the primer sensor (PrimerSense™) on
+  the Revo. Turn on the ones fitted to your press, and check that each one stops the press.</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>An open guard stops only four commands.</strong> With the Machine Guard (or a 1050/1100's Safety Shield) open, the press
+refuses only RUN, SINGLE CYCLE, END CYCLE and CALIBRATE. <strong>Every other move still moves the press with the guard
+open:</strong> JOG UP / JOG DOWN, CLEAR SHELL PLATE, CLEAR CASE (the swage sensor alert's button) and the die-setup moves.
+Keep your hands out of the press whenever it is powered, guard open or not.</p>
+</div>
 <p>Details: <a href="../docs/user-guide/sensors-and-interlocks/">Sensors and interlocks</a>.</p>
 <h2 id="after-a-jam-check-for-a-double-charge">After a jam: check for a double charge<a class="headerlink" href="#after-a-jam-check-for-a-double-charge" title="Permanent link">¶</a></h2>
-<p>After a <strong>Jam</strong>, <strong>Index torque (TorqueSense™)</strong> or <strong>Swage sensor (SwageSense™)</strong> stop a case can be left half-way through a station, and running on
-can give a round <strong>a double charge or no charge</strong>. The alert says what to check on your press. When in doubt, switch
-the press off, clear it by hand, and discard the affected rounds.</p>
+<p>After a <strong>Jam</strong>, <strong>Index torque (TorqueSense™)</strong> or <strong>Swage sensor (SwageSense™)</strong> stop, a case can be left half-way
+through a station. Running on can give a round <strong>a double charge or no charge</strong>.</p>
+<ul>
+<li>The alert says what to check on your press.</li>
+<li>When in doubt, switch the press off, clear it by hand, and discard the affected rounds.</li>
+</ul>
 <h2 id="the-foot-pedal">The foot pedal<a class="headerlink" href="#the-foot-pedal" title="Permanent link">¶</a></h2>
-<p>A USB foot pedal can start <strong>SINGLE CYCLE</strong> only. With it armed your hands are free while the press moves: keep them
-clear. <strong>The pedal is never a stop.</strong> It cannot be armed while the Remote Stop or the Machine Guard is bypassed, and it
-disarms itself on any stop. See <a href="../docs/user-guide/foot-pedal/">Foot pedal</a>.</p>
+<p>A USB foot pedal can start <strong>SINGLE CYCLE</strong> only. With it armed, your hands are free while the press moves: keep them
+clear.</p>
+<ul>
+<li><strong>The pedal is never a stop.</strong></li>
+<li>It cannot be armed while the Remote Stop or the Machine Guard is bypassed.</li>
+<li>It disarms itself on any stop.</li>
+</ul>
+<p>See <a href="../docs/user-guide/foot-pedal/">Foot pedal</a>.</p>
 <h2 id="firmware">Firmware<a class="headerlink" href="#firmware" title="Permanent link">¶</a></h2>
 <ul>
 <li>You do not need to change your press firmware to use KHC Press Console.</li>
-<li><strong>Each firmware image is for its own press model only.</strong> All Mark 7 presses speak the same language to the
-  console, so nothing on the press tells you when it runs another model's firmware: the sensor inputs and the motion
-  and torque settings would be wrong. The console refuses another model's firmware, except Mark 7's own original for
-  putting back a press that was flashed with the wrong one, and then only after a warning.</li>
-<li>The <strong>KHC primer-learn patch</strong> (for the Evo, from Mark 7 FW 19, and for the Revo, from Mark 7 FW 30) is
-  unofficial and <strong>has not yet run on a real press</strong>. Test it with dummy rounds and pull a primer before loading; the
-  Revo build must be validated on a Revo itself. With a KHC build, calibrate after every connect with an empty shell plate,
-  and keep Primer Orientation bypassed if no sensor is fitted.</li>
+<li><strong>No firmware image is released.</strong> The console reads a backup of your press's own firmware before every flash of a
+  press it has identified (a recovery flash of an unknown press reads none). It
+  makes the KHC primer-learn patch on the console, from that backup. <strong>RESTORE BACKUP</strong> puts your press's own firmware
+  back.</li>
+<li><strong>Each firmware image is for its own press model only.</strong> All Mark 7 presses speak the same language to the console,
+  so nothing on the press tells you when it runs another model's firmware: the sensor inputs and the motion and torque
+  settings would be wrong. The console refuses another model's firmware, except Mark 7's own original for putting back
+  a press that was flashed with the wrong one, and then only after a warning.</li>
 <li>If a firmware update is interrupted after it started writing, the console shows <strong>DO NOT OPERATE THE PRESS</strong> and
   will not connect until the press is flashed again. Do not run a press in that state.</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>The KHC primer-learn patch is unofficial and has not been validated on a press.</strong> The first test of a KHC build on
+a Revo ran an empty plate one index before it stopped, where Mark 7's own firmware stops before the tool head moves.
+Until that is resolved:</p>
+<ul>
+<li>use a KHC build with <strong>dummy rounds only</strong>, and pull a primer to check that the press stops before you load;</li>
+<li>check that <strong>Primer Orientation</strong> is switched on (green, ACTIVE) on the Sensors tab; with no sensor fitted,
+  keep it bypassed;</li>
+<li>calibrate after every connection, with an empty shell plate;</li>
+<li>the Revo build must be validated on a Revo itself.</li>
+</ul>
+</div>
 <p>Details: <a href="../docs/user-guide/firmware/">Firmware</a>.</p>
 <h2 id="software-updates">Software updates<a class="headerlink" href="#software-updates" title="Permanent link">¶</a></h2>
-<p>Updates are installed only when you tap INSTALL, never while the press runs, and the console disconnects from the
-press first. The update packages are checked against the checksums published on the releases page, but <strong>they are not
-yet digitally signed</strong>: whoever controls the release account, or a USB stick you put in the console, could install
-software that drives your press. Install only from the official releases page or from a stick you prepared yourself.
-See <a href="../docs/user-guide/software-updates/">Software updates</a>.</p>
-<h2 id="650750-and-10501100-presses">650/750 and 1050/1100 presses<a class="headerlink" href="#650750-and-10501100-presses" title="Permanent link">¶</a></h2>
-<p>KHC Press Console supports Mark 7's drives for the Dillon 650 and 750 (the <strong>650/750 PRO</strong> and <strong>650/750 X</strong>; we believe a
-750 drive reports itself as a 650 model) and for the Dillon 1050 and 1100 (the <strong>1050/1100 PRO</strong>, <strong>X</strong> and <strong>LTE</strong>). <strong>None of these has been run with KHC Press Console
-yet</strong>; the support comes from Mark 7's manuals and from reading their firmware.</p>
 <ul>
-<li>On a 650/750, the Setup tab's <strong>Primer depth (0 = deepest)</strong> sets how deep primers are seated. Change it one step at a
-  time and check seated primers with SINGLE CYCLE before you RUN.</li>
-<li>On a 1050/1100, <strong>JOG needs the Dillon ratchet removed</strong> (the 1050 manual): with it fitted, jogging from mid-stroke jams
-  the press.</li>
+<li>Updates are installed <strong>only when you tap INSTALL</strong> and confirm. The console checks for new versions by itself, but
+  it never installs anything by itself.</li>
+<li>An update is never installed while the press runs, and the console disconnects from the press first.</li>
+<li><strong>Pre-releases</strong> are test versions. A console gets one only when KHC Precision has assigned it to that console or its
+  license for testing. Treat a pre-release as untested: empty shell plate first, power switch within reach.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Updates are checked, but not yet digitally signed.</strong> Each package is checked against the checksums published on the
+releases page. But whoever controls the release account, or a USB stick you put in the console, could install
+software that drives your press. Install only from the official releases page, or from a stick you prepared yourself
+from it.</p>
+</div>
+<p>See <a href="../docs/user-guide/software-updates/">Software updates</a>.</p>
+<h2 id="650750-and-10501100-presses">650/750 and 1050/1100 presses<a class="headerlink" href="#650750-and-10501100-presses" title="Permanent link">¶</a></h2>
+<p>KHC Press Console supports Mark 7's drives for the Dillon 650 and 750 (the <strong>650/750 PRO</strong> and <strong>650/750 X</strong>; we
+believe a 750 drive reports itself as a 650 model) and for the Dillon 1050 and 1100 (the <strong>1050/1100 PRO</strong>, <strong>X</strong> and
+<strong>LTE</strong>). <strong>None of these has been run with KHC Press Console yet.</strong> The support comes from Mark 7's manuals and from
+reading their firmware.</p>
+<ul>
+<li>On a 650/750, the Setup tab's <strong>PRIMER DEPTH</strong> sets how deep primers are seated (0 is the deepest). Change it one
+  step at a time, and check seated primers with SINGLE CYCLE before you RUN.</li>
+<li>On a 1050/1100, <strong>JOG needs the Dillon ratchet removed</strong> (the 1050 manual). With it fitted, jogging from mid-stroke
+  jams the press.</li>
 <li><strong>Never connect a DIY Primer Orientation sensor to a 1050/1100.</strong> Its console port 2 is the swage sensor: the press
   would read the sensor as a swage switch.</li>
 </ul>
 <h2 id="not-yet-verified-on-real-hardware">Not yet verified on real hardware<a class="headerlink" href="#not-yet-verified-on-real-hardware" title="Permanent link">¶</a></h2>
-<p>At the time of this BETA, KHC Press Console has been developed and tested against press simulators (a model of every press
-build, and Mark 7's real firmware running in a microcontroller simulator), and the SD card has been built and started
-in a container. These have <strong>not yet been verified on real hardware</strong>:</p>
+<p>At the time of this BETA, KHC Press Console has been developed and tested against press simulators (a model of every
+press build, and Mark 7's real firmware running in a microcontroller simulator), and has been used on a real <strong>Apex
+10 Evolution</strong> and a real <strong>Revolution</strong>: connecting, calibrating and running, and backing up and flashing the press
+firmware, with Mark 7's firmware and with the KHC builds. That is use, not validation. These have <strong>not yet been
+verified</strong>:</p>
 <ul>
-<li><strong>Running a real press</strong> with KHC Press Console, at all, on any model.</li>
-<li><strong>The Raspberry Pi 4 and 5 themselves:</strong> the screen, the touch panel, sound over HDMI, Wi-Fi and the boot time.</li>
-<li><strong>The press console's USB-serial chip</strong> with the Pi, and the controller reset through the cable.</li>
-<li><strong>Firmware flashing</strong> on a real press controller, and the KHC primer-learn patch for the Evo and the Revo on a press.</li>
+<li><strong>The KHC primer-learn patch</strong> for the Evo and the Revo: its first press test is still open (the warning above).</li>
+<li><strong>The 650/750 and the 1050/1100</strong> with KHC Press Console, at all.</li>
+<li><strong>Every Raspberry Pi 4 and 5 variant:</strong> the screen, the touch panel, sound over HDMI, Wi-Fi and the boot time have
+  been tried on the owner's units only.</li>
+<li><strong>The controller reset through the cable</strong> on every press console revision.</li>
 <li><strong>Software updates and Wi-Fi</strong> on a real console.</li>
 <li><strong>The foot pedal</strong> with a real USB pedal.</li>
 </ul>

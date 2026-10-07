@@ -659,10 +659,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#how-alerts-appear" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How alerts appear
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#kinds-of-alert" class="md-nav__link">
     <span class="md-ellipsis">
       
         Kinds of alert
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stop-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stop alerts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#after-a-jam-check-for-a-double-charge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After a jam: check for a double charge
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warnings-and-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Warnings and information
       
     </span>
   </a>
@@ -677,6 +721,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="CRITICAL alerts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-switch-the-power-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why switch the power off
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1162,10 +1223,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#how-alerts-appear" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How alerts appear
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#kinds-of-alert" class="md-nav__link">
     <span class="md-ellipsis">
       
         Kinds of alert
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stop-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stop alerts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#after-a-jam-check-for-a-double-charge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After a jam: check for a double charge
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warnings-and-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Warnings and information
       
     </span>
   </a>
@@ -1180,6 +1285,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="CRITICAL alerts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-switch-the-power-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why switch the power off
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1220,11 +1342,18 @@
 
 
 <h1 id="alerts">Alerts<a class="headerlink" href="#alerts" title="Permanent link">¶</a></h1>
-<p>Everything the press reports, and every problem the console sees, becomes an alert. Alerts start after you tap
-ACCEPT. The newest is shown first; CRITICAL alerts always come first, then the press's own stops, then the rest. An
-alert never covers the RUN / END CYCLE / SINGLE / STOP column, except a CRITICAL one, which leaves STOP uncovered.</p>
-<p>With sounds on, each new alert plays a short sound by its kind, and a CRITICAL alert sounds an alarm every few seconds
-until it is closed (<a href="../console-settings/#sound">Console settings</a>).</p>
+<p>Everything the press reports, and every problem the console sees, becomes an alert. Alerts start once you have tapped
+ACCEPT (or CONNECT).</p>
+<h2 id="how-alerts-appear">How alerts appear<a class="headerlink" href="#how-alerts-appear" title="Permanent link">¶</a></h2>
+<ul>
+<li>One alert is shown at a time. <strong>CRITICAL</strong> alerts always come first, then the press's own stops, then the rest;
+  within each, the newest first.</li>
+<li>An alert is a dialog over the left part of the screen. It <strong>never covers the RUN, END CYCLE, SINGLE and STOP
+  column</strong>, except a CRITICAL alert, which covers everything but <strong>STOP</strong>.</li>
+<li>With sound on, each new alert plays a short sound by its kind, and a CRITICAL alert sounds an alarm every few
+  seconds until it is closed (<a href="../console-settings/#sound">Sound</a>).</li>
+<li>When a run starts, any NEUTRAL or CLEAR CASE offer still open is dropped, so it can never be sent to a moving press.</li>
+</ul>
 <h2 id="kinds-of-alert">Kinds of alert<a class="headerlink" href="#kinds-of-alert" title="Permanent link">¶</a></h2>
 <table>
 <thead>
@@ -1239,44 +1368,214 @@ until it is closed (<a href="../console-settings/#sound">Console settings</a>).<
 <tr>
 <td><strong>Information</strong></td>
 <td>a dialog</td>
-<td>Run ended, Stopping at end of cycle, Not now (a refused tap, with the reason)</td>
-<td>Read it, tap OK</td>
+<td>Run ended, Stopping at end of cycle, Not now</td>
+<td>Read it, tap <strong>OK</strong></td>
 </tr>
 <tr>
 <td><strong>Warning</strong></td>
 <td>a dialog</td>
-<td>Calibration failed, Refused by the press, Primers low, Connection reset, Neutral</td>
-<td>Read it, fix the cause, tap OK</td>
+<td>Calibration failed, Refused by the press, Connection reset, Primers low, Neutral</td>
+<td>Read it, fix the cause, tap <strong>OK</strong></td>
 </tr>
 <tr>
 <td><strong>Stop</strong></td>
 <td>a dialog</td>
-<td>Stopped, Jam: Digital Clutch, Index torque (TorqueSense™), Machine Guard open, Remote Stop, Decap sensor (DecapSense™), Swage sensor (SwageSense™), Bullet sensor (BulletSense™), Primer Orientation, Index, Powder check</td>
+<td>Stopped, Jam: Digital Clutch, Machine Guard open, Remote Stop, the sensor stops</td>
 <td>The press has stopped. Make it safe, clear the cause, check for a double charge where the alert says so</td>
 </tr>
 <tr>
 <td><strong>CRITICAL</strong></td>
 <td>full screen, red</td>
 <td>STOP NOT CONFIRMED, PRESS NOT ANSWERING, PRESS KEPT MOVING, TOUCHSCREEN NOT WORKING</td>
-<td><strong>Switch off the console power now</strong></td>
+<td><strong>Switch off the press console's power now</strong></td>
 </tr>
 </tbody>
 </table>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-alert-stop.png" data-desc-position="bottom"><img alt="A stop alert over the press screen, with NEUTRAL and OK" src="../../images/screen-alert-stop.png"></a></p>
-<p>Stop alerts offer:</p>
+<h2 id="stop-alerts">Stop alerts<a class="headerlink" href="#stop-alerts" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-alert-stop.png" data-desc-position="bottom"><img alt="A stop alert over the press screen, with NEUTRAL and OK, the run column still visible on the right" src="../../images/screen-alert-stop.png"></a></p>
+<table>
+<thead>
+<tr>
+<th>Alert</th>
+<th>What happened</th>
+<th>Buttons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Stopped</strong></td>
+<td>The press stopped, for example after STOP.</td>
+<td><strong>OK</strong>, <strong>NEUTRAL</strong></td>
+</tr>
+<tr>
+<td><strong>Jam: Digital Clutch</strong></td>
+<td>The torque limit was reached. Clear the jam, then do the double-charge check the alert names.</td>
+<td><strong>OK</strong>, <strong>NEUTRAL</strong></td>
+</tr>
+<tr>
+<td><strong>Index torque (TorqueSense™)</strong></td>
+<td>Resistance while the shell plate indexed. Clear it, then do the double-charge check.</td>
+<td><strong>OK</strong>, <strong>NEUTRAL</strong></td>
+</tr>
+<tr>
+<td><strong>Swage sensor (SwageSense™)</strong></td>
+<td>Swage fault. <strong>CLEAR CASE</strong> raises the tool head to release the case; do the double-charge check.</td>
+<td><strong>OK</strong>, <strong>CLEAR CASE</strong></td>
+</tr>
+<tr>
+<td><strong>Machine Guard open</strong> (<strong>Safety Shield open</strong> on a 1050/1100)</td>
+<td>The guard was opened. The alert says which moves still work with it open.</td>
+<td><strong>OK</strong></td>
+</tr>
+<tr>
+<td><strong>Remote Stop</strong></td>
+<td>The remote stop was pressed.</td>
+<td><strong>OK</strong></td>
+</tr>
+<tr>
+<td><strong>Decap sensor (DecapSense™)</strong></td>
+<td>The spent primer was not seen ejecting.</td>
+<td><strong>OK</strong></td>
+</tr>
+<tr>
+<td><strong>Decap sensor dirty</strong></td>
+<td>The decap sensor's beam was blocked at home. Clean it; if it was unplugged, plug it back in or bypass it.</td>
+<td><strong>OK</strong></td>
+</tr>
+<tr>
+<td><strong>Bullet sensor (BulletSense™)</strong></td>
+<td>No projectile was detected.</td>
+<td><strong>OK</strong></td>
+</tr>
+<tr>
+<td><strong>Primer Orientation</strong></td>
+<td>Case not present or primer not seated properly.</td>
+<td><strong>OK</strong></td>
+</tr>
+<tr>
+<td><strong>Index</strong></td>
+<td>The shell plate did not index correctly.</td>
+<td><strong>OK</strong></td>
+</tr>
+<tr>
+<td><strong>Powder check</strong></td>
+<td>Powder charge out of range.</td>
+<td><strong>OK</strong></td>
+</tr>
+<tr>
+<td><strong>Powder check 2</strong></td>
+<td>The second powder check tripped.</td>
+<td><strong>OK</strong></td>
+</tr>
+<tr>
+<td><strong>Sensor malfunction</strong></td>
+<td>A powder-check sensor is obstructed or disconnected. Bypass it if it is not fitted.</td>
+<td><strong>OK</strong></td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li><strong>NEUTRAL:</strong> switches the motor off so the press can be moved by hand (RUN then needs a new calibration);</li>
-<li><strong>CLEAR CASE</strong> (swage sensor): raises the tool head to release the case. It moves the press, even with the guard open;</li>
-<li><strong>OK:</strong> closes the alert.</li>
+<li><strong>NEUTRAL</strong> switches the motor off so the press can be moved by hand. RUN then needs a new calibration, with an
+  empty shell plate (<a href="../calibrate-and-run/#neutral">NEUTRAL</a>).</li>
+<li><strong>CLEAR CASE</strong> moves the press, <strong>even with the guard open</strong>.</li>
+<li><strong>OK</strong> closes the alert.</li>
 </ul>
-<p>After a <strong>Jam</strong>, <strong>Index torque</strong> or <strong>Swage sensor</strong> stop, the alert says what to check for a <strong>double charge</strong> on
-your press (for example station 5 on an Evo). Do it before you continue.</p>
+<h2 id="after-a-jam-check-for-a-double-charge">After a jam: check for a double charge<a class="headerlink" href="#after-a-jam-check-for-a-double-charge" title="Permanent link">¶</a></h2>
+<p>After a <strong>Jam</strong>, <strong>Index torque</strong> or <strong>Swage sensor</strong> stop, a case can be left half-way through a station, and running
+on can give a round <strong>a double charge or no charge</strong>. The alert says what to check on your press:</p>
+<table>
+<thead>
+<tr>
+<th>Press</th>
+<th>What the alert asks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Evo models</td>
+<td>Check station #5 for powder in the case and empty it.</td>
+</tr>
+<tr>
+<td>Revo models</td>
+<td>Clear the case entering the shell plate and check the powder station.</td>
+</tr>
+<tr>
+<td>1050/1100</td>
+<td>Check station #5 (powder) and empty the case there. If the plate over- or under-indexed, power off, clear the press by hand and discard the affected rounds.</td>
+</tr>
+<tr>
+<td>650/750</td>
+<td>Do not just JOG and RUN. Power off, clear the press by hand and discard the affected rounds, then run one cycle at the lowest speed and clutch.</td>
+</tr>
+</tbody>
+</table>
+<p>Do it before you continue. When in doubt, switch the press off, clear it by hand and discard the affected rounds.</p>
+<h2 id="warnings-and-information">Warnings and information<a class="headerlink" href="#warnings-and-information" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Alert</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Calibration failed</strong></td>
+<td>The press refused or aborted the calibration (the guard open, busy, or blocked). RUN stays locked.</td>
+</tr>
+<tr>
+<td><strong>Refused by the press</strong></td>
+<td>The press refused a command (busy, not at home, or the guard open).</td>
+</tr>
+<tr>
+<td><strong>Not delivered</strong></td>
+<td>A command did not reach the press because the connection reset.</td>
+</tr>
+<tr>
+<td><strong>Connection reset</strong></td>
+<td>The press restarted, stopped answering for 8 seconds, or the USB connection failed. Calibrate again once it reconnects (<a href="../calibrate-and-run/#when-the-connection-resets">When the connection resets</a>).</td>
+</tr>
+<tr>
+<td><strong>Primers low</strong></td>
+<td>The primer sensor tripped: the run ends at the end of this cycle. Refill the primer tube.</td>
+</tr>
+<tr>
+<td><strong>Neutral</strong></td>
+<td>The motor is off. RUN stays locked until you calibrate again.</td>
+</tr>
+<tr>
+<td><strong>Press</strong></td>
+<td>A message from the press itself, shown as it is.</td>
+</tr>
+<tr>
+<td><strong>Run ended</strong></td>
+<td>The press finished the cycle and is at home.</td>
+</tr>
+<tr>
+<td><strong>Stopping at end of cycle</strong></td>
+<td>A counter on the Monitors tab reached its stop level.</td>
+</tr>
+<tr>
+<td><strong>Firmware available</strong></td>
+<td>A newer KHC firmware is available for this press (<a href="../firmware/#firmware-available">Press firmware</a>).</td>
+</tr>
+<tr>
+<td><strong>Not now</strong></td>
+<td>What you tapped cannot be done at the moment; the alert says why (<a href="#not-now">below</a>).</td>
+</tr>
+</tbody>
+</table>
 <h2 id="critical-alerts">CRITICAL alerts<a class="headerlink" href="#critical-alerts" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-alert-critical.png" data-desc-position="bottom"><img alt="PRESS NOT ANSWERING: a full-screen red alert ending &quot;Switch off the console power now&quot;, with STOP and CONSOLE IS OFF" src="../../images/screen-alert-critical.png"></a></p>
-<p>A CRITICAL alert means the console cannot be sure the press is under control. Every CRITICAL alert ends with
-<strong>"Switch off the console power now."</strong> <strong>Do it</strong>, then tap <strong>CONSOLE IS OFF</strong> to close the alert. STOP stays
-tappable on it. Once it is closed, the console offers to <strong>SAVE LOGS</strong> for a bug report
-(<a href="../troubleshooting/#reporting-a-problem">Reporting a problem</a>).</p>
+<p>A CRITICAL alert means the console cannot be sure the press is under control.</p>
+<ol>
+<li><strong>Switch off the press console's power now.</strong> Every CRITICAL alert ends with "Switch off the console power now."
+   STOP stays tappable on the alert.</li>
+<li>Tap <strong>CONSOLE IS OFF</strong> to close the alert.</li>
+<li>The console then asks <strong>Save the logs?</strong>: tap <strong>SAVE LOGS</strong> to keep them for a bug report
+   (<a href="../troubleshooting/#reporting-a-problem">Reporting a problem</a>), or <strong>OK</strong>.</li>
+<li>Check the press before you switch it on again and reconnect.</li>
+</ol>
 <table>
 <thead>
 <tr>
@@ -1295,22 +1594,23 @@ tappable on it. Once it is closed, the console offers to <strong>SAVE LOGS</stro
 </tr>
 <tr>
 <td><strong>PRESS KEPT MOVING</strong></td>
-<td>The press moved after it reported a stop. The console sent STOP, and resets the controller if that STOP is not confirmed.</td>
+<td>The press moved after it reported a stop. The console sent STOP, and resets the press controller if that STOP is not confirmed.</td>
 </tr>
 <tr>
 <td><strong>TOUCHSCREEN NOT WORKING</strong></td>
-<td>The touch screen stopped responding: STOP on the screen cannot work. Use the remote stop, or switch off the console power if the press is moving. This alert closes with OK, and by itself when the touch screen is back.</td>
+<td>The touch screen stopped responding, so STOP on the screen cannot work. Use the remote stop, or switch off the press console's power if the press is moving. This alert closes with <strong>OK</strong>, and by itself when the touch screen is back.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Why switch the power off?</strong> The Mark 7 press console has <strong>no separate emergency-stop button</strong>. Its power switch is
-the only hard stop. The console's controller reset normally stops the motor, but when the press has stopped answering,
-only the power switch is certain. Switch it off, wait, and check the press before you switch it on again and
-reconnect.</p>
+<h3 id="why-switch-the-power-off">Why switch the power off<a class="headerlink" href="#why-switch-the-power-off" title="Permanent link">¶</a></h3>
+<p>The Mark 7 press console has <strong>no separate emergency-stop button</strong>: its power switch is the only hard stop. The
+console's controller reset normally stops the motor, but when the press has stopped answering, only the power switch
+is certain.</p>
 <h2 id="not-now">Not now<a class="headerlink" href="#not-now" title="Permanent link">¶</a></h2>
 <p>If you tap something the press cannot do at that moment (RUN before calibrating, CALIBRATE while running, a setting
-while the press calibrates), the console shows <strong>Not now</strong> with the reason, and sends nothing. A move that had to wait
-more than a second behind something slow is also dropped with Not now, rather than moving the press late.</p>
+while the press calibrates), the console shows <strong>Not now</strong> with the reason and sends nothing. A move that had to wait
+more than a second behind something slower is also dropped with <strong>Not now</strong>, rather than moving the press late. A
+refused foot pedal press shows <strong>Not now (pedal)</strong> (<a href="../foot-pedal/">Foot pedal</a>).</p>
 
 
 

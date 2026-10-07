@@ -730,6 +730,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-a-pedal-press-counts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How a pedal press counts
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1216,6 +1227,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-a-pedal-press-counts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How a pedal press counts
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1243,37 +1265,47 @@
 
 <h1 id="foot-pedal">Foot pedal<a class="headerlink" href="#foot-pedal" title="Permanent link">¶</a></h1>
 <p>A USB foot pedal can start <strong>SINGLE CYCLE</strong>, one cycle per press, so your hands are free to place cases and
-projectiles. <strong>It does nothing else, and it is never a stop:</strong> STOP, the remote stop and the console's power switch
-are the stops.</p>
-<blockquote>
+projectiles. <strong>It does nothing else.</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>The pedal is never a stop.</strong> STOP, the remote stop and the press console's power switch are the stops. With the
+pedal armed, the press moves while your hands are free: keep them clear of the shell plate and dies.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>The foot pedal has been tested with the console's simulators, not yet with a real USB pedal on a Raspberry Pi.</p>
-</blockquote>
+</div>
 <h2 id="which-pedals-work">Which pedals work<a class="headerlink" href="#which-pedals-work" title="Permanent link">¶</a></h2>
-<p>Any USB foot pedal that acts as a <strong>keyboard</strong> (it "types" a key when pressed) and can be set to a key that keyboards
-rarely send. Best: a pedal you can program to <strong>F13 to F24</strong>. Escape, Enter, Space, Tab, Backspace, Delete, the arrows,
-and the modifier and lock keys cannot be learned. Plug it into any USB port of the Pi.</p>
+<ul>
+<li>Any USB foot pedal that acts as a <strong>keyboard</strong> (it "types" a key when pressed). Plug it into any USB port of the Pi.</li>
+<li>Set it to a key that keyboards rarely send. Best: a pedal you can program to <strong>F13 to F24</strong>.</li>
+<li>Escape, Enter, Space, Tab, Backspace, Delete, the arrows, and the modifier and lock keys cannot be learned.</li>
+</ul>
 <p>The console recognises <strong>the learned pedal itself</strong>, by its USB identity and serial number (or the USB port it is in):
 the same key typed on another keyboard does not fire SINGLE CYCLE. A pedal moved to another USB port (or one without a
 serial number, replaced by another unit) must be learned again.</p>
 <h2 id="setting-it-up">Setting it up<a class="headerlink" href="#setting-it-up" title="Permanent link">¶</a></h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-pedal.png" data-desc-position="bottom"><img alt="The foot pedal page: ON/OFF, the learned key, LEARN KEY, the auto-disarm minutes" src="../../images/screen-pedal.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-pedal.png" data-desc-position="bottom"><img alt="The FOOT PEDAL page: USB foot pedal ON, the learned key, LEARN KEY and CLEAR, and the auto-disarm minutes" src="../../images/screen-pedal.png"></a></p>
 <ol>
-<li><strong>CONSOLE SETTINGS → FOOT PEDAL.</strong> Switch <strong>USB foot pedal</strong> <strong>ON</strong> (it is off on a new console).</li>
-<li>Tap <strong>LEARN KEY</strong> and press the pedal once. The page shows the learned key. <strong>CLEAR</strong> forgets it; <strong>CANCEL LEARN</strong>
-   stops learning.</li>
-<li>Set <strong>Auto-disarm</strong>: the pedal disarms itself after this many minutes without a press (5 to 30).</li>
+<li>On the home screen, tap <strong>CONSOLE SETTINGS</strong>, then <strong>FOOT PEDAL</strong>.</li>
+<li>Switch <strong>USB foot pedal</strong> to <strong>ON</strong> (it is off on a new console).</li>
+<li>Tap <strong>LEARN KEY</strong>. When the page says "Press the pedal once now.", press the pedal once. The page shows the learned
+   key. (<strong>CANCEL LEARN</strong> stops learning; <strong>CLEAR</strong> forgets the key.)</li>
+<li>Set <strong>Auto-disarm</strong>: the pedal disarms itself after this many <strong>MINUTES</strong> without a pedal press (5 to 30; 10 on a
+   new console).</li>
 </ol>
+<p>The pedal is armed on the press screen, never on this page.</p>
 <h2 id="arming-it-every-session">Arming it, every session<a class="headerlink" href="#arming-it-every-session" title="Permanent link">¶</a></h2>
 <p>The pedal works only while it is <strong>armed</strong>, and arming is never remembered: not across connections, restarts or a
 settings import.</p>
 <ol>
 <li>Connect, accept and <strong>CALIBRATE</strong> as usual.</li>
 <li>On the <strong>Control</strong> tab, tap <strong>ARM PEDAL</strong> (orange).</li>
-<li>Read the confirmation <strong>"Arm the foot pedal?"</strong> ("Your hands will be free while the press moves. Keep them clear of
-   the shell plate and dies: the pedal starts a full stroke. The pedal is not a stop: STOP, the remote stop and the
-   console power switch are.") and tap <strong>I UNDERSTAND: ARM</strong>. It is asked once per connection.</li>
-<li>The status bar shows <strong>PEDAL ARMED</strong> (purple). Each pedal press now starts one SINGLE CYCLE, with the same checks
-   as the SINGLE button. <strong>DISARM PEDAL</strong> disarms it.</li>
+<li>The first time in each connection, the console asks <strong>"Arm the foot pedal?"</strong>: "The pedal starts a full stroke, so
+   keep your hands clear of the shell plate and dies. It is not a stop: STOP, the remote stop and the console power
+   switch are." Tap <strong>I UNDERSTAND: ARM</strong>, or <strong>CANCEL</strong>.</li>
+<li>The status bar shows <strong>PEDAL ARMED</strong>. Each pedal press now starts one SINGLE CYCLE, with the same checks as the
+   SINGLE button. <strong>DISARM PEDAL</strong> disarms it.</li>
 </ol>
 <table>
 <thead>
@@ -1284,22 +1316,33 @@ settings import.</p>
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-press-evolution-pedal-confirm.png" data-desc-position="bottom"><img alt="The confirmation before arming" src="../../images/screen-press-evolution-pedal-confirm.png"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-press-evolution-pedal-confirm.png" data-desc-position="bottom"><img alt="The &quot;Arm the foot pedal?&quot; confirmation with CANCEL and I UNDERSTAND: ARM" src="../../images/screen-press-evolution-pedal-confirm.png"></a></td>
 <td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-press-evolution-pedal-armed.png" data-desc-position="bottom"><img alt="PEDAL ARMED in the status bar, and DISARM PEDAL on the Control tab" src="../../images/screen-press-evolution-pedal-armed.png"></a></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Arming is refused</strong> (with the reason) before a calibration, while the Remote Stop or the Machine Guard is bypassed,
-while a CRITICAL alert is open, away from the press screen, and on a press without SINGLE (the 1050/1100 LTE).</p>
+<p><strong>ARM PEDAL</strong> needs a learned key and a press with SINGLE CYCLE (not the 1050/1100 LTE). Arming is refused, with
+"Can't arm the pedal:" and the reason on the Control tab, before a calibration, while the Remote Stop or the Machine
+Guard is bypassed, while a CRITICAL alert is open, and away from the press screen.</p>
 <h2 id="when-it-disarms-itself">When it disarms itself<a class="headerlink" href="#when-it-disarms-itself" title="Permanent link">¶</a></h2>
-<p>The pedal disarms on: <strong>any STOP</strong> (at the moment you touch it), any stop alert or CRITICAL alert, <strong>NEUTRAL</strong>, a
-connection reset or disconnect, a refused command or a fault, bypassing the Remote Stop or the Machine Guard, losing the
-calibration, the touch screen failing, <strong>leaving the press screen</strong>, and the auto-disarm time without a press. Then arm
-it again on the Control tab.</p>
-<p>A pedal press is ignored while a question is open on the press screen (a bypass confirmation, the number pad). Each
-press must be released before the next one counts, holding the pedal down does not repeat, and two presses closer
-than about three quarters of a second count once. A refused pedal press shows one <strong>Not now (pedal)</strong> alert with the
-reason.</p>
+<p>The pedal disarms on:</p>
+<ul>
+<li><strong>any STOP</strong> (at the moment you touch it), any stop alert or CRITICAL alert, and <strong>NEUTRAL</strong>;</li>
+<li>a connection reset or disconnect, a refused command or a press fault;</li>
+<li>bypassing the Remote Stop or the Machine Guard, or losing the calibration;</li>
+<li>the touch screen failing;</li>
+<li><strong>leaving the press screen</strong> (switching tabs does not disarm it);</li>
+<li>the auto-disarm time without a pedal press.</li>
+</ul>
+<p>The Control tab then says "Pedal disarmed:" and why. Arm it again with <strong>ARM PEDAL</strong>.</p>
+<h2 id="how-a-pedal-press-counts">How a pedal press counts<a class="headerlink" href="#how-a-pedal-press-counts" title="Permanent link">¶</a></h2>
+<ul>
+<li>A pedal press is ignored while a question is open on the press screen (a bypass confirmation, the number pad).</li>
+<li>Each press must be released before the next one counts, and holding the pedal down does not repeat.</li>
+<li>Two presses closer than about three quarters of a second count once.</li>
+<li>A press during the cycle it started is ignored ("Pedal ignored: the press is running.").</li>
+<li>A refused pedal press shows one <strong>Not now (pedal)</strong> alert with the reason.</li>
+</ul>
 
 
 

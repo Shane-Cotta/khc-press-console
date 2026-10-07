@@ -488,6 +488,39 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#the-buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The buttons
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-status-line-and-the-bottom-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The status line and the bottom bar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-top-bar-badges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The top bar badges
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#accept-before-every-connection" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1173,6 +1206,39 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#the-buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The buttons
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-status-line-and-the-bottom-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The status line and the bottom bar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-top-bar-badges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The top bar badges
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#accept-before-every-connection" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1242,8 +1308,9 @@
 
 
 <h1 id="the-home-screen">The home screen<a class="headerlink" href="#the-home-screen" title="Permanent link">¶</a></h1>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-home.png" data-desc-position="bottom"><img alt="The home screen: the KHC Precision logo, the status line, six buttons, and STOP on the right" src="../../images/screen-home.png"></a></p>
 <p>The home screen is where the console starts. <strong>STOP</strong> is on the right, as on every screen.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-home.png" data-desc-position="bottom"><img alt="The home screen with the press not connected: the KHC Precision logo, the status line, six buttons, and STOP on the right" src="../../images/screen-home.png"></a></p>
+<h2 id="the-buttons">The buttons<a class="headerlink" href="#the-buttons" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -1258,7 +1325,7 @@
 </tr>
 <tr>
 <td><strong>FIRMWARE</strong></td>
-<td>Updates the press controller's firmware (<a href="../firmware/">Firmware</a>).</td>
+<td>Backs up, patches or restores the press controller's firmware (<a href="../firmware/">Firmware</a>).</td>
 </tr>
 <tr>
 <td><strong>SOFTWARE UPDATE</strong></td>
@@ -1266,11 +1333,11 @@
 </tr>
 <tr>
 <td><strong>CONSOLE SETTINGS</strong></td>
-<td>Touch calibration, rotation, sounds, the foot pedal, the settings file and console ports (<a href="../console-settings/">Console settings</a>).</td>
+<td>Touch calibration, rotation, sounds, the foot pedal, the settings file, console ports, Wi-Fi and the license (<a href="../console-settings/">Console settings</a>).</td>
 </tr>
 <tr>
 <td><strong>ABOUT</strong></td>
-<td>The version of the console app and of the SD card, the Mark 7 trademark note and the licences.</td>
+<td>The versions, the trademark note, the terms of use, the license, and the licences of the software on the card (<a href="#about">About</a>).</td>
 </tr>
 <tr>
 <td><strong>TURN OFF</strong></td>
@@ -1278,56 +1345,125 @@
 </tr>
 </tbody>
 </table>
-<p><strong>The status line</strong> under the logo says what the console is doing with the press: <strong>Press not connected</strong>,
-<strong>Connecting to the press…</strong>, <strong>Identifying the press…</strong>, the press model and firmware once it is connected, or a
-fault the press reported. The bar at the very bottom shows the press port, the connection state (<strong>OFFLINE</strong>,
-<strong>CONNECTED</strong>) and the console's version with <strong>BETA</strong>.</p>
-<p><strong>UPDATE AVAILABLE</strong> (or <strong>SAFETY UPDATE</strong> in amber) in the top bar means a newer version of the console software can
-be installed; tap it to see it in SOFTWARE UPDATE. Nothing is installed until you install it there
-(<a href="../software-updates/#update-available">Software updates</a>).</p>
-<h2 id="accept-before-every-connection">Accept before every connection<a class="headerlink" href="#accept-before-every-connection" title="Permanent link">¶</a></h2>
-<p>Before <strong>every</strong> connection to the press, the console asks first. From <strong>PRESS</strong> it shows a safety screen:
-<strong>"Reloading is dangerous."</strong>, with <strong>ACCEPT</strong> and <strong>DENY</strong>. Mark 7's own app works the same way.</p>
-<p>When you <strong>plug in the press console's USB cable</strong> (or start the console with it plugged in), the console asks
-instead with <strong>Press detected</strong>: the USB adapter, the press it last saw on that cable, <strong>"Connecting restarts the
-press controller. Keep hands clear."</strong>, and <strong>CONNECT</strong> / <strong>NOT NOW</strong>. NOT NOW (or STOP) closes it; it asks again
-the next time the cable is plugged in. If the cable was pulled out while connected, the button says <strong>RECONNECT</strong>.
-It does not ask while something else is going on (a firmware or software update, an open message, the first-start
-setup, demo mode, ...): it asks once that is over, or use PRESS. If more than one USB serial adapter is plugged in,
-or one that cannot run the press, a yellow note at the bottom says so instead, and nothing connects.</p>
+<h2 id="the-status-line-and-the-bottom-bar">The status line and the bottom bar<a class="headerlink" href="#the-status-line-and-the-bottom-bar" title="Permanent link">¶</a></h2>
+<p><strong>The status line</strong> under the logo says what the console is doing with the press:</p>
 <ul>
-<li><strong>Nothing is sent to the press before you tap ACCEPT or CONNECT.</strong> After a restart of the console, the press is
-  left alone until someone accepts.</li>
-<li><strong>ACCEPT (or CONNECT) connects</strong>, and connecting <strong>restarts the press controller</strong>: the press forgets its calibration (and, with
-  Mark 7's firmware, the learned Primer Orientation sensor). You calibrate again afterwards, with an empty shell
-  plate.</li>
+<li><strong>Press not connected</strong></li>
+<li><strong>Connecting to the press…</strong></li>
+<li><strong>Identifying the press…</strong></li>
+<li>the press model and firmware once it is connected, or a fault the press reported.</li>
+</ul>
+<p><strong>The bottom bar</strong> shows the press port on the left, and on the right the connection state (<strong>OFFLINE</strong>,
+<strong>CONNECTED</strong>) and the console's version with <strong>BETA</strong>.</p>
+<h2 id="the-top-bar-badges">The top bar badges<a class="headerlink" href="#the-top-bar-badges" title="Permanent link">¶</a></h2>
+<p>The top bar can show two small badges, left of <strong>BETA</strong>. They never pop up and never sound.</p>
+<p><strong>The license badge</strong> says when the console needs your attention for its license. Tap it to open <strong>LICENSE</strong>
+(<a href="../license/">The trial and your license</a>).</p>
+<table>
+<thead>
+<tr>
+<th>Badge</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TRIAL: 7 DAYS LEFT</strong> (orange)</td>
+<td>The trial is running. <strong>TRIAL: LAST DAY</strong> on its last day.</td>
+</tr>
+<tr>
+<td><strong>NO LICENSE YET</strong> (red)</td>
+<td>Neither the trial nor a license has been started. The press cannot connect.</td>
+</tr>
+<tr>
+<td><strong>TRIAL ENDED</strong> (red)</td>
+<td>The 10-day trial is over. The press cannot connect until you enter a license.</td>
+</tr>
+<tr>
+<td><strong>NOT LICENSED</strong> (red)</td>
+<td>The seat was released or ended. The press cannot connect until you enter a license.</td>
+</tr>
+<tr>
+<td><strong>LICENSE NOT CHECKED</strong> (red)</td>
+<td>The console could not read its license state. The press stays disconnected.</td>
+</tr>
+</tbody>
+</table>
+<p>A licensed console shows no license badge.</p>
+<p><strong>The update badge</strong> says a newer version of the console software can be installed:</p>
+<ul>
+<li><strong>UPDATE AVAILABLE</strong>: a newer version is out.</li>
+<li><strong>SAFETY UPDATE</strong> (amber): the newer version fixes a safety problem, or this version is older than the safety
+  minimum. Install it soon, with the press stopped.</li>
+</ul>
+<p>Tap the badge to open <strong>SOFTWARE UPDATE</strong> with that version highlighted. Nothing is installed until you install it
+there (<a href="../software-updates/#update-available">Update available</a>).</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-home-update.png" data-desc-position="bottom"><img alt="The home screen with the UPDATE AVAILABLE badge in the top bar, left of BETA (example data)" src="../../images/screen-home-update.png"></a></p>
+<h2 id="accept-before-every-connection">Accept before every connection<a class="headerlink" href="#accept-before-every-connection" title="Permanent link">¶</a></h2>
+<p>The console asks before <strong>every</strong> connection to the press. There are two ways to connect.</p>
+<p><strong>From PRESS:</strong> the console shows a safety screen, <strong>"Reloading is dangerous."</strong>, with <strong>ACCEPT</strong> and <strong>DENY</strong>. Mark
+7's own app works the same way.</p>
+<p><strong>When you plug in the press console's USB cable</strong> (or start the console with it plugged in): the console asks with
+<strong>Press detected</strong>. It shows the USB adapter, the press it last saw on that cable, <strong>"Connecting restarts the press
+controller. Keep hands clear."</strong>, and <strong>CONNECT</strong> / <strong>NOT NOW</strong>.</p>
+<ul>
+<li><strong>NOT NOW</strong> (or STOP) closes it. It asks again the next time the cable is plugged in.</li>
+<li>If the cable was pulled out while connected, the button says <strong>RECONNECT</strong>.</li>
+<li>It does not ask while something else is going on (a firmware or software update, an open message, the first-start
+  setup, demo mode). It asks once that is over, or you can use PRESS.</li>
+<li>If more than one USB serial adapter is plugged in, or one that cannot run the press, a yellow note at the bottom
+  says so instead, and nothing connects.</li>
+</ul>
+<p>What happens next:</p>
+<ul>
+<li><strong>Nothing is sent to the press before you tap ACCEPT or CONNECT.</strong> After a restart of the console, the press is left
+  alone until someone accepts.</li>
+<li><strong>ACCEPT (or CONNECT) connects, and connecting restarts the press controller.</strong> The press forgets its calibration
+  (and, with Mark 7's firmware, the learned Primer Orientation sensor). Calibrate again afterwards, with an empty
+  shell plate.</li>
 <li><strong>DENY</strong> goes back to the home screen without connecting.</li>
+<li>If the terms of use have not been accepted, or the console has no trial or license, the console shows the
+  <strong>terms</strong> or <strong>LICENSE</strong> first, and does not connect.</li>
 </ul>
 <p>The one time the console reconnects without asking is right after a firmware update you started yourself, which it
 verified: it reconnects to read the new firmware version.</p>
 <h2 id="the-press-screen">The press screen<a class="headerlink" href="#the-press-screen" title="Permanent link">¶</a></h2>
-<p><strong>PRESS</strong> opens the press screen once connected: the tabs for your press model along the top, <strong>MENU</strong> (back to the
-home screen; not while the press runs, calibrates or is in die setup), the <strong>BETA</strong> badge, and on the right the
-column <strong>RUN / END CYCLE / SINGLE / STOP</strong>, the same on every tab. See <a href="../press-tabs/">The press tabs</a>.</p>
+<p>Once connected, <strong>PRESS</strong> opens the press screen:</p>
+<ul>
+<li>the tabs for your press model along the top (<a href="../press-tabs/">The press tabs</a>);</li>
+<li><strong>MENU</strong>, back to the home screen (not while the press runs, calibrates or is in die setup);</li>
+<li>the <strong>BETA</strong> badge;</li>
+<li>on the right, the column <strong>RUN / END CYCLE / SINGLE / STOP</strong>, the same on every tab.</li>
+</ul>
 <p>If the connection fails, the press screen says why and offers <strong>CONNECT</strong> (which goes through ACCEPT again).</p>
 <h2 id="about">About<a class="headerlink" href="#about" title="Permanent link">¶</a></h2>
-<p><strong>ABOUT</strong> shows the console app's version, who makes it (KHC Precision), the SD card image it came on (version and
-build date), a note that it is not affiliated with Mark 7 Reloading, Lyman Products or Dillon Precision (their names
-only describe compatibility; its <strong>?</strong> opens the trademark note), and the licences of the software on the card. Quote the
-version from here (or from the bottom bar) in a bug report.</p>
+<p><strong>ABOUT</strong> shows:</p>
+<ul>
+<li>the console app's version, and the SD card image it came on (version and build date);</li>
+<li>who makes it (KHC Precision);</li>
+<li>a note that it is not affiliated with Mark 7 Reloading, Lyman Products or Dillon Precision (their names only
+  describe compatibility); its <strong>?</strong> opens the trademark note;</li>
+<li>the license state, with <strong>LICENSE</strong>, and <strong>TERMS OF USE</strong> to read the terms again;</li>
+<li>the licences of the software on the card.</li>
+</ul>
+<p>Quote the version from here (or from the bottom bar) in a bug report.</p>
 <h2 id="turning-off">Turning off<a class="headerlink" href="#turning-off" title="Permanent link">¶</a></h2>
-<p>Tap <strong>TURN OFF</strong>, then confirm with <strong>TURN OFF</strong> (or <strong>CANCEL</strong>). The console:</p>
 <ol>
-<li>disconnects from the press: it sends STOP if the press is still moving (a jog, for example), then resets the
-   press controller;</li>
-<li>shuts the Raspberry Pi down.</li>
+<li>Tap <strong>TURN OFF</strong>.</li>
+<li>Confirm with <strong>TURN OFF</strong> (or tap <strong>CANCEL</strong>).</li>
+<li>The console disconnects from the press: it sends STOP if the press is still moving (a jog, for example), then
+   resets the press controller. Then it shuts the Raspberry Pi down.</li>
+<li><strong>Wait until the screen goes dark.</strong></li>
+<li>Unplug the Pi, and switch off the press console.</li>
 </ol>
-<p><strong>Wait until the screen goes dark</strong>, then unplug the Pi and switch off the press console. Unplugging the Pi without
-TURN OFF is not dangerous for the press (the controller is reset at the next start), but it can damage the SD card's
-contents over time.</p>
 <p>TURN OFF is refused (the screen says why) while the press is running or calibrating, and while a firmware update or a
-software update is running: stop the press first (STOP or END CYCLE), or wait for the update to finish.</p>
+software update is running. Stop the press first (STOP or END CYCLE), or wait for the update to finish.</p>
+<p>Unplugging the Pi without TURN OFF is not dangerous for the press (the controller is reset at the next start), but it
+can damage the SD card's contents over time.</p>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
 <p>Turning the Pi off <strong>does not switch the press off.</strong> The press console's own power switch does that.</p>
+</div>
 
 
 

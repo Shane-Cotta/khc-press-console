@@ -1342,38 +1342,41 @@
 
 
 <h1 id="installing-khc-press-console">Installing KHC Press Console<a class="headerlink" href="#installing-khc-press-console" title="Permanent link">¶</a></h1>
-<p>KHC Press Console comes as one ready-to-write <strong>SD card image</strong> for the Raspberry Pi 4 and the Raspberry Pi 5. You write it
-to a microSD card once; the Pi then starts straight into KHC Press Console, full screen. There is nothing to install on top,
-no login and no keyboard needed.</p>
+<p>KHC Press Console comes as one ready-to-write <strong>SD card image</strong> for the Raspberry Pi 4 and the Raspberry Pi 5. You
+write it to a microSD card once. The Pi then starts straight into KHC Press Console, full screen. There is nothing to
+install on top, no login and no keyboard.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>KHC Press Console is unofficial BETA software for real machinery. Read <a href="../../../SAFETY/">Safety</a> before you connect
+a press.</p>
+</div>
 <h2 id="what-you-need">What you need<a class="headerlink" href="#what-you-need" title="Permanent link">¶</a></h2>
 <ul>
-<li>A <strong>Raspberry Pi 4</strong> (2 GB of memory or more) or a <strong>Raspberry Pi 5</strong> (2 GB or more).</li>
+<li>A <strong>Raspberry Pi 4</strong> or <strong>Raspberry Pi 5</strong>, with 2 GB of memory or more.</li>
 <li>The <strong>power supply</strong> for your Pi: the official Raspberry Pi USB-C supply (Pi 4: 5.1 V 3 A; Pi 5: 5 V 5 A) or an
   equivalent. A weak supply causes random restarts and faults.</li>
 <li>A <strong>10.1-inch 1920x1200 HDMI touch screen</strong> whose touch panel connects over USB, with <strong>its own 5 V supply</strong>, and a
   micro-HDMI to HDMI cable.</li>
 <li>A <strong>microSD card of 8 GB or more</strong>. A good-quality card from a known brand (A1 or A2 rated) lasts longer; 16 or
-  32 GB is a sensible size. The download is about 260 MB; on the card the system takes under 2 GB, and the rest is
-  free space for updates.</li>
-<li>A <strong>USB-A to micro-USB data cable</strong> for the press console (see <a href="../getting-started/">Getting started</a>).</li>
+  32 GB is a sensible size.</li>
+<li>A <strong>USB-A to micro-USB data cable</strong> for the press console (see <a href="../getting-started/#wiring">Getting started</a>).</li>
 <li>A computer with an SD card reader, to write the card.</li>
 </ul>
 <h2 id="download">Download<a class="headerlink" href="#download" title="Permanent link">¶</a></h2>
-<p>Open the <strong><a href="https://github.com/Shane-Cotta/khc-press-console/releases/latest">Releases page</a></strong> and download, from the
-newest release:</p>
-<ul>
-<li><code>khc-press-console-X.Y.Z-rpi.img.xz</code>: the SD card image (<code>X.Y.Z</code> is the version, for example <code>0.1.0</code>);</li>
+<ol>
+<li>Open the <strong><a href="https://github.com/Shane-Cotta/khc-press-console/releases/latest">Releases page</a></strong>.</li>
+<li>From the newest release, download:</li>
+<li><code>khc-press-console-X.Y.Z-rpi.img.xz</code>: the SD card image (<code>X.Y.Z</code> is the version number);</li>
 <li><code>SHA256SUMS.txt</code>: the checksums of every file of that release.</li>
-</ul>
+</ol>
 <h2 id="check-the-download">Check the download<a class="headerlink" href="#check-the-download" title="Permanent link">¶</a></h2>
-<p>Checking tells you the image arrived complete and unchanged. Put both files in the same folder and open a terminal
-(Windows: PowerShell; macOS: Terminal; Linux: any terminal) in that folder.</p>
-<p><strong>Windows (PowerShell):</strong></p>
-<pre><code class="language-powershell">Get-FileHash .\khc-press-console-X.Y.Z-rpi.img.xz -Algorithm SHA256
-</code></pre>
-<p>Windows does not compare for you. Open <code>SHA256SUMS.txt</code> in Notepad and compare the long hexadecimal number on the
-image's line with the one PowerShell printed. Every character must be the same; upper or lower case does not matter.
-(In Command Prompt instead: <code>certutil -hashfile khc-press-console-X.Y.Z-rpi.img.xz SHA256</code>.)</p>
+<p>Checking tells you the image arrived complete and unchanged. Check the file <strong>as downloaded</strong>, still ending in
+<code>.img.xz</code>.</p>
+<ol>
+<li>Put both files in the same folder.</li>
+<li>Open a terminal in that folder (Windows: PowerShell; macOS: Terminal; Linux: any terminal).</li>
+<li>Run the command for your computer, below.</li>
+</ol>
 <p><strong>macOS:</strong></p>
 <pre><code class="language-sh">shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 </code></pre>
@@ -1381,14 +1384,23 @@ image's line with the one PowerShell printed. Every character must be the same; 
 <pre><code class="language-sh">sha256sum -c --ignore-missing SHA256SUMS.txt
 </code></pre>
 <p>On macOS and Linux the image's line must end in <code>OK</code>. <code>FAILED</code> means it does not match. If nothing is printed, the
-image is not in that folder or has another name.</p>
-<p>Each release also has <code>khc-press-console-X.Y.Z-rpi.img.xz.sha256</code>, the image's checksum alone, in the same format: you can
-check against it instead of <code>SHA256SUMS.txt</code>.</p>
-<p><strong>If it does not match:</strong> do not use the file. Download the image and <code>SHA256SUMS.txt</code> again, from the same release,
-and check again (a download that stopped early is the usual cause). Make sure you downloaded from the official
-<a href="https://github.com/Shane-Cotta/khc-press-console/releases">releases page</a>. If it still fails, report it as an
-<a href="https://github.com/Shane-Cotta/khc-press-console/issues/new/choose">issue</a> with the file name and the output of the check.</p>
-<p>Check the file <strong>as downloaded</strong>, still ending in <code>.img.xz</code>.</p>
+image is not in that folder, or it has another name.</p>
+<p><strong>Windows (PowerShell):</strong></p>
+<pre><code class="language-powershell">Get-FileHash .\khc-press-console-X.Y.Z-rpi.img.xz -Algorithm SHA256
+</code></pre>
+<p>Windows does not compare for you. Open <code>SHA256SUMS.txt</code> in Notepad and compare the long number on the image's line
+with the one PowerShell printed. Every character must be the same; upper or lower case does not matter. (In Command
+Prompt instead: <code>certutil -hashfile khc-press-console-X.Y.Z-rpi.img.xz SHA256</code>.)</p>
+<p>Each release also has <code>khc-press-console-X.Y.Z-rpi.img.xz.sha256</code>, the image's checksum on its own, in the same
+format. You can check against it instead of <code>SHA256SUMS.txt</code>.</p>
+<div class="admonition danger">
+<p class="admonition-title">Caution</p>
+<p><strong>If the checksum does not match, do not use the file.</strong> Download the image and <code>SHA256SUMS.txt</code> again, from the same
+release, and check again (a download that stopped early is the usual cause). Make sure you downloaded from the
+official <a href="https://github.com/Shane-Cotta/khc-press-console/releases">releases page</a>. If it still fails, report it as
+an <a href="https://github.com/Shane-Cotta/khc-press-console/issues/new/choose">issue</a> with the file name and the output of
+the check.</p>
+</div>
 <h2 id="write-the-card-with-raspberry-pi-imager">Write the card with Raspberry Pi Imager<a class="headerlink" href="#write-the-card-with-raspberry-pi-imager" title="Permanent link">¶</a></h2>
 <p>Install <a href="https://www.raspberrypi.com/software/">Raspberry Pi Imager</a> (Windows, macOS or Linux) and put the microSD
 card in your computer's card reader.</p>
@@ -1396,55 +1408,66 @@ card in your computer's card reader.</p>
 <li><strong>Choose Device:</strong> pick <strong>Raspberry Pi 4</strong> or <strong>Raspberry Pi 5</strong>, whichever you have.</li>
 <li><strong>Choose OS:</strong> scroll to the very bottom of the list and pick <strong>Use custom</strong>. Select the downloaded
    <code>khc-press-console-X.Y.Z-rpi.img.xz</code>. There is no need to unzip it first.</li>
-<li><strong>Choose Storage:</strong> pick the microSD card. Look at the size to be sure it is the card: everything on it is
-   erased.</li>
-<li><strong>Next.</strong> If Imager asks whether to apply <strong>OS customisation settings</strong>, answer <strong>No</strong> (see below). Current
-   versions of Imager do not offer customisation for a custom image, so you may not be asked.</li>
-<li>Confirm that the card will be erased. Imager writes the card and then <strong>verifies</strong> it (reads it back). This takes
-   a few minutes. When it says the card can be removed, take it out.</li>
+<li><strong>Choose Storage:</strong> pick the microSD card. Look at the size to be sure it is the card: everything on it is erased.</li>
+<li><strong>Next.</strong> If Imager asks whether to apply <strong>OS customisation settings</strong>, answer <strong>No</strong> (see below). Current versions
+   of Imager do not offer customisation for a custom image, so you may not be asked.</li>
+<li>Confirm that the card will be erased. Imager writes the card and then <strong>verifies</strong> it (reads it back). This takes a
+   few minutes.</li>
+<li>When Imager says the card can be removed, take it out.</li>
 </ol>
 <h3 id="os-customisation-answer-no">OS customisation: answer No<a class="headerlink" href="#os-customisation-answer-no" title="Permanent link">¶</a></h3>
-<p>KHC Press Console's card configures itself: its name on the network, its firewall, the kiosk that runs the console, and
-Wi-Fi (which you set up later on the console's own screen, if you want online updates). It needs no user account,
-no SSH (the card has no SSH server) and no Wi-Fi settings from Imager, and Imager's customisation is <strong>not supported</strong> for it:</p>
+<p>The card configures itself: its name on the network, its firewall, the kiosk that runs the console, and Wi-Fi (which
+you set up later on the console's own screen). It needs no user account, no SSH (the card has no SSH server) and no
+Wi-Fi settings from Imager. Imager's customisation is <strong>not supported</strong> for it.</p>
 <ul>
-<li><strong>Current Imager versions (2.x)</strong> do not know how a custom image wants to be customised, so they skip the
-  customisation step for it. Nothing to do.</li>
+<li><strong>Current Imager versions (2.x)</strong> skip the customisation step for a custom image. Nothing to do.</li>
 <li><strong>Older Imager versions (1.8, 1.9)</strong> ask "Would you like to apply OS customisation settings?". If you answer Yes,
-  they add a first-start script made for older Raspberry Pi OS releases. KHC Press Console's card is built on a newer
-  release, so those settings would not be applied reliably and the first start could behave unexpectedly (for
-  example an extra restart, a changed network name, or Wi-Fi switched on without a country set on the console).
-  <strong>Answer No.</strong></li>
+  they add a first-start script made for older Raspberry Pi OS releases. This card is built on a newer release, so
+  those settings would not be applied reliably, and the first start could behave unexpectedly (for example an extra
+  restart, a changed network name, or Wi-Fi switched on without a country set on the console). <strong>Answer No.</strong></li>
 </ul>
-<p>If you answered Yes by mistake, simply write the card again and answer No.</p>
+<p>If you answered Yes by mistake, write the card again and answer No.</p>
 <h2 id="other-ways-to-write-the-card">Other ways to write the card<a class="headerlink" href="#other-ways-to-write-the-card" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>balenaEtcher</strong> (<a href="https://etcher.balena.io/">etcher.balena.io</a>) also reads <code>.img.xz</code> directly: <strong>Flash from file</strong>,
   pick the image, <strong>Select target</strong> (the card), <strong>Flash</strong>. It verifies the card afterwards.</li>
-<li><strong>From a terminal</strong> on Linux (on macOS, use Imager or balenaEtcher):</li>
+<li><strong>From a terminal on Linux</strong> (on macOS, use Imager or balenaEtcher):</li>
 </ul>
 <p><code>sh
   xz -dc khc-press-console-X.Y.Z-rpi.img.xz | sudo dd of=/dev/&lt;your card&gt; bs=4M conv=fsync status=progress</code></p>
 <p>Find the card's device name first with <code>lsblk</code> (the whole card, for example <code>/dev/sdb</code> or <code>/dev/mmcblk0</code>, not a
-  partition), and unmount its partitions. <strong><code>dd</code> overwrites whatever device you give it without asking</strong>: a wrong name
-  can erase your computer's disk.</p>
+  partition), and unmount its partitions.</p>
+<div class="admonition danger">
+<p class="admonition-title">Caution</p>
+<p><strong><code>dd</code> overwrites whatever device you give it, without asking.</strong> A wrong device name can erase your computer's disk.</p>
+</div>
 <h2 id="first-start">First start<a class="headerlink" href="#first-start" title="Permanent link">¶</a></h2>
 <ol>
-<li>Wire the Pi, the screen and the press console as in <a href="../getting-started/">Getting started</a>.</li>
+<li>Wire the Pi, the screen and the press console as in <a href="../getting-started/#wiring">Getting started</a>.</li>
 <li>Switch the screen on, then plug in the Pi's power. The Pi has no power switch: it starts when power is applied.</li>
-<li>The screen shows the boot animation while the system starts, then the KHC Press Console <strong>home screen</strong>.</li>
-<li><strong>The very first start takes about a minute longer</strong> than later ones: the card grows to use the whole microSD
-   card and finishes its one-time setup. Do not unplug the Pi during it.</li>
-<li>The console shows the <a href="../../../TERMS/">terms of use</a>: read them and tap <strong>I AGREE</strong> on the last page. Then it asks
-   for Wi-Fi and a license or the trial (<a href="../license/">The trial and your license</a>).</li>
-<li>On the home screen, the status line reads <strong>Press not connected</strong> until you tap <strong>PRESS</strong> and <strong>ACCEPT</strong>. Nothing
-   is sent to the press before that.</li>
+<li>The screen shows the boot animation while the system starts.</li>
+<li><strong>The very first start takes about a minute longer</strong> than later ones: the card grows to use the whole microSD card
+   and finishes its one-time setup. Do not unplug the Pi during it.</li>
+<li>The home screen appears, and the <strong>terms of use</strong> open by themselves, page by page. Read them and tap <strong>I AGREE</strong>
+   on the last page (the same text is in <a href="../../../TERMS/">Terms of use</a>).</li>
+<li>The welcome screens follow: Wi-Fi (or <strong>SKIP</strong>), then a license or the 10-day trial. See
+   <a href="../license/#the-first-start">The trial and your license</a>.</li>
+<li>Back on the home screen, the status line reads <strong>Press not connected</strong>. Nothing is sent to the press until you tap
+   <strong>CONNECT</strong> or <strong>PRESS</strong> and <strong>ACCEPT</strong>.</li>
 </ol>
-<p>If the screen stays black, see <a href="../troubleshooting/#no-picture-on-the-screen">Troubleshooting</a>.</p>
+<p>Next: <a href="../getting-started/#your-first-session">Getting started</a>. If the screen stays black, see
+<a href="../troubleshooting/">Troubleshooting</a>.</p>
 <h2 id="updating-later">Updating later<a class="headerlink" href="#updating-later" title="Permanent link">¶</a></h2>
-<p>Newer consoles update themselves from the SOFTWARE UPDATE screen, over Wi-Fi or Ethernet, or from a USB stick: see
-<a href="../software-updates/">Software updates</a>. Writing a new card with a newer image also works at any time, but it
-starts from scratch: the console's saved settings, saved Wi-Fi networks and settings exports on the card are lost.</p>
+<p>A console updates itself from <strong>SOFTWARE UPDATE</strong>, over Wi-Fi or Ethernet, or from a USB stick: see
+<a href="../software-updates/">Software updates</a>. You do not need to write a new card for an update.</p>
+<p>Writing a new card with a newer image also works, and some releases need it (their release notes say so). But a new
+card starts from scratch.</p>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p><strong>Writing a new card erases everything the console kept on the old one:</strong> your settings, the saved Wi-Fi networks,
+the settings files saved on the console, and the <strong>backups of your press's firmware</strong>. A licensed Raspberry Pi gets
+its license back by itself once it is online (<a href="../license/#a-new-sd-card-in-a-licensed-console">A new SD card</a>).</p>
+</div>
 
 
 

@@ -1032,10 +1032,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#no-press-detected" class="md-nav__link">
+  <a href="#connecting-to-the-press" class="md-nav__link">
     <span class="md-ellipsis">
       
-        No press detected
+        Connecting to the press
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-press" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running the press
       
     </span>
   </a>
@@ -1087,32 +1098,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#wi-fi" class="md-nav__link">
+  <a href="#wi-fi-and-updates" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Wi-Fi
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#a-firmware-update-failed" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A firmware update failed
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#a-software-update-went-back-by-itself" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A software update went back by itself
+        Wi-Fi and updates
       
     </span>
   </a>
@@ -1142,12 +1131,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#send-a-diagnostic-report" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1155,6 +1139,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1267,10 +1256,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#no-press-detected" class="md-nav__link">
+  <a href="#connecting-to-the-press" class="md-nav__link">
     <span class="md-ellipsis">
       
-        No press detected
+        Connecting to the press
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-press" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running the press
       
     </span>
   </a>
@@ -1322,32 +1322,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#wi-fi" class="md-nav__link">
+  <a href="#wi-fi-and-updates" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Wi-Fi
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#a-firmware-update-failed" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A firmware update failed
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#a-software-update-went-back-by-itself" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A software update went back by itself
+        Wi-Fi and updates
       
     </span>
   </a>
@@ -1377,12 +1355,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#send-a-diagnostic-report" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1390,6 +1363,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1430,146 +1408,325 @@
 
 
 <h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">¶</a></h1>
-<p><strong>If the press is moving and anything is not as you expect: switch off the press console's power first</strong>, then read
-on.</p>
-<h2 id="no-press-detected">No press detected<a class="headerlink" href="#no-press-detected" title="Permanent link">¶</a></h2>
-<p>The status line stays at <strong>Press not connected</strong> or <strong>Connecting to the press…</strong>, or the press screen shows an error
-and <strong>CONNECT</strong>.</p>
-<ul>
-<li>Is the press console switched on?</li>
-<li>The cable must go from the press console's <strong>micro-USB port</strong> to a <strong>USB-A port of the Pi</strong>. Not the console's
-  USB-A port (that is the motor's).</li>
-<li>Use a <strong>data</strong> cable. Many micro-USB cables sold with chargers carry power only. Try another cable.</li>
-<li>Try another USB port of the Pi, and unplug other USB-serial adapters: connect <strong>one press</strong> only.</li>
-<li>After plugging the cable in, tap <strong>CONNECT</strong> (or MENU, then PRESS) and ACCEPT again.</li>
-<li><strong>Connection reset</strong> alerts that keep coming back point to a bad cable or a weak power supply.</li>
-<li>"<strong>Identifying the press…</strong>" that never ends, or a fault on the status line: switch the press console off and on,
-  then connect again. If the press reports a motor USB or oscillator fault, check the ClearPath motor's USB cable to
-  the console and see your press manual.</li>
-<li>A press that shows only the <strong>Settings</strong> tab is running firmware the console does not recognise
-  (<a href="../press-tabs/#stop-only-mode">STOP-only mode</a>).</li>
-</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>If the press is moving and anything is not as you expect, switch off the press console's power first.</strong> Then read
+on. Pulling the Raspberry Pi's plug does not stop the press.</p>
+</div>
+<p>Find your symptom below. If nothing here helps, <a href="#reporting-a-problem">ask for help</a>.</p>
+<h2 id="connecting-to-the-press">Connecting to the press<a class="headerlink" href="#connecting-to-the-press" title="Permanent link">¶</a></h2>
+<p>The home screen's status line stays at <strong>Press not connected</strong> or <strong>Connecting to the press…</strong>, or the press screen
+shows an error and <strong>CONNECT</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Likely cause</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nothing happens when you plug the press in</td>
+<td>The press console is off, or the cable is in the wrong port</td>
+<td>Switch the press console on. The cable goes from the press console's <strong>micro-USB port</strong> to a <strong>USB-A port of the Pi</strong>, never into the press console's USB-A port (that is the motor's).</td>
+</tr>
+<tr>
+<td>Still no connection with the right ports</td>
+<td>A charge-only cable</td>
+<td>Use a <strong>data</strong> cable. Many micro-USB cables sold with chargers carry power only. Try another cable.</td>
+</tr>
+<tr>
+<td>A notice says the console cannot choose the press port</td>
+<td>Several USB-serial adapters are plugged in</td>
+<td>Unplug the other adapters: connect <strong>one press</strong> only. Try another USB port of the Pi.</td>
+</tr>
+<tr>
+<td>You tapped <strong>NOT NOW</strong> on the <strong>Press detected</strong> question</td>
+<td>Nothing is wrong</td>
+<td>Tap <strong>PRESS</strong> on the home screen, then <strong>ACCEPT</strong>.</td>
+</tr>
+<tr>
+<td><strong>Connection reset</strong> keeps coming back</td>
+<td>A bad cable or a weak power supply</td>
+<td>Change the cable; check the Pi's power supply. Calibrate again after each reconnection.</td>
+</tr>
+<tr>
+<td><strong>Identifying the press…</strong> never ends, or a fault shows in the status line</td>
+<td>The press controller is stuck</td>
+<td>Switch the press console off and on, then connect again. For a motor USB or oscillator fault, check the ClearPath motor's USB cable and see your press manual.</td>
+</tr>
+<tr>
+<td>PRESS opens the terms of use or the LICENSE screen</td>
+<td>The terms are not accepted yet, or there is no trial or license</td>
+<td>Accept the terms; start the trial or activate a license (<a href="../license/">The trial and your license</a>).</td>
+</tr>
+<tr>
+<td>Only the <strong>Settings</strong> tab, and RUN dimmed</td>
+<td>The press runs firmware the console does not recognise</td>
+<td>See <a href="../press-tabs/#stop-only-mode">STOP-only mode</a>.</td>
+</tr>
+<tr>
+<td><strong>DO NOT OPERATE THE PRESS</strong> instead of the home screen</td>
+<td>A flash was interrupted</td>
+<td>See <a href="../firmware/#do-not-operate">DO NOT OPERATE</a>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="running-the-press">Running the press<a class="headerlink" href="#running-the-press" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Likely cause</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RUN and SINGLE are dimmed</td>
+<td>No successful calibration in this connection, or after NEUTRAL</td>
+<td>Clear the shell plate and tap <strong>CALIBRATE</strong> (<a href="../calibrate-and-run/#calibrate">CALIBRATE</a>).</td>
+</tr>
+<tr>
+<td><strong>Calibration failed</strong></td>
+<td>The guard is open, the press is busy, or something blocks it</td>
+<td>Close the guard, clear the press, and calibrate again.</td>
+</tr>
+<tr>
+<td><strong>Not now</strong> when you tap a button</td>
+<td>The press cannot do it at that moment</td>
+<td>Read the reason in the alert (<a href="../alerts/#not-now">Not now</a>).</td>
+</tr>
+<tr>
+<td><strong>Refused by the press</strong></td>
+<td>The press is busy, not at home, or the guard is open</td>
+<td>Wait for the press to finish, or close the guard.</td>
+</tr>
+<tr>
+<td>Every run stops with a sensor alert</td>
+<td>A sensor is ACTIVE but not fitted, dirty or unplugged</td>
+<td>Bypass sensors that are not fitted; clean or reconnect the others (<a href="../sensors-and-interlocks/">Sensors and interlocks</a>).</td>
+</tr>
+<tr>
+<td><strong>Decap sensor dirty</strong></td>
+<td>The beam is blocked, or the sensor was unplugged</td>
+<td>Clean it with compressed air; plug it back in or bypass it.</td>
+</tr>
+<tr>
+<td><strong>Sensor malfunction</strong></td>
+<td>A powder-check sensor is obstructed or not fitted</td>
+<td>Clean it, or bypass it if it is not fitted.</td>
+</tr>
+<tr>
+<td>Primer Orientation never stops the press</td>
+<td>With Mark 7's firmware, a replacement sensor may never be learned</td>
+<td>See <a href="../sensors-and-interlocks/#the-khc-primer-orientation-sensor">The KHC Primer Orientation sensor</a>.</td>
+</tr>
+<tr>
+<td>An index alarm on every cycle with the KHC patch</td>
+<td>Primer Orientation is ACTIVE with no working sensor</td>
+<td>Fit and check the sensor, or bypass Primer Orientation.</td>
+</tr>
+<tr>
+<td>The Remote Stop or guard bypass came back on</td>
+<td>On purpose: both are switched ACTIVE at every connection</td>
+<td>Nothing to fix.</td>
+</tr>
+<tr>
+<td>A CRITICAL alert (red, full screen)</td>
+<td>The console cannot be sure the press is under control</td>
+<td><strong>Switch off the press console's power</strong>, then tap <strong>CONSOLE IS OFF</strong> (<a href="../alerts/#critical-alerts">CRITICAL alerts</a>).</td>
+</tr>
+</tbody>
+</table>
 <h2 id="touches-land-in-the-wrong-place">Touches land in the wrong place<a class="headerlink" href="#touches-land-in-the-wrong-place" title="Permanent link">¶</a></h2>
-<p>Use <strong>CONSOLE SETTINGS → Touch screen</strong>: <strong>Swap X and Y</strong>, <strong>Invert X</strong>, <strong>Invert Y</strong>. Each change is on trial for 15
-seconds: tap <strong>KEEP</strong> if it is right; if it is wrong, wait and it goes back by itself
-(<a href="../console-settings/#touch-screen">Console settings</a>).</p>
-<ul>
-<li>If <strong>nothing</strong> reacts to touch: check the touch USB cable from the screen to the Pi. When the console loses the
-  touch panel it shows <strong>TOUCHSCREEN NOT WORKING</strong> (CRITICAL): STOP on the screen cannot work then; use the remote
-  stop or the console's power switch.</li>
-<li>Screen upside down: <strong>Screen rotation 180°</strong>, then restart (TURN OFF and on).</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A tap reacts somewhere else</td>
+<td><strong>CONSOLE SETTINGS → Touch screen</strong>: <strong>Swap X and Y</strong>, <strong>Invert X</strong>, <strong>Invert Y</strong>. Each change is on trial for 15 seconds: tap <strong>KEEP</strong> if it is right; if it is wrong, wait and it goes back by itself (<a href="../console-settings/#touch-screen">Touch screen</a>).</td>
+</tr>
+<tr>
+<td>Nothing reacts to touch</td>
+<td>Check the touch USB cable from the screen to the Pi. The console shows <strong>TOUCHSCREEN NOT WORKING</strong> (CRITICAL): STOP on the screen cannot work then; use the remote stop or the press console's power switch.</td>
+</tr>
+<tr>
+<td>The picture is upside down</td>
+<td><strong>CONSOLE SETTINGS → Screen rotation → 180°</strong>, then <strong>TURN OFF</strong> and switch on again.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="no-picture-on-the-screen">No picture on the screen<a class="headerlink" href="#no-picture-on-the-screen" title="Permanent link">¶</a></h2>
-<ul>
-<li>The HDMI cable must be in the Pi's <strong>first HDMI port</strong> (HDMI0, next to the USB-C power input).</li>
-<li>Power the screen from <strong>its own 5 V supply</strong>, and switch it on <strong>before</strong> the Pi.</li>
-<li>Check the Pi's power supply: a red light only, or a Pi that restarts by itself, means too little power.</li>
-<li>The card tells the Pi to drive the screen at 1920x1200 even when the screen does not identify itself at start-up.
-  Screens of another resolution are not supported in this BETA.</li>
-<li>If the picture comes only sometimes after a cold start (the screen powered after the Pi), a technician can make the
-  console remember the screen's identification: see <code>PRESS-CONSOLE.txt</code> on the card's boot partition ("If the screen or
-  sound misbehaves").</li>
-<li>If the screen stays black and not even the boot animation appears, the card may be badly written: write it again
-  and let Imager verify it, or try another card.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Black screen</td>
+<td>The HDMI cable must be in the Pi's <strong>first HDMI port</strong> (HDMI0, next to the USB-C power input). Power the screen from <strong>its own 5 V supply</strong>, and switch it on <strong>before</strong> the Pi.</td>
+</tr>
+<tr>
+<td>A red light only on the Pi, or a Pi that restarts by itself</td>
+<td>Too little power: use a proper Raspberry Pi power supply.</td>
+</tr>
+<tr>
+<td>The picture comes only sometimes after a cold start</td>
+<td>A technician can make the console remember the screen's identification: see <code>PRESS-CONSOLE.txt</code> on the card's boot partition ("If the screen or sound misbehaves").</td>
+</tr>
+<tr>
+<td>Not even the boot animation appears</td>
+<td>The card may be badly written: write it again and let Imager verify it, or try another card (<a href="../install/">Installing</a>).</td>
+</tr>
+</tbody>
+</table>
+<p>The console drives the screen at 1920x1200. Screens of another resolution are not supported in this BETA.</p>
 <h2 id="the-screen-says-the-console-app-has-stopped">The screen says "the console app has stopped"<a class="headerlink" href="#the-screen-says-the-console-app-has-stopped" title="Permanent link">¶</a></h2>
-<p>The console app failed to start several times in a row and stopped trying. <strong>The press is not controlled from this
-screen: switch the press console off before you touch the press.</strong> Then restart the Pi (unplug and plug in). If it
-happens again, write the card again (<a href="../install/">Installing</a>) and
-<a href="https://github.com/Shane-Cotta/khc-press-console/issues/new/choose">report it</a> with a photo of the screen.</p>
+<p>The console app failed to start several times in a row and stopped trying.</p>
+<div class="admonition danger">
+<p class="admonition-title">Caution</p>
+<p><strong>The press is not controlled from this screen.</strong> Switch the press console off before you touch the press.</p>
+</div>
+<ol>
+<li>Restart the Pi (unplug it and plug it in again).</li>
+<li>If it happens again, write the card again (<a href="../install/">Installing</a>).</li>
+<li><a href="https://github.com/Shane-Cotta/khc-press-console/issues/new/choose">Report it</a> with a photo of the screen.</li>
+</ol>
 <h2 id="no-sound">No sound<a class="headerlink" href="#no-sound" title="Permanent link">¶</a></h2>
-<ul>
-<li>Sound comes through the screen's own speaker over HDMI. A screen without a speaker, or with its volume down, stays
-  silent.</li>
-<li><strong>CONSOLE SETTINGS → Sound</strong> must be <strong>ON</strong>. The panel says which device plays the sounds, or "No sound device
-  found: the console is silent".</li>
-<li>The first fraction of a second of a sound can be lost while the screen's audio wakes up.</li>
-<li>Sound also needs the screen's identification at start-up; the same <code>PRESS-CONSOLE.txt</code> note as for the picture applies.</li>
-</ul>
-<p>Sounds are an extra: every alert also shows on the screen.</p>
-<h2 id="wi-fi">Wi-Fi<a class="headerlink" href="#wi-fi" title="Permanent link">¶</a></h2>
-<ul>
-<li><strong>The Wi-Fi list is empty or Wi-Fi is off:</strong> choose your <strong>country</strong> first (Wi-Fi stays off until it is set), then
-  <strong>SCAN</strong>.</li>
-<li><strong>Your network is not listed:</strong> it may be hidden (use <strong>HIDDEN NETWORK…</strong>), out of range, or a 5 GHz channel not
-  allowed in the country you chose.</li>
-<li><strong>It does not connect:</strong> check the password (<strong>SHOW</strong> shows what you typed). WPA Enterprise and WEP networks are not
-  supported.</li>
-<li><strong>CHECK FOR UPDATES fails</strong> while Wi-Fi is connected: the network may need a sign-in page (hotel or guest Wi-Fi),
-  which the console cannot open, or it has no internet. The console also needs the correct time from the internet;
-  it waits for it up to about 45 seconds.</li>
-<li>Ethernet to a router works as an alternative.</li>
-<li>A console that cannot reach the internet can still be updated from a <a href="../software-updates/#from-a-usb-stick-no-network">USB stick</a>.</li>
-</ul>
-<h2 id="a-firmware-update-failed">A firmware update failed<a class="headerlink" href="#a-firmware-update-failed" title="Permanent link">¶</a></h2>
-<p>See <a href="../firmware/#do-not-operate">Firmware: DO NOT OPERATE</a>. In short: if nothing was written, the press is unchanged;
-if the console shows <strong>DO NOT OPERATE THE PRESS</strong>, flash it again with <strong>FLASH AGAIN</strong>.</p>
-<h2 id="a-software-update-went-back-by-itself">A software update went back by itself<a class="headerlink" href="#a-software-update-went-back-by-itself" title="Permanent link">¶</a></h2>
-<p>The new version did not start properly, and the console returned to the previous one
-(<a href="../software-updates/#the-trial-automatic-return-to-the-previous-version">the trial</a>). The press is fine. Please report
-it with the version numbers.</p>
+<table>
+<thead>
+<tr>
+<th>Cause</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The screen has no speaker, or its volume is down</td>
+<td>Sound comes through the screen's own speaker over HDMI. Turn the screen's volume up.</td>
+</tr>
+<tr>
+<td>Sound is off</td>
+<td><strong>CONSOLE SETTINGS → Sound</strong> must be <strong>ON</strong>. If the panel says "No speaker found: alerts are silent.", the console found no sound device.</td>
+</tr>
+<tr>
+<td>The screen was not identified at start-up</td>
+<td>The same <code>PRESS-CONSOLE.txt</code> note as for the picture applies.</td>
+</tr>
+</tbody>
+</table>
+<p>The first fraction of a second of a sound can be lost while the screen's audio wakes up. Sounds are an extra: every
+alert also shows on the screen.</p>
+<h2 id="wi-fi-and-updates">Wi-Fi and updates<a class="headerlink" href="#wi-fi-and-updates" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The Wi-Fi list is empty, or Wi-Fi is off</td>
+<td>Choose your <strong>country</strong> first (Wi-Fi stays off until it is set), then <strong>SCAN</strong>.</td>
+</tr>
+<tr>
+<td>Your network is not listed</td>
+<td>It may be hidden (<strong>HIDDEN NETWORK…</strong>), out of range, or on a 5 GHz channel not allowed in the country you chose.</td>
+</tr>
+<tr>
+<td>It does not connect</td>
+<td>Check the password (<strong>SHOW</strong> shows what you typed). WPA Enterprise and WEP networks are not supported.</td>
+</tr>
+<tr>
+<td>CHECK FOR UPDATES fails while Wi-Fi is connected</td>
+<td>The network may need a sign-in page (hotel or guest Wi-Fi), which the console cannot open, or it has no internet. The console also needs the correct time from the internet.</td>
+</tr>
+<tr>
+<td>No network at all</td>
+<td>Use Ethernet to a router, or update from a USB stick.</td>
+</tr>
+<tr>
+<td>An update went back to the previous version by itself</td>
+<td>The new version did not start properly. The press is fine; please report it with both version numbers.</td>
+</tr>
+</tbody>
+</table>
+<p>Details: <a href="../software-updates/">Software updates and Wi-Fi</a>.</p>
 <h2 id="reporting-a-problem">Reporting a problem<a class="headerlink" href="#reporting-a-problem" title="Permanent link">¶</a></h2>
-<p>Open an <a href="https://github.com/Shane-Cotta/khc-press-console/issues/new/choose">issue</a> with the bug report form. Include:</p>
+<p>Open an <a href="https://github.com/Shane-Cotta/khc-press-console/issues/new/choose">issue</a> and choose the <strong>Bug report</strong>
+form. KHC Press Console is not made or supported by Mark 7 Reloading: please do not contact Mark 7 about it.</p>
+<p>Include:</p>
 <ul>
-<li>the console version (bottom right of every screen, or ABOUT);</li>
+<li>the console version (bottom right of every screen, or <strong>ABOUT</strong>);</li>
 <li>the press model and firmware as the console shows them (the status bar on the press screen);</li>
 <li>what you did, what happened, and <strong>the exact text of any alert</strong> (a photo of the screen is best);</li>
-<li>whether the press stopped when it should have. <strong>If it did not, say so in the first line</strong>, and do not use KHC
-  Press Console again until the problem is understood;</li>
-<li>the name of the logs file, if you saved one (below).</li>
+<li>whether the press stopped when it should have. <strong>If it did not, say so in the first line</strong>, and do not use KHC Press
+  Console again until the problem is understood;</li>
+<li>the name of the logs file, if you saved one (below), or the ticket number of a diagnostic report.</li>
 </ul>
 <h3 id="save-logs">Save logs<a class="headerlink" href="#save-logs" title="Permanent link">¶</a></h3>
 <p>The console keeps a detailed log of every session on the card, including a record of the last moments before each
-CRITICAL alert. <strong>SAVE LOGS</strong> puts it, with the console's version, the press model and firmware and the recent
-alerts, into one file:</p>
-<ul>
-<li><strong>CONSOLE SETTINGS → SAVE LOGS</strong>, at any time; or</li>
-<li><strong>SAVE LOGS</strong> on the "Save the logs?" message the console shows after you close a CRITICAL alert with CONSOLE IS
-  OFF.</li>
-</ul>
-<p>It takes a few seconds; the console and STOP keep working meanwhile. It is not possible while a firmware update runs.
-When it is done, the console shows the file's name and where it was saved.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-alert-logs-saved.png" data-desc-position="bottom"><img alt="Logs saved: the file's name and where it was saved" src="../../images/screen-alert-logs-saved.png"></a></p>
+CRITICAL alert. <strong>SAVE LOGS</strong> puts it into one file, with the console's version, the press model and firmware, and the
+recent alerts.</p>
+<ol>
+<li>Tap <strong>CONSOLE SETTINGS → SAVE LOGS</strong> at any time, or <strong>SAVE LOGS</strong> on the <strong>Save the logs?</strong> question the console
+   asks after you close a CRITICAL alert with <strong>CONSOLE IS OFF</strong>.</li>
+<li>Wait a few seconds (the button shows <strong>SAVING…</strong>). The console and STOP keep working meanwhile. It is not possible
+   while a firmware update runs.</li>
+<li>The <strong>Logs saved</strong> alert shows the file's name and where it was saved. Give that name in your bug report.</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-alert-logs-saved.png" data-desc-position="bottom"><img alt="Logs saved: the alert with the file's name and where it was saved on the console" src="../../images/screen-alert-logs-saved.png"></a></p>
 <ul>
 <li>The file is <strong>kept on the console</strong>. USB sticks are mounted read-only on the console, so it cannot be written to a
-  stick (the message says so). The console keeps the five newest.</li>
-<li>Give the file's name in your bug report. If the file is needed, the issue will say how to get it off the console's
-  SD card (it needs a computer that can read the card's Linux partition, so usually a technician's help).</li>
+  stick (the alert says so). The console keeps the five newest.</li>
+<li>If the file is needed, the issue will say how to get it off the card (it needs a computer that can read the card's
+  Linux partition, so usually a technician's help).</li>
 <li>The file holds <strong>no Wi-Fi password</strong> and no other secret: the console leaves out its Wi-Fi settings and blanks
   anything in the logs that looks like a password.</li>
 </ul>
-<h2 id="send-a-diagnostic-report">Send a diagnostic report<a class="headerlink" href="#send-a-diagnostic-report" title="Permanent link">¶</a></h2>
-<p>A technician can send a report straight from the console, with the logs, when it is connected to the internet
-(Wi-Fi or Ethernet). They open <strong>DIAGNOSTIC UPLOAD</strong>, type a short description of what happened (and, if you like,
-your company and first name), and tap <strong>SEND</strong>. STOP and the RUN column keep working meanwhile.</p>
+<h3 id="send-a-diagnostic-report">Send a diagnostic report<a class="headerlink" href="#send-a-diagnostic-report" title="Permanent link">¶</a></h3>
+<p>When the console is connected to the internet (Wi-Fi or Ethernet), a technician can send a report straight from it,
+with its logs. They open <strong>DIAGNOSTIC UPLOAD</strong>, type a short description of what happened (and, if you like, your
+company and first name), and tap <strong>SEND</strong>. STOP and the run column keep working meanwhile.</p>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p><strong>The description and the diagnostic summary are published on GitHub as a public issue.</strong> The summary holds the
+versions, the press model and firmware, the license state (never a license number), recent errors and alert
+titles. <strong>Your company, your first name, the console's device identity and the logs bundle are never published.</strong>
+The console says so on the form before you send. Do not type names, license numbers, Wi-Fi names or passwords into
+the description.</p>
+</div>
 <ul>
-<li><strong>Your description and the diagnostics are posted publicly on GitHub. Your name and company are not.</strong> The console
-  says so on the form before you send.</li>
-<li>The logs go with it, privately: only KHC reads them. They hold no Wi-Fi password or network name, no license
+<li>The logs go with the report privately: only KHC reads them. They hold no Wi-Fi password or network name, no license
   number and no other secret, and errors keep only where they happened, never their messages.</li>
 <li>When it is done, the console shows the ticket number, for example <strong>Ticket KHC-20261002-7F3K sent: GitHub issue
-  #42.</strong>, or <strong>Received (ticket …). We'll review it.</strong> on a console in its trial: KHC reads it first and then posts it.
-  Give the ticket number if you write to us about it.</li>
-<li>A console can send a few reports a day. If it says there is no internet, connect it (CONSOLE SETTINGS → Wi-Fi) and
-  try again.</li>
+  #42.</strong> On a console without a license it shows <strong>Received (ticket …). We'll review it.</strong>: KHC reads it first and
+  then publishes it. Give the ticket number if you write to us about it.</li>
+<li>A console can send a few reports a day. If it says it is not connected to the internet, connect it (<strong>CONSOLE
+  SETTINGS → WI-FI</strong>) and tap <strong>TRY AGAIN</strong>.</li>
 </ul>
 <h2 id="for-technicians">For technicians<a class="headerlink" href="#for-technicians" title="Permanent link">¶</a></h2>
-<p>These need a computer and some Linux experience; operators never need them.</p>
+<p>Operators never need these.</p>
 <ul>
 <li><strong><code>PRESS-CONSOLE.txt</code></strong> on the card's boot partition (readable from any computer) describes the card: what runs at
-  start-up, the screen and sound settings, and how to enable an administrator login before the first start, from
-  which the console's logs can be read.</li>
-<li><strong>The service link:</strong> a laptop connected to the Pi's Ethernet port with a plain cable gets an address from the
-  console (no internet goes through it); the console is then <code>khc-console.local</code>. The console has a <strong>read-only
-  diagnostic view</strong> for support sessions: it shows the press traffic live on the screen and can stream it to the
-  laptop's browser, with a one-time code shown on the console. It never sends anything to the press, it is opened by a
-  technician (operators do not need it), and it switches itself off after 30 minutes without use. Nothing listens on
-  the network while it is off.</li>
-<li>The console also has a <strong>demo mode for technicians</strong>, opened the same way: the console simulates a press by
-  itself, so the screens and the touchscreen can be tried, or the console shown, with no press connected. It is off at every start,
-  a large <strong>DEMO — NO PRESS CONNECTED</strong> banner shows on every screen while it is on, and nothing is sent to a press.</li>
+  start-up and the screen and sound settings.</li>
+<li>The console has a <strong>read-only diagnostic view</strong> for support sessions. A technician opens it; it never sends anything
+  to the press.</li>
 <li>If a number pad titled <strong>Technician: debug and demo mode</strong> appears by accident, tap <strong>CANCEL</strong> (or wait a minute: it
-  closes by itself). STOP keeps working while it is open.</li>
+  closes by itself). It changes nothing on the press, and STOP keeps working while it is open.</li>
+<li>If a <strong>DEMO — NO PRESS CONNECTED</strong> banner shows, the console is simulating a press: nothing on the screen comes from
+  your press. Restarting the console turns it off.</li>
 </ul>
 
 

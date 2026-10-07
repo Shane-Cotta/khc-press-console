@@ -1069,6 +1069,25 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#words-used-in-this-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Words used in this guide
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1093,7 +1112,7 @@
 
 
 <h1 id="khc-press-console-user-guide">KHC Press Console user guide<a class="headerlink" href="#khc-press-console-user-guide" title="Permanent link">¶</a></h1>
-<p>KHC Press Console is BETA software for real machinery. Read <a href="../../SAFETY/">Safety</a> first.</p>
+<p><strong>Read <a href="../../SAFETY/">Safety</a> first.</strong> KHC Press Console is unofficial BETA software that drives real machinery.</p>
 <table>
 <thead>
 <tr>
@@ -1116,71 +1135,110 @@
 <tr>
 <td>3</td>
 <td><a href="home-screen/">The home screen</a></td>
-<td>PRESS, FIRMWARE, SOFTWARE UPDATE, CONSOLE SETTINGS, ABOUT, TURN OFF; ACCEPT before every connection</td>
+<td>The buttons of the home screen, ACCEPT before every connection, turning off</td>
 </tr>
 <tr>
 <td>4</td>
 <td><a href="calibrate-and-run/">Calibrating and running</a></td>
-<td>CALIBRATE, RUN, END CYCLE, SINGLE, STOP, NEUTRAL, jog, die setup</td>
+<td>STOP, CALIBRATE, RUN, END CYCLE, SINGLE, NEUTRAL, JOG and die setup</td>
 </tr>
 <tr>
 <td>5</td>
 <td><a href="press-tabs/">The press tabs</a></td>
-<td>Control, Monitors, Sensors, Setup and Settings, and which presses have which</td>
+<td>Control, Monitors, Sensors, Setup and Settings, and what each press model has</td>
 </tr>
 <tr>
 <td>6</td>
 <td><a href="sensors-and-interlocks/">Sensors and interlocks</a></td>
-<td>ACTIVE and BYPASSED, what starts active, confirming a bypass</td>
+<td>ACTIVE and BYPASSED, what starts active, bypassing an interlock, the open guard</td>
 </tr>
 <tr>
 <td>7</td>
 <td><a href="alerts/">Alerts</a></td>
-<td>Information, stop and CRITICAL alerts, and what each asks of you</td>
+<td>Information, warning, stop and CRITICAL alerts, and what each one asks of you</td>
 </tr>
 <tr>
 <td>8</td>
-<td><a href="firmware/">Firmware</a></td>
-<td>Which image for which press, the custom builds, flashing, recovery, DO NOT OPERATE</td>
+<td><a href="foot-pedal/">Foot pedal</a></td>
+<td>Learning a USB foot pedal and arming it for SINGLE CYCLE</td>
 </tr>
 <tr>
 <td>9</td>
-<td><a href="software-updates/">Software updates and Wi-Fi</a></td>
-<td>Setting up Wi-Fi, checking for updates, installing, going back, USB sticks, the trial</td>
+<td><a href="console-settings/">Console settings</a></td>
+<td>Touch screen, rotation, sound, the settings file, SAVE LOGS</td>
 </tr>
 <tr>
 <td>10</td>
-<td><a href="license/">The trial and your license</a></td>
-<td>The 10-day trial, activating a license, seats, moving a seat to another Pi</td>
-</tr>
-<tr>
-<td>11</td>
-<td><a href="console-settings/">Console settings</a></td>
-<td>Touch calibration, rotation, sounds, settings export and import</td>
-</tr>
-<tr>
-<td>12</td>
-<td><a href="foot-pedal/">Foot pedal</a></td>
-<td>Setting up and arming a USB foot pedal for SINGLE CYCLE</td>
-</tr>
-<tr>
-<td>13</td>
 <td><a href="console-ports/">Console ports</a></td>
 <td>Which sensor plugs into which port of the press console</td>
 </tr>
 <tr>
+<td>11</td>
+<td><a href="firmware/">Press firmware</a></td>
+<td>Backups, the KHC primer-learn patch, flashing, recovery, DO NOT OPERATE</td>
+</tr>
+<tr>
+<td>12</td>
+<td><a href="software-updates/">Software updates and Wi-Fi</a></td>
+<td>Wi-Fi, checking for updates, installing, going back, USB sticks</td>
+</tr>
+<tr>
+<td>13</td>
+<td><a href="license/">The trial and your license</a></td>
+<td>The 10-day trial, activating a license, seats</td>
+</tr>
+<tr>
 <td>14</td>
 <td><a href="troubleshooting/">Troubleshooting</a></td>
-<td>Common problems and what to do; a note for technicians</td>
+<td>Symptoms, causes and fixes; how to ask for help</td>
 </tr>
 <tr>
 <td>15</td>
 <td><a href="faq/">FAQ</a></td>
-<td>Common questions</td>
+<td>Short answers to common questions</td>
 </tr>
 </tbody>
 </table>
-<p>The words on the buttons are written in capitals here, as on the screen: <strong>RUN</strong>, <strong>CALIBRATE</strong>, <strong>ACCEPT</strong>.</p>
+<h2 id="words-used-in-this-guide">Words used in this guide<a class="headerlink" href="#words-used-in-this-guide" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Word</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>the console</strong></td>
+<td>KHC Press Console: the Raspberry Pi with its touch screen, running this software</td>
+</tr>
+<tr>
+<td><strong>the press console</strong></td>
+<td>Mark 7's control box on the press, with the sensor ports and the power switch</td>
+</tr>
+<tr>
+<td><strong>the press</strong></td>
+<td>the reloading press and its motor, driven through the press console</td>
+</tr>
+<tr>
+<td><strong>the card</strong></td>
+<td>the SD card in the Raspberry Pi that holds KHC Press Console</td>
+</tr>
+<tr>
+<td><strong>the home screen</strong></td>
+<td>the console's main screen, with PRESS, FIRMWARE and the other main buttons</td>
+</tr>
+<tr>
+<td><strong>STOP</strong></td>
+<td>the red STOP sign on the right of every screen</td>
+</tr>
+<tr>
+<td><strong>RUN</strong></td>
+<td>the green button that runs the press continuously</td>
+</tr>
+</tbody>
+</table>
+<p>Words in bold capitals are written as the screen shows them: <strong>RUN</strong>, <strong>CALIBRATE</strong>, <strong>ACCEPT</strong>.</p>
 
 
 

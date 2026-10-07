@@ -490,6 +490,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Your first session">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-the-interlocks-and-calibrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check the interlocks and calibrate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-you-are-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When you are done
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1203,6 +1231,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Your first session">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-the-interlocks-and-calibrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check the interlocks and calibrate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-you-are-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When you are done
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1242,8 +1298,13 @@
 
 
 <h1 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">¶</a></h1>
-<p>This page wires the console up and walks through a first session. Read <a href="../../../SAFETY/">Safety</a> first, and have the
-card written (<a href="../install/">Installing</a>).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Read <a href="../../../SAFETY/">Safety</a> first.</strong> KHC Press Console is unofficial BETA software that drives real machinery.
+Keep the press console's power switch within reach: it is the press's only hard stop.</p>
+</div>
+<p>This page wires the console up and walks you through a first session. Write the card first
+(<a href="../install/">Installing</a>).</p>
 <h2 id="wiring">Wiring<a class="headerlink" href="#wiring" title="Permanent link">¶</a></h2>
 <pre><code> press console                      Raspberry Pi 4 / 5                    touch screen
  ┌───────────────┐   USB-A to       ┌──────────────────┐  micro-HDMI to   ┌──────────────┐
@@ -1255,54 +1316,60 @@ card written (<a href="../install/">Installing</a>).</p>
  └───────────────┘
 </code></pre>
 <ol>
-<li><strong>The press:</strong> a <strong>USB-A to micro-USB data cable</strong> from <strong>any USB-A port of the Pi</strong> to the <strong>micro-USB port of the
-   press console</strong> (the port Mark 7's tablet used). Charge-only cables do not work.</li>
-<li><strong>Never plug anything into the press console's USB-A port</strong> except the cable to the ClearPath motor that is
-     already there. That port is the press's link to its motor.</li>
-<li>Connect <strong>one press</strong> to a console. A second press adapter on the same Pi is not supported.</li>
-<li><strong>The screen picture:</strong> a micro-HDMI to HDMI cable from the Pi's <strong>first HDMI port</strong> (HDMI0, the one next to the
+<li><strong>The press:</strong> connect a <strong>USB-A to micro-USB data cable</strong> from <strong>any USB-A port of the Pi</strong> to the <strong>micro-USB
+   port of the press console</strong> (the port Mark 7's tablet used). Charge-only cables do not work.</li>
+<li><strong>The picture:</strong> connect a micro-HDMI to HDMI cable from the Pi's <strong>first HDMI port</strong> (HDMI0, the one next to the
    USB-C power input) to the screen.</li>
-<li><strong>The touch:</strong> the screen's touch USB cable to any free USB port of the Pi.</li>
-<li><strong>Power:</strong> the screen from <strong>its own 5 V supply</strong>, not from a USB port of the Pi (the Pi cannot supply enough
-   current for it, and a sagging supply makes the Pi unreliable). The Pi from its own supply.</li>
-<li>Optional: an Ethernet cable (for online updates through a router, or for a technician's laptop), a USB foot pedal,
-   a USB stick.</li>
+<li><strong>The touch:</strong> connect the screen's touch USB cable to any free USB port of the Pi.</li>
+<li><strong>Power:</strong> give the screen <strong>its own 5 V supply</strong>, not a USB port of the Pi (the Pi cannot supply enough current
+   for it, and a sagging supply makes the Pi unreliable). Give the Pi its own supply.</li>
+<li><strong>Optional:</strong> an Ethernet cable (for online updates through a router), a USB foot pedal, a USB stick.</li>
 </ol>
-<p>Plug and unplug <strong>sensors</strong> at the press console only with the console switched off
-(<a href="../console-ports/">Console ports</a>).</p>
+<div class="admonition danger">
+<p class="admonition-title">Caution</p>
+<p><strong>Never plug anything into the press console's USB-A port</strong> except the cable to the ClearPath motor that is already
+there. That port is the press's link to its motor.</p>
+</div>
+<ul>
+<li>Connect <strong>one press</strong> to a console. A second press adapter on the same Pi is not supported.</li>
+<li>Plug and unplug <strong>sensors</strong> at the press console only with the console switched off
+  (<a href="../console-ports/">Console ports</a>).</li>
+</ul>
 <h2 id="power-on-order">Power-on order<a class="headerlink" href="#power-on-order" title="Permanent link">¶</a></h2>
 <ol>
-<li>The press console switched <strong>off</strong>, or on with the press at rest. (KHC Press Console never moves the press by itself:
-   nothing is sent until you tap ACCEPT or CONNECT.)</li>
+<li>Leave the press console switched <strong>off</strong>, or on with the press at rest. KHC Press Console never moves the press by
+   itself: nothing is sent until you tap <strong>ACCEPT</strong> or <strong>CONNECT</strong>.</li>
 <li>Switch on the screen.</li>
-<li>Plug in the Pi's power. The boot animation plays, then the home screen appears (the very first start takes about
-   a minute longer).</li>
+<li>Plug in the Pi's power. The boot animation plays, then the home screen appears. The very first start takes about a
+   minute longer, and shows the terms of use and the welcome screens (<a href="../install/#first-start">Installing</a>).</li>
 <li>Switch on the press console if it was off.</li>
 </ol>
 <h2 id="your-first-session">Your first session<a class="headerlink" href="#your-first-session" title="Permanent link">¶</a></h2>
-<p>Use an <strong>empty shell plate</strong> for your first sessions, keep your hand near the console's power switch, and go one step
+<p>Use an <strong>empty shell plate</strong> for your first sessions. Keep your hand near the console's power switch, and go one step
 at a time.</p>
 <ol>
-<li><strong>Plug in the press, tap CONNECT.</strong> When the console sees the press console's USB cable (plugged in, or already
-   plugged in when the console starts), it asks: <strong>Press detected</strong>, with the USB adapter, the press it last saw on
-   that cable, and <strong>"Connecting restarts the press controller. Keep hands clear."</strong> Tap <strong>CONNECT</strong> to connect, or
-   <strong>NOT NOW</strong> (it asks again the next time you plug the cable in).</li>
+<li><strong>Plug in the press and tap CONNECT.</strong> When the console sees the press console's USB cable (plugged in, or already
+   plugged in when the console starts), it shows <strong>Press detected</strong>: the USB adapter, the press it last saw, and
+   <strong>"Connecting restarts the press controller. Keep hands clear."</strong> Tap <strong>CONNECT</strong>, or <strong>NOT NOW</strong> (it asks again
+   the next time you plug the cable in).</li>
 </ol>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-press-detected.png" data-desc-position="bottom"><img alt="Press detected: the adapter, the last press seen on it, CONNECT and NOT NOW" src="../../images/screen-press-detected.png"></a></p>
-<p>Or, from the home screen (the status line says <strong>Press not connected</strong>), tap <strong>PRESS</strong>, read the safety text and
-   tap <strong>ACCEPT</strong> (or <strong>DENY</strong> to go back).</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-accept.png" data-desc-position="bottom"><img alt="The accept screen: &quot;Reloading is dangerous.&quot;, ACCEPT and DENY" src="../../images/screen-accept.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-press-detected.png" data-desc-position="bottom"><img alt="The Press detected popup: the USB adapter, the last press seen on it, the keep-hands-clear warning, CONNECT and NOT NOW" src="../../images/screen-press-detected.png"></a></p>
 <ol>
-<li>
-<p><strong>Either way, the console connects and restarts the press controller.</strong> You accept <strong>before every connection</strong>:
-   see <a href="../home-screen/#accept-before-every-connection">The home screen</a>.</p>
-</li>
-<li>
-<p><strong>Wait for the press to be identified.</strong> The status bar at the bottom shows the firmware (for example
-   "Firmware: Evo FW 19") and the motor, then <strong>CONNECTED</strong> and <strong>NOT CALIBRATED</strong>. The tabs for your press model
-   appear.</p>
-</li>
-<li><strong>Check the interlocks.</strong> On the <strong>Sensors</strong> tab, <strong>Remote Stop</strong> and <strong>Machine Guard</strong> are <strong>ACTIVE</strong> (green).
+<li><strong>Or connect from the home screen.</strong> Tap <strong>PRESS</strong>, read the safety text and tap <strong>ACCEPT</strong> (or <strong>DENY</strong> to go
+   back).</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-accept.png" data-desc-position="bottom"><img alt="The accept screen before connecting: &quot;Reloading is dangerous.&quot;, with ACCEPT and DENY" src="../../images/screen-accept.png"></a></p>
+<ol>
+<li><strong>Wait for the press to be identified.</strong> Either way, the console connects and restarts the press controller. The
+   status bar at the bottom shows the firmware (for example "Firmware: Evo FW 19") and the motor, then <strong>CONNECTED</strong>
+   and <strong>NOT CALIBRATED</strong>. The tabs for your press model appear.</li>
+</ol>
+<p>You accept <strong>before every connection</strong>: see
+<a href="../home-screen/#accept-before-every-connection">The home screen</a>. If the console has no trial or license yet, CONNECT
+and PRESS open <strong>LICENSE</strong> instead (<a href="../license/">The trial and your license</a>).</p>
+<h3 id="check-the-interlocks-and-calibrate">Check the interlocks and calibrate<a class="headerlink" href="#check-the-interlocks-and-calibrate" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Check the interlocks.</strong> On the <strong>Sensors</strong> tab, <strong>Remote Stop</strong> and <strong>Machine Guard</strong> must be <strong>ACTIVE</strong> (green).
    Turn on the other sensors that are fitted to your press. Close the guard.</li>
 <li><strong>Calibrate.</strong> With the shell plate <strong>empty</strong>, tap <strong>CALIBRATE</strong> on the Control tab. The press moves through its
    calibration. When it succeeds, the status bar shows <strong>CALIBRATED</strong> and <strong>RUN</strong> unlocks.</li>
@@ -1311,19 +1378,31 @@ at a time.</p>
 <li><strong>Run.</strong> Choose a speed and tap <strong>RUN</strong>. <strong>END CYCLE</strong> stops at the end of the current cycle; <strong>STOP</strong> stops now.
    See <a href="../calibrate-and-run/">Calibrating and running</a>.</li>
 </ol>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-press-evolution-control.png" data-desc-position="bottom"><img alt="The Control tab of an Evo: speeds, digital clutch, Index torque, JOG, CALIBRATE, and RUN / END CYCLE / SINGLE / STOP on the right" src="../../images/screen-press-evolution-control.png"></a></p>
-<p>When you are done, tap <strong>MENU</strong> to go back home, and <strong>TURN OFF</strong> before you unplug the Pi
-(<a href="../home-screen/#turning-off">Turning off</a>).</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-press-evolution-control.png" data-desc-position="bottom"><img alt="The Control tab of an Evo: speeds, digital clutch, Index torque, JOG and CALIBRATE, with RUN, END CYCLE, SINGLE and STOP in the column on the right" src="../../images/screen-press-evolution-control.png"></a></p>
+<div class="admonition danger">
+<p class="admonition-title">Caution</p>
+<p>If the press does not stop at once when you tap STOP, press the Remote Stop or open the guard, <strong>switch off the press
+console's power</strong>, and do not use the console until you have reported it.</p>
+</div>
+<h3 id="when-you-are-done">When you are done<a class="headerlink" href="#when-you-are-done" title="Permanent link">¶</a></h3>
+<ol>
+<li>Stop the press (<strong>STOP</strong> or <strong>END CYCLE</strong>).</li>
+<li>Tap <strong>MENU</strong> to go back to the home screen.</li>
+<li>Tap <strong>TURN OFF</strong> before you unplug the Pi (<a href="../home-screen/#turning-off">Turning off</a>).</li>
+<li>Switch off the press console.</li>
+</ol>
 <h2 id="what-the-console-remembers">What the console remembers<a class="headerlink" href="#what-the-console-remembers" title="Permanent link">¶</a></h2>
 <ul>
 <li>Your <strong>press settings</strong> (sensors, clutch, dwell, index and the monitors), per press model. They are sent to the
-  press every time it connects, because the press itself forgets them at every restart. The <strong>speed</strong> always starts
-  at the slowest, and <strong>Remote Stop, Machine Guard and Index torque (TorqueSense™)</strong> always start <strong>ACTIVE</strong>.</li>
-<li>The <strong>console settings</strong>: touch calibration, screen rotation, sounds, the foot pedal.</li>
+  press every time it connects, because the press itself forgets them at every restart.</li>
+<li>The <strong>speed</strong> always starts at the slowest, and <strong>Remote Stop, Machine Guard and Index torque (TorqueSense™)</strong> always
+  start <strong>ACTIVE</strong>.</li>
+<li>The <strong>console settings:</strong> touch calibration, screen rotation, sounds, the foot pedal.</li>
+<li>The <strong>backups of your press's firmware</strong> (<a href="../firmware/">Firmware</a>).</li>
 <li>The last press model it saw (used for firmware recovery).</li>
 </ul>
-<p>These live on the SD card and survive software updates. A newly written card starts from scratch, and the
-<a href="../console-settings/#settings-file-export-and-import">settings files</a> saved on the old card go with it.</p>
+<p>All of this lives on the SD card and survives software updates. A newly written card starts from scratch: the
+<a href="../console-settings/">settings files</a> and firmware backups saved on the old card do not carry over.</p>
 
 
 
