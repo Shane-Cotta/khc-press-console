@@ -1,0 +1,1650 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The user manual of KHC Press Console, the touch-screen console for Mark 7 automated reloading presses (BETA).">
+      
+      
+      
+        <link rel="canonical" href="https://shane-cotta.github.io/khc-press-console/0.3.0b3/docs/user-guide/firmware/">
+      
+      
+        <link rel="prev" href="../console-ports/">
+      
+      
+        <link rel="next" href="../software-updates/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Press firmware - KHC Press Console manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  <style>
+    .md-banner { background-color: #b33a00; }
+    .md-banner .khc-announce { color: #fff; text-decoration: underline; text-underline-offset: 0.2em; }
+    .md-banner .khc-announce:hover, .md-banner .khc-announce:focus { color: #fff; text-decoration-thickness: 2px; }
+  </style>
+
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#press-firmware" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<a href="../../../SAFETY/" class="khc-announce">
+  <strong>Unofficial BETA software for real machinery</strong> — read <strong>Safety</strong> first
+</a>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="KHC Press Console manual" class="md-header__button md-logo" aria-label="KHC Press Console manual" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            KHC Press Console manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Press firmware
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Shane-Cotta/khc-press-console" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    Shane-Cotta/khc-press-console
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="KHC Press Console manual" class="md-nav__button md-logo" aria-label="KHC Press Console manual" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    KHC Press Console manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Shane-Cotta/khc-press-console" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    Shane-Cotta/khc-press-console
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KHC Press Console
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SAFETY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Safety
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installing KHC Press Console
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../home-screen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The home screen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Daily use
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Daily use
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../calibrate-and-run/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calibrating and running
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../press-tabs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The press tabs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sensors-and-interlocks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sensors and interlocks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alerts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../foot-pedal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Foot pedal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../console-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Console settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../console-ports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Console ports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Press firmware
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Press firmware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#the-firmware-on-the-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The firmware on the console
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-one-to-choose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which one to choose
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Which one to choose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-khc-primer-learn-patch-the-primer-orientation-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The KHC primer-learn patch: the Primer Orientation fix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backup-restore-and-the-khc-patch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup, restore and the KHC patch
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backup, restore and the KHC patch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#firmware-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firmware available
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#never-cross-flash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Never cross-flash
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flashing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flashing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#do-not-operate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DO NOT OPERATE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firmware-and-software-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firmware and software updates
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Updates and Wi-Fi
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Updates and Wi-Fi
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software-updates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software updates and Wi-Fi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Licence and trial
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Licence and trial
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The trial and your license
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting and FAQ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Troubleshooting and FAQ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../TERMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terms of use
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#the-firmware-on-the-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The firmware on the console
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-one-to-choose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which one to choose
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Which one to choose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-khc-primer-learn-patch-the-primer-orientation-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The KHC primer-learn patch: the Primer Orientation fix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backup-restore-and-the-khc-patch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup, restore and the KHC patch
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backup, restore and the KHC patch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#firmware-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firmware available
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#never-cross-flash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Never cross-flash
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flashing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flashing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#do-not-operate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DO NOT OPERATE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firmware-and-software-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firmware and software updates
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/Shane-Cotta/khc-press-console/edit/main/docs/user-guide/firmware.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+    </a>
+  
+  
+
+
+<h1 id="press-firmware">Press firmware<a class="headerlink" href="#press-firmware" title="Permanent link">¶</a></h1>
+<p>The press controller inside the press console runs Mark 7's firmware. <strong>You do not need to change it to use KHC
+Press Console</strong>: the console works with the firmware your press shipped with. The <strong>FIRMWARE</strong> screen is for putting a
+firmware image on the press controller when you want to: the KHC primer-learn patch, or a file of your own from a
+USB stick.</p>
+<h2 id="the-firmware-on-the-console">The firmware on the console<a class="headerlink" href="#the-firmware-on-the-console" title="Permanent link">¶</a></h2>
+<p>The console carries the <strong>KHC primer-learn patch</strong> for the Evo and the Revo; nothing needs downloading. For a press on
+Mark 7's original firmware, the console makes the KHC build itself, from <strong>a backup of your own press's firmware</strong>
+("Backup, restore and the KHC patch" below). The release page carries no firmware image, only the patch descriptions
+(<code>khc-*.json</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Firmware</th>
+<th>For</th>
+<th>Reports</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KHC primer-learn patch for Evo (from Mark 7 FW 19)</td>
+<td>the Mark 7 Apex 10 Evolution (Evo) <strong>only</strong></td>
+<td>Evo FW 20</td>
+<td>Primer Orientation fix. <strong>Not yet run on a press</strong></td>
+</tr>
+<tr>
+<td>KHC primer-learn patch for Revo (from Mark 7 FW 30)</td>
+<td>the Mark 7 Revolution (Revo) <strong>only</strong></td>
+<td>Revo FW 31</td>
+<td>Primer Orientation fix. <strong>Not yet run on a press</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The list on the FIRMWARE screen shows them by their short names, <strong>KHC patch for Evo</strong> and <strong>KHC patch for Revo</strong>.</p>
+<p>The console does not carry Mark 7's own firmware images. <strong>There is no KHC firmware for the 650/750 PRO and X, the
+1050/1100 PRO, X and LTE, the Evo PRO, the Duals or the GAP PRO yet</strong>: on those presses the FIRMWARE screen says so,
+and you can still flash a file of your own from a USB stick (below). None of these images has been flashed with KHC
+Press Console on a real press yet.</p>
+<h2 id="which-one-to-choose">Which one to choose<a class="headerlink" href="#which-one-to-choose" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Evo or Revo with Mark 7's Primer Orientation sensor, or none:</strong> you do not need to change anything.</li>
+<li><strong>Evo with a replacement Primer Orientation sensor</strong> that does not change state during every calibration: the KHC
+  primer-learn patch for Evo.</li>
+<li><strong>Revo with a replacement sensor:</strong> the KHC primer-learn patch for Revo, after reading the notes below.</li>
+<li><strong>650/750 and 1050/1100:</strong> keep the firmware your press has. Their firmware has no Primer Orientation sensor,
+  so there is nothing for the fix to change.</li>
+</ul>
+<h3 id="the-khc-primer-learn-patch-the-primer-orientation-fix">The KHC primer-learn patch: the Primer Orientation fix<a class="headerlink" href="#the-khc-primer-learn-patch-the-primer-orientation-fix" title="Permanent link">¶</a></h3>
+<p>Mark 7's firmware learns the Primer Orientation sensor during a calibration <strong>only if the calibration sees the sensor
+change state</strong>, and forgets it at every restart of the press controller, which happens at every connection. A sensor
+that does not change state during calibration is then never checked. The KHC patch changes two things only: <strong>the press
+learns the sensor at every CALIBRATE</strong>, so a replacement sensor works after every restart, and it reports a version
+one higher (Evo FW 20, Revo FW 31), so you can see which firmware is loaded. Everything else is
+Mark 7's code, unchanged.</p>
+<ul>
+<li><strong>Calibrate after every connect, with an empty shell plate.</strong> The press forgets what it learned at every restart.</li>
+<li><strong>The sensor goes in console port 2</strong>, the Primer Orientation port of the Evo and the Revo
+  (<a href="../console-ports/">Console ports</a>). <strong>On a 1050/1100, port 2 is the swage sensor:</strong> never fit a Primer
+  Orientation sensor there.</li>
+<li><strong>With no sensor fitted, keep Primer Orientation bypassed</strong> (black) on the Sensors tab. With the fix, a sensor that
+  is missing or dead at calibration is no longer silently skipped: the press stops with an index alarm on every
+  cycle instead.</li>
+<li><strong>Revo:</strong> it checks the shell-plate index at other points of its stroke than the Evo, so a sensor that works on an
+  Evo must be tested again on the Revo: dummy rounds with seated primers (no index alarm),
+  then pull a primer (the press must stop).</li>
+<li><strong>The KHC patch has not run on a press yet.</strong> The FIRMWARE screen marks both builds <strong>UNTESTED</strong>, with the warning
+  <strong>"Not yet run on a press: test with dummy rounds and pull a primer before loading."</strong> If you load one, run dummy
+  rounds first and check that the press stops when a primer is pulled.</li>
+<li>They are <strong>unofficial</strong>, and each is for <strong>its own model only</strong>.</li>
+<li>Going back is always possible: flash Mark 7's own firmware file for your press (from Mark 7's software package)
+  from a USB stick, as below.</li>
+</ul>
+<h2 id="backup-restore-and-the-khc-patch">Backup, restore and the KHC patch<a class="headerlink" href="#backup-restore-and-the-khc-patch" title="Permanent link">¶</a></h2>
+<p><strong>Before every flash, the console reads the firmware your press is running back from it and keeps a copy on the
+console</strong> (the screen shows BACKUP FIRST: READING THE PRESS FIRMWARE). It reads everything twice and compares the two
+reads. <strong>If the firmware cannot be read back, nothing is flashed</strong>: the screen says NOT FLASHED, nothing was written,
+and the press keeps its firmware. (A press whose firmware cannot be read back could not be checked after flashing
+either.) Reading takes from a few seconds to about two minutes for firmware the console does not recognise.</p>
+<p>For firmware the console does not recognise, it reads the whole memory, including an upper part (above 64 KiB) that
+it has not yet read on a real press. If only that upper part fails, the screen offers <strong>FLASH WITHOUT BACKUP…</strong>: it
+warns you first that your current firmware will not be kept, then flashes and verifies as usual. If the press's
+firmware reads as empty, the press controller may not allow reading at all: the console then refuses to flash (it
+could not check the result either) and nothing is written.</p>
+<ul>
+<li><strong>BACK UP FIRMWARE</strong> on the FIRMWARE screen reads and keeps a copy without flashing anything. Do this once when you
+  first connect a press: it is also a safe test that the console can talk to the press controller's bootloader.</li>
+<li><strong>The backups</strong> of your press model are listed under the firmware, as <strong>BACKUPS ON THIS CONSOLE</strong>, with the date and
+  the version the press reported. The console names the ones it recognises (for example "Evo FW 19 (Mark 7 original)" or
+  "KHC primer-learn patch for Evo (from Mark 7 FW 19)"); others say "Not identified". It keeps the newest five per press model, and never
+  drops a copy of Mark 7's original.</li>
+<li><strong>To restore a backup</strong>, choose it in the list and tap <strong>RESTORE BACKUP</strong>. It is checked against the press like any
+  other file and every page is verified. A backup the console did not recognise has no model tag, so restoring it
+  needs a warned confirmation.</li>
+</ul>
+<p><strong>The KHC patch.</strong> When the console has a backup of Mark 7's original firmware (Evo FW 19 or Revo FW 30),
+the FIRMWARE screen offers <strong>KHC primer-learn patch for Evo</strong> (or <strong>for Revo</strong>) instead of the build on the card. Tap
+it and then <strong>APPLY KHC PATCH</strong>: the console changes those few bytes in <strong>your own backup</strong>, checks that the result is
+exactly the KHC build, byte for byte, and then flashes and verifies it as usual. If the press runs Mark 7's original
+but has no backup yet, the screen tells you to tap BACK UP FIRMWARE first. A press on other firmware can still take
+the KHC build the console carries.</p>
+<p><strong>Test with dummy rounds.</strong> Neither KHC build has run on a press yet. After the patch or a KHC build: calibrate with an
+empty shell plate, run dummy rounds with seated primers (no index alarm), then pull a primer: the press must stop. If
+anything is wrong, restore your backup.</p>
+<h3 id="firmware-available">Firmware available<a class="headerlink" href="#firmware-available" title="Permanent link">¶</a></h3>
+<p>Once a KHC build has been run on a press, the console will say so when a press connects with Mark 7's version that
+the build is based on, or an older KHC build: once per connection, while the press is stopped and no other alert is
+open (for example <strong>"KHC primer-learn patch for Evo (from Mark 7 FW 19) is available for this press"</strong>), and the FIRMWARE screen will mark the
+build <strong>NEWER</strong>. <strong>No build is announced yet:</strong> both are untested, so they are only listed, with their warning.
+Nothing is ever flashed unless you do it yourself.</p>
+<h2 id="never-cross-flash">Never cross-flash<a class="headerlink" href="#never-cross-flash" title="Permanent link">¶</a></h2>
+<p>All Mark 7 presses speak the same language to the console, so <strong>nothing on the press warns you when it runs another
+model's firmware</strong>. The sensor inputs then mean different things (on a 1050/1100, Evo firmware would read the
+swage switch as Primer Orientation) and the motion and torque settings are the other model's. Never flash the Evo
+build on a Revo or the other way round, never between the Evo/Revo and the 650/750 or 1050/1100, and never between
+the 1050/1100 PRO and the 1050/1100 X.</p>
+<p>The console enforces this:</p>
+<ul>
+<li>It offers only the firmware whose <strong>model tag</strong> (written inside the image) matches the press it detected.</li>
+<li>A file from a USB stick is checked the same way, including the version its code reports; a custom or unknown file
+  for another model is refused.</li>
+<li><strong>Mark 7's own original for another model</strong>, from a USB stick, is accepted for one case only: a press that was
+  flashed with the wrong model's firmware and must be put back. It needs a warned confirmation ("I UNDERSTAND: THIS
+  PRESS IS REALLY A …"). Never do this on a press that is working.</li>
+</ul>
+<h2 id="flashing">Flashing<a class="headerlink" href="#flashing" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-firmware.png" data-desc-position="bottom"><img alt="The firmware screen: the KHC patch for Evo on the left, the check and FLASH AND VERIFY on the right" src="../../images/screen-firmware.png"></a></p>
+<ol>
+<li>Stop the press and connect to it (PRESS, ACCEPT), so the console knows the model. Then <strong>MENU</strong> and
+   <strong>FIRMWARE</strong>.</li>
+<li><strong>1. Choose the firmware:</strong> tap the KHC build in the list (what it changes is shown under the list), or <strong>USB
+   STICK…</strong> to pick a <code>.hex</code> file from a USB stick (FAT or exFAT; the file can be in a folder; sticks are mounted
+   read-only).</li>
+<li><strong>2. Check:</strong> the console shows the image's model tag and version and whether it fits: OK, <strong>needs
+   confirmation</strong> (a warning you must accept with the orange <strong>I UNDERSTAND: …</strong> button first, for example "I
+   UNDERSTAND: THIS PRESS IS REALLY A REVO"), or <strong>blocked</strong>.</li>
+<li><strong>3. Flash:</strong> tap <strong>FLASH AND VERIFY</strong> (<strong>RESTORE BACKUP</strong> for a backup, <strong>APPLY KHC PATCH</strong> for the patch). The
+   press controller restarts into its bootloader (the motor is off), its firmware is read back and kept first (the
+   backup; if it cannot be read, nothing is flashed), the image is written, and <strong>every page is read back and
+   verified</strong>, with up to 3 attempts. <strong>Do not unplug or power off anything</strong> while it writes. CANCEL works only
+   until writing starts.</li>
+<li>When it is done, the console reconnects by itself and shows the version the press now reports. After a KHC build:
+   calibrate with an empty shell plate, and check that the press stops when a primer is pulled.</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-firmware-override.png" data-desc-position="bottom"><img alt="The override confirmation for Mark 7's original for another model, from a USB stick" src="../../images/screen-firmware-override.png"></a></p>
+<p><strong>Recovery:</strong> if the press cannot identify itself (for example after an interrupted flash), the FIRMWARE screen shows
+the KHC build for <strong>the last press model the console saw</strong>, if there is one, and checks any file against that model.
+If the console has never seen a press, choose a file from a USB stick: every file then needs a warned confirmation.</p>
+<h2 id="do-not-operate">DO NOT OPERATE<a class="headerlink" href="#do-not-operate" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-marker.png" data-desc-position="bottom"><img alt="FIRMWARE INCOMPLETE: DO NOT OPERATE THE PRESS, with FLASH AGAIN and I CONFIRMED IT IS SAFE…" src="../../images/screen-marker.png"></a></p>
+<p>If a flash wrote pages but could not verify them (a cable pulled, a power cut, repeated errors), the press controller
+may be running a <strong>partial image</strong>. The console then shows <strong>FIRMWARE INCOMPLETE: DO NOT OPERATE THE PRESS</strong> instead
+of the home screen, keeps showing it after restarts, and <strong>will not connect to the press</strong>.</p>
+<p>To recover:</p>
+<ul>
+<li><strong>FLASH AGAIN</strong> (recommended): goes to FIRMWARE. The bootloader is never touched by a flash, so the press can always
+  be flashed again. Flash the right image for your press and let it verify.</li>
+<li><strong>I CONFIRMED IT IS SAFE…</strong>: only if you have re-flashed the press another way and know it is good. It needs two
+  taps (the second within a few seconds: <strong>TAP AGAIN: CONNECT TO THIS PRESS</strong>), then the accept screen as before every
+  connection.</li>
+</ul>
+<p>A flash that failed <strong>before</strong> it wrote anything says so ("Nothing was written; the press firmware is unchanged") and
+does not set DO NOT OPERATE.</p>
+<h2 id="firmware-and-software-updates">Firmware and software updates<a class="headerlink" href="#firmware-and-software-updates" title="Permanent link">¶</a></h2>
+<p>Software updates can bring new KHC patches (descriptions of a few bytes to change), never a firmware image: the
+console applies a patch to the backup of your own press's firmware. The builds the console had on its card stay
+(<a href="../software-updates/">Software updates</a>). A recovery flash (after DO NOT OPERATE, or a press that cannot identify
+itself) reads no backup first.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../console-ports/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Console ports">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Console ports
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../software-updates/" class="md-footer__link md-footer__link--next" aria-label="Next: Software updates and Wi-Fi">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Software updates and Wi-Fi
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
