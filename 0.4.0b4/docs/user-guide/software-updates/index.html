@@ -1,0 +1,1630 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The user manual of KHC Press Console, the touch-screen console for Mark 7 automated reloading presses (BETA).">
+      
+      
+      
+        <link rel="canonical" href="https://shane-cotta.github.io/khc-press-console/0.4.0b4/docs/user-guide/software-updates/">
+      
+      
+        <link rel="prev" href="../firmware/">
+      
+      
+        <link rel="next" href="../license/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Software updates and Wi-Fi - KHC Press Console manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  <style>
+    .md-banner { background-color: #b33a00; }
+    .md-banner .khc-announce { color: #fff; text-decoration: underline; text-underline-offset: 0.2em; }
+    .md-banner .khc-announce:hover, .md-banner .khc-announce:focus { color: #fff; text-decoration-thickness: 2px; }
+  </style>
+
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#software-updates-and-wi-fi" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<a href="../../../SAFETY/" class="khc-announce">
+  <strong>Unofficial BETA software for real machinery</strong> — read <strong>Safety</strong> first
+</a>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="KHC Press Console manual" class="md-header__button md-logo" aria-label="KHC Press Console manual" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            KHC Press Console manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Software updates and Wi-Fi
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Shane-Cotta/khc-press-console" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    Shane-Cotta/khc-press-console
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="KHC Press Console manual" class="md-nav__button md-logo" aria-label="KHC Press Console manual" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    KHC Press Console manual
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Shane-Cotta/khc-press-console" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    Shane-Cotta/khc-press-console
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KHC Press Console
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SAFETY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Safety
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installing KHC Press Console
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../home-screen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The home screen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Daily use
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Daily use
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../calibrate-and-run/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calibrating and running
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../press-tabs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The press tabs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sensors-and-interlocks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sensors and interlocks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alerts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../foot-pedal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Foot pedal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../console-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Console settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../console-ports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Console ports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../firmware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Press firmware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Updates and Wi-Fi
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Updates and Wi-Fi
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software updates and Wi-Fi
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software updates and Wi-Fi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#before-you-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before you update
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-wi-fi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting up Wi-Fi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update available
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-and-installing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checking and installing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#going-back-to-an-older-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Going back to an older version
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-trial-automatic-return-to-the-previous-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The trial: automatic return to the previous version
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-safety-minimum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The safety minimum
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-release-versions-for-testers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-release versions for testers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-a-usb-stick-no-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From a USB stick (no network)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updates-and-the-press-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updates and the press firmware
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Licence and trial
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Licence and trial
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The trial and your license
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting and FAQ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Troubleshooting and FAQ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../TERMS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terms of use
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#before-you-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before you update
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-wi-fi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting up Wi-Fi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update available
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-and-installing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checking and installing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#going-back-to-an-older-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Going back to an older version
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-trial-automatic-return-to-the-previous-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The trial: automatic return to the previous version
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-safety-minimum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The safety minimum
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-release-versions-for-testers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-release versions for testers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-a-usb-stick-no-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From a USB stick (no network)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updates-and-the-press-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updates and the press firmware
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/Shane-Cotta/khc-press-console/edit/main/docs/user-guide/software-updates.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+    </a>
+  
+  
+
+
+<h1 id="software-updates-and-wi-fi">Software updates and Wi-Fi<a class="headerlink" href="#software-updates-and-wi-fi" title="Permanent link">¶</a></h1>
+<p>KHC Press Console updates itself from the
+<a href="https://github.com/Shane-Cotta/khc-press-console/releases">KHC Press Console releases</a>, over Wi-Fi or Ethernet, or
+from a USB stick. You can install a newer version (an upgrade) or go back to an older one (a downgrade). Software
+updates never change your press's firmware.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Consoles older than 0.3.0b2</strong> cannot find updates at this address. Update them by writing a new card
+(<a href="../install/">Installing</a>). Writing a new card erases the settings and firmware backups kept on the old one.</p>
+</div>
+<h2 id="before-you-update">Before you update<a class="headerlink" href="#before-you-update" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Nothing is installed unless you tap INSTALL</strong> (or SWITCH TO) and confirm. The console looks for new versions by
+  itself (<a href="#update-available">Update available</a>), but it never installs one by itself.</li>
+<li><strong>Updates are never offered while the press is busy:</strong> while it runs, moves, calibrates or is in die setup, while a
+  STOP is being confirmed, while a CRITICAL alert is open or a firmware update runs, and for 5 seconds after.</li>
+<li><strong>Every install disconnects the press first.</strong> The console sends STOP if anything moves, resets the press
+  controller, and keeps the press disconnected while the update downloads and installs. <strong>STOP still works</strong> the whole
+  time. Then the console software restarts into the new version.</li>
+<li><strong>After an update,</strong> tap PRESS, ACCEPT and CALIBRATE again, with an empty shell plate.</li>
+<li><strong>Updates are checked, not yet signed.</strong> Every package is checked against the SHA-256 checksums published with its
+  release, and is downloaded only over HTTPS from the KHC Press Console releases. Install only from the official
+  releases, or from a USB stick you prepared yourself from them (<a href="../../../SAFETY/#software-updates">Safety</a>).</li>
+</ul>
+<h2 id="setting-up-wi-fi">Setting up Wi-Fi<a class="headerlink" href="#setting-up-wi-fi" title="Permanent link">¶</a></h2>
+<p>The press never needs Wi-Fi. Wi-Fi is for updates and license activation only. Wi-Fi stays <strong>off</strong> until you choose
+the country the console is in (the radio channels and power allowed differ by country).</p>
+<ol>
+<li>Open <strong>SOFTWARE UPDATE</strong> and tap <strong>WI-FI</strong> (also in <strong>CONSOLE SETTINGS</strong> and on <strong>LICENSE</strong>).</li>
+<li>Choose your country from the list, or tap <strong>OTHER CODE…</strong> and type its two-letter code (for example US).</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-wifi-country.png" data-desc-position="bottom"><img alt="The Wi-Fi screen asking for the country first, with the country list and OTHER CODE" src="../../images/screen-wifi-country.png"></a></p>
+<ol>
+<li>Tap <strong>SCAN</strong>, then tap your network.</li>
+<li>Type its password on the on-screen keyboard. It shows dots; <strong>SHOW</strong> shows the text. Tap <strong>CONNECT</strong>.</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-wifi-password.png" data-desc-position="bottom"><img alt="The Wi-Fi password entry with the on-screen keyboard, SHOW and CONNECT" src="../../images/screen-wifi-password.png"></a></p>
+<ol>
+<li>
+<p>The status line shows the network and the console's address once it is connected.</p>
+</li>
+<li>
+<p><strong>A network that does not broadcast its name:</strong> tap <strong>HIDDEN NETWORK…</strong>, type its name, choose its security (WPA2,
+  WPA3 or open), then its password.</p>
+</li>
+<li><strong>Supported:</strong> open networks, WPA2 and WPA3 personal (a password). <strong>Not supported:</strong> WPA Enterprise (a user name and
+  password) and WEP.</li>
+<li><strong>FORGET</strong> removes a saved network and its password.</li>
+<li>The password is stored only in the console's network configuration, readable only by the system. It never goes into
+  a log.</li>
+</ol>
+<p><strong>Ethernet</strong> works too: plug a cable from your router into the Pi's Ethernet port. The console gets its address from
+the router by itself.</p>
+<h2 id="update-available">Update available<a class="headerlink" href="#update-available" title="Permanent link">¶</a></h2>
+<p>The console looks for new versions by itself: a few minutes after it starts, then about once a day, and soon after the
+network comes back. It does this <strong>only while no press is connected</strong>, and it only reads the release list: it never
+downloads or installs anything by itself. A failed check (no internet, for example) shows nothing; it tries again
+later.</p>
+<p>When a newer version can be installed, the top bar of the home screen and of <strong>SOFTWARE UPDATE</strong> shows a badge:</p>
+<ul>
+<li><strong>UPDATE AVAILABLE</strong>: a newer version is out.</li>
+<li><strong>SAFETY UPDATE</strong> (amber): it fixes a safety problem, or this version is older than the safety minimum. Install it
+  soon, with the press stopped.</li>
+</ul>
+<p>Nothing pops up, nothing sounds, and nothing appears on the press screen. On the home screen, tap the badge to open
+<strong>SOFTWARE UPDATE</strong> with that version highlighted. On SOFTWARE UPDATE, tap it for a short explanation.</p>
+<h2 id="checking-and-installing">Checking and installing<a class="headerlink" href="#checking-and-installing" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-software-check.png" data-desc-position="bottom"><img alt="SOFTWARE UPDATE with example data: the running version, the Versions list marked Safety fix, Newer, Running and Older, and CHECK FOR UPDATES, USB STICK and WI-FI" src="../../images/screen-software-check.png"></a></p>
+<ol>
+<li>Stop the press.</li>
+<li>Open <strong>SOFTWARE UPDATE</strong> and tap <strong>CHECK FOR UPDATES</strong>. The console reads the release list. (It may wait up to
+   about 45 seconds for its clock to be set from the network: the Pi has no clock battery.)</li>
+<li>The <strong>Versions</strong> list shows each version with its date and size, marked <strong>Newer</strong>, <strong>Older</strong>, <strong>Running</strong>,
+   <strong>Safety fix</strong> or <strong>Pre-release</strong>, and <strong>INSTALL</strong> or <strong>SWITCH TO</strong> where it can be installed.</li>
+<li>Tap a version to read its notes.</li>
+<li>Tap <strong>INSTALL</strong>. Read the question: "The console software restarts to switch versions. The press does not move
+   during the update. Keep your hands clear of the press." Confirm with <strong>INSTALL</strong>.</li>
+<li>The download shows its progress. <strong>CANCEL</strong> stops it.</li>
+<li>The console checks the package, installs it and restarts into the new version.</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-software-progress.png" data-desc-position="bottom"><img alt="The download progress bar with CANCEL, and the note that the press is disconnected and STOP still works" src="../../images/screen-software-progress.png"></a></p>
+<p>If an update finishes without restarting the console (for example a switch to the version already running), after
+20 seconds the screen offers <strong>USE THE PRESS AGAIN</strong>. The press stays disconnected until you tap it.</p>
+<h2 id="going-back-to-an-older-version">Going back to an older version<a class="headerlink" href="#going-back-to-an-older-version" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Older</strong> versions down to the safety minimum can be installed like newer ones. The question says that it is a
+  downgrade.</li>
+<li><strong>SWITCH TO</strong> goes back to a version that is still on the console, without downloading it. The console keeps the
+  running version, the last version that was confirmed working, and one more.</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-software-confirm-downgrade.png" data-desc-position="bottom"><img alt="The install question for an older version, warning that this is a downgrade" src="../../images/screen-software-confirm-downgrade.png"></a></p>
+<h2 id="the-trial-automatic-return-to-the-previous-version">The trial: automatic return to the previous version<a class="headerlink" href="#the-trial-automatic-return-to-the-previous-version" title="Permanent link">¶</a></h2>
+<p>A newly installed version is <strong>on trial</strong>: "Trying X.Y.Z. It is kept once the console has run for 15 seconds."</p>
+<ul>
+<li>It is kept once it has run for 15 seconds with its screen working.</li>
+<li>If it does not start, freezes for 3 minutes, or the console restarts twice before the version was confirmed, the
+  console <strong>goes back to the previous version by itself</strong>. SOFTWARE UPDATE says so.</li>
+<li>A version the console went back from is not offered again by the update badge.</li>
+</ul>
+<p>If this happens, please <a href="https://github.com/Shane-Cotta/khc-press-console/issues/new/choose">report it</a>.</p>
+<h2 id="the-safety-minimum">The safety minimum<a class="headerlink" href="#the-safety-minimum" title="Permanent link">¶</a></h2>
+<p>The release list carries a <strong>safety minimum</strong> ("Safety minimum: X.Y.Z" on the screen).</p>
+<ul>
+<li>Versions below it are listed but cannot be installed: a later version fixed a safety problem in them.</li>
+<li>The minimum only ever goes up. Versions withdrawn by a release are never offered.</li>
+<li>A <strong>Safety fix</strong> mark on a version means it fixes a safety problem. Install it soon.</li>
+</ul>
+<h2 id="pre-release-versions-for-testers">Pre-release versions for testers<a class="headerlink" href="#pre-release-versions-for-testers" title="Permanent link">¶</a></h2>
+<p>A pre-release is a test version, published before it becomes the public release.</p>
+<ul>
+<li><strong>Only testers get it.</strong> KHC Precision can assign a pre-release to a license, or to a single console. That console
+  then offers it as an update, marked <strong>Pre-release</strong>, and <strong>SOFTWARE UPDATE</strong> shows "Pre-release channel:" with its
+  version. Everyone else sees only the public latest release.</li>
+<li><strong>Nothing installs by itself.</strong> You install a pre-release exactly like any other version, after the same question.</li>
+<li><strong>It needs a licensed console on a card written with 0.4.0b1 or later.</strong> A console in its trial, or on an older
+  card, sees only the public releases.</li>
+<li>When the pre-release is no longer assigned, the console shows the public releases again. An installed pre-release
+  keeps running until you install another version.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>A pre-release is less tested than a public release. Use an empty shell plate first, and keep the power switch within
+reach.</p>
+</div>
+<h2 id="from-a-usb-stick-no-network">From a USB stick (no network)<a class="headerlink" href="#from-a-usb-stick-no-network" title="Permanent link">¶</a></h2>
+<ol>
+<li>On a computer, download <code>khc-press-console-X.Y.Z.bundle.tar.xz</code> from the release you want. Check it against that
+   release's <code>SHA256SUMS.txt</code> (<a href="../install/#check-the-download">Check the download</a>).</li>
+<li>Copy it, unchanged, to the <strong>top folder</strong> of a FAT or exFAT USB stick, or into a folder named <code>khc-press-console</code>
+   on it.</li>
+<li>Plug the stick into the Pi, open <strong>SOFTWARE UPDATE</strong> and tap <strong>USB STICK</strong>. The stick's packages appear with their
+   version.</li>
+<li>Tap one, and confirm as for an online install.</li>
+</ol>
+<p>The console mounts USB sticks <strong>read-only</strong>: it never writes to your stick.</p>
+<p><strong>A package this console has never seen in an online release list</strong> (the console has never been online, or the stick
+came from somewhere else) shows a warning with the start of its SHA-256. It then needs <strong>INSTALL ANYWAY</strong>. Compare the
+SHA-256 with the release's <code>SHA256SUMS.txt</code> before you tap it.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../images/screen-software-usb.png" data-desc-position="bottom"><img alt="The USB install question for a package never listed online: the SHA-256 warning and INSTALL ANYWAY" src="../../images/screen-software-usb.png"></a></p>
+<h2 id="updates-and-the-press-firmware">Updates and the press firmware<a class="headerlink" href="#updates-and-the-press-firmware" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Software updates carry no press firmware,</strong> and no release carries a firmware image. Updating the console, or
+  going back to an older version, never changes the firmware on your press. Only the <a href="../firmware/">FIRMWARE</a> screen
+  does that.</li>
+<li>The KHC patch (firmware 200) is made on the console, from a backup of your press's own firmware
+  (<a href="../firmware/">Firmware</a>).</li>
+<li>Your firmware backups are kept with the console's settings and survive software updates.</li>
+<li>A console whose card was written with 0.3.0b3 or earlier may still hold firmware images from that card. They are
+  kept, and SOFTWARE UPDATE shows how many.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../firmware/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Press firmware">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Press firmware
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../license/" class="md-footer__link md-footer__link--next" aria-label="Next: The trial and your license">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                The trial and your license
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

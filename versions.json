@@ -1,10 +1,15 @@
 [
   {
-    "version": "0.4.0b3",
-    "title": "0.4.0b3 (pre-release)",
+    "version": "0.4.0b4",
+    "title": "0.4.0b4 (pre-release)",
     "aliases": [
       "pre-release"
     ]
+  },
+  {
+    "version": "0.4.0b3",
+    "title": "0.4.0b3 (pre-release)",
+    "aliases": []
   },
   {
     "version": "0.4.0b2",
